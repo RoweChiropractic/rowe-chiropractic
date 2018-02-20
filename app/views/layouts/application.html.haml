@@ -1,11 +1,34 @@
 !!!
-%html
+%html{lang: 'en'}
   %head
-    %title CmsTemplate
+    %meta{charset: 'utf-8'}
+    %meta{content: 'IE=edge', 'http-equiv' => 'X-UA-Compatible'}
+    %meta{content: 'width=device-width, initial-scale=1', name: 'viewport'}
+    / The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+
+    %meta{content: '', name: 'description'}
+    %meta{content: '', name: 'author'}
+    %link{href: '../../favicon.ico', rel: 'icon'}
+    =# render 'layouts/icons'
+    %title Rowe Chiropractic
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_tag '$.fx.off = true;' if Rails.env.test?
+
+    %script
+      window.FontAwesomeConfig = {searchPseudoElements: true }
+
   %body
-    %p.notice= notice
-    %p.alert= alert
-    = yield
+    = render 'layouts/navigation'
+    %main{ role: :main }
+      - if flash
+        .container
+          .row
+            .col-12
+              = render 'layouts/messages'
+      = yield
+    = javascript_include_tag 'fontawesome'
+    = render 'layouts/footer'
+
+

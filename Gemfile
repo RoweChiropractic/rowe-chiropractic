@@ -18,7 +18,7 @@ gem 'devise'
 gem 'actionview-encoded_mail_to', '~> 1.0'
 gem 'active_link_to', '~> 1.0'
 gem 'activeadmin'
-gem 'bootstrap', '~> 4.0.0.beta3'
+gem 'bootstrap', '~> 4.0.0'
 gem 'bootstrap4-kaminari-views'
 gem 'exception_handler'
 gem 'haml-rails'
@@ -28,9 +28,23 @@ gem 'rollbar'
 gem 'simple_form'
 
 group :development, :test do
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'database_cleaner'
+  gem 'rspec-rails'
+  gem 'rspec-retry'
+  gem 'rspec_junit_formatter'
+  gem 'rubocop', '0.50.0', require: false
+  gem 'rubocop-rspec', '0.18.0', require: false
+  gem 'selenium-webdriver', '~> 2.5'
+  gem 'shoulda-matchers'
+  gem 'simplecov', require: false
+  gem 'vcr'
+  gem 'webmock'
+end
+
+group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
 end
 
 group :development do

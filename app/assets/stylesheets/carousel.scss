@@ -1,0 +1,29 @@
+.carousel {
+  .carousel-inner{
+    max-height: 500px !important;
+  }
+  margin-bottom: $margin;
+  .carousel-item {
+    &.fitness blockquote{
+      font-size: 3rem;
+      line-height: 3.2rem;
+      text-align: left;
+      font-family: serif;
+      font-style: italic;
+    }
+    &.child blockquote, &.picnic blockquote{
+      font-size: 2rem;
+      text-align: left;
+    }
+    .carousel-caption {
+      left: 5%;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  // blockquote {
+  //   margin: 0;
+  //   color: white;
+
+  // }
+}
