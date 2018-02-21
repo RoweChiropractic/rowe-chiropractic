@@ -1,8 +1,7 @@
-.carousel {
+.image-carousel {
   .carousel-inner{
     max-height: 500px !important;
   }
-  margin-bottom: $margin;
   .carousel-item {
     &.fitness blockquote{
       font-size: 3rem;
@@ -21,9 +20,25 @@
       margin: 0;
     }
   }
-  // blockquote {
-  //   margin: 0;
-  //   color: white;
+}
 
-  // }
+.quote-carousel {
+  min-height: 150px;
+  text-align: center;
+  padding-left: $margin*4;
+  padding-right: $margin*4;
+  color: $gray-600;
+  p {
+    text-indent: 1rem;
+  }
+  p:before {
+    font-family: 'Font Awesome 5 Solid';
+    content: "\f10d";
+    display:none;
+  }
+  p:after {
+    font-family: 'Font Awesome 5 Solid';
+    content: "\f10e";
+    display:none;
+  }
 }

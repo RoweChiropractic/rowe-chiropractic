@@ -1,4 +1,8 @@
+
 nav.navbar {
+  a {
+    text-decoration: none;
+  }
   .navbar-brand {
     color: $brand-primary  !important;
     span {
