@@ -1,6 +1,11 @@
 .footer {
-  .card {
-    text-align: center;
-    color: white;
+  padding: $margin;
+  color: $gray-400;
+
+  h5 {
+    color: $gray-400;
+  }
+  .copy {
+    color: $gray-600;
   }
 }

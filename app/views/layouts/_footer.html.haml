@@ -1,30 +1,29 @@
 %footer.footer.bg-dark
-  .row
-    .col-sm-12
-      .card-group
-        .card.bg-dark
-          .card-body
-            .card-title Welcome
-            .card-body
-              Video
-
-        .card.bg-dark
-          .card-body
-            .card-title Join The Conversation
-            .card-body
-              FB Link
-        .card.bg-dark
-          .card-body
-            .card-title Recent Blog Post
-            .card-body
-              Video
-        .card.bg-dark
-          .card-body
-            .card-title Contact
-            .card-body
-              Video
-        .card.bg-dark
-          .card-body
-            .card-title Hours
-            .card-body
-              Video
+  .container
+    .row
+      .col-sm-6
+        %h5 Introduction to Chiropractic care
+        %iframe{height: "120px", src: "https://player.vimeo.com/video/100711016?", width: "204px"}
+      .col-sm-3
+        %address
+          %strong Rowe Chiropractic Offices
+          %br
+          316 E. 59th St.
+          %br
+          New York, NY 10022
+          %br
+          %abbr{ title: :Phone } P:
+          = link_to '(212) 486-8888', 'tel:2124868888'
+      .col-sm-3
+        %h5
+        %ul
+          %li Monday  8:00AM - 6:45PM
+          %li Tuesday 8:00AM - 6:45PM
+          %li Wednesday 8:00AM - 6:45PM
+          %li Thursday  8:00AM - 6:45PM
+          %li Friday  8:00AM - 9:30AM
+    .row.copy
+      .col-sm-12
+        &copy;
+        = Date.today.year
+        Rowe Chiropractic Offices. All rights reserved.

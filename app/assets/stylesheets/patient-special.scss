@@ -1,4 +1,5 @@
-.patient-special {
+.row.patient-special {
+  margin-bottom: $margin;
   text-align: center;
   font-style: italic;
   h3 { color: $gray-700; }

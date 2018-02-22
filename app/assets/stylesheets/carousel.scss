@@ -1,4 +1,5 @@
-.image-carousel {
+.row.image-carousel {
+  margin-bottom: $margin;
   .carousel-inner{
     max-height: 500px !important;
   }
@@ -23,7 +24,7 @@
 }
 
 .quote-carousel {
-  min-height: 150px;
+  min-height: 200px;
   text-align: center;
   padding-left: $margin*4;
   padding-right: $margin*4;
