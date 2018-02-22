@@ -2,10 +2,23 @@
   padding: $margin;
   color: $gray-400;
 
-  h5 {
-    color: $gray-400;
+  h6 {
+    color: $gray-200;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   .copy {
     color: $gray-600;
+  }
+
+  .row.content {
+    margin-bottom: $margin;
+  }
+
+  ul.hours {
+    list-style: none;
+    padding: 0;
+    li {
+    }
   }
 }

@@ -4,5 +4,7 @@
       Call
       = link_to '212-486-8888', 'tel:2124868888'
       to learn more about our new patient special!
-
+    = simple_form_for :contact do |f|
+      = f.submit 'Contact Us Now', class: 'btn btn-primary'
+      = f.submit 'Patient Info', class: 'btn btn-secondary'
     %hr
