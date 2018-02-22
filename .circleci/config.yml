@@ -69,7 +69,6 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               git push --force git@heroku.com:rowe-chiropractic.git HEAD:refs/heads/master
-              heroku run rails db:migrate
-              heroku run rails restart
-              heroku restart
+              heroku run rails db:migrate -a rowe-chiropractic
+              heroku restart -a rowe-chiropractic
             fi
