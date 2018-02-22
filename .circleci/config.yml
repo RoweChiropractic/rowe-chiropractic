@@ -29,8 +29,9 @@ jobs:
     steps:
       - checkout
 
+      - run: sudo apt-get update
       - run:
-          name: Install System Dependencies
+          name: Install CapybaraWebkit Dependencies
           command: sudo apt-get install qt5-default libqt5webkit5-dev gstreamer1.0-plugins-base gstreamer1.0-tools gstreamer1.0-x
 
       # Download and cache dependencies
