@@ -5,32 +5,30 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '~> 5.1.4'
-gem 'pg', '~> 0.18'
-gem 'puma', '~> 3.7'
-
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
-gem 'turbolinks', '~> 5'
-gem 'devise'
-
 gem 'actionview-encoded_mail_to', '~> 1.0'
 gem 'active_link_to', '~> 1.0'
 gem 'activeadmin'
 gem 'bootstrap', '~> 4.0.0'
 gem 'bootstrap4-kaminari-views'
+gem 'coffee-rails', '~> 4.2'
+gem 'devise'
 gem 'exception_handler'
 gem 'haml-rails'
 gem 'kaminari'
 gem 'newrelic_rpm', '~> 3.14'
-gem 'rollbar'
+gem 'pg', '~> 0.18'
+gem 'puma', '~> 3.7'
+gem 'rails', '~> 5.1.4'
+gem 'sass-rails', '~> 5.0'
 gem 'simple_form'
+gem 'turbolinks', '~> 5'
+gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'capybara'
   gem 'capybara-webkit'
   gem 'database_cleaner'
+  gem 'fuubar'
   gem 'rspec-rails'
   gem 'rspec-retry'
   gem 'rspec_junit_formatter'
@@ -44,7 +42,7 @@ group :development, :test do
 end
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug'
 end
 
 group :development do
