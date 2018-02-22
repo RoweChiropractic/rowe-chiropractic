@@ -62,28 +62,28 @@ jobs:
       - store_artifacts:
           path: /tmp/test-results
           destination: test-results
-  deploy:
-    docker:
-      - image: circleci/ruby:2.4.1-node-browsers
-    steps:
-      - run: bash .circleci/setup-heroku.sh
-      - add_ssh_keys:
-          fingerprints:
-            - "bd:7f:12:a8:5d:88:6f:9f:ef:3d:91:49:ce:a9:f0:ca"
-      - run:
-          name: Deploy Master to Heroku
-          command: |
-            git push --force git@heroku.com:$HEROKU_APP_NAME.git HEAD:refs/heads/master
-            heroku run rails db:migrate
-            heroku run rails restart
-            heroku restart
-workflows:
-  version: 2
-  build_and_test:
-    jobs:
-      - build
-      - test
-      - deploy:
-          filters:
-            branches:
-              only: master
+  # deploy:
+  #   docker:
+  #     - image: circleci/ruby:2.4.1-node-browsers
+  #   steps:
+  #     - run: bash .circleci/setup-heroku.sh
+  #     - add_ssh_keys:
+  #         fingerprints:
+  #           - "bd:7f:12:a8:5d:88:6f:9f:ef:3d:91:49:ce:a9:f0:ca"
+  #     - run:
+  #         name: Deploy Master to Heroku
+  #         command: |
+  #           git push --force git@heroku.com:$HEROKU_APP_NAME.git HEAD:refs/heads/master
+  #           heroku run rails db:migrate
+  #           heroku run rails restart
+  #           heroku restart
+# workflows:
+#   version: 2
+#   build_and_test:
+#     jobs:
+#       - build
+#       - test
+#       - deploy:
+#           filters:
+#             branches:
+#               only: master
