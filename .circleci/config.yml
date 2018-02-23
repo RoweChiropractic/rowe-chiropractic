@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  build:
+  build_and_test:
     working_directory: ~/repo
     docker:
       - image: circleci/ruby:2.4.1-node-browsers
@@ -59,7 +59,10 @@ jobs:
       - store_artifacts:
           path: /tmp/test-results
           destination: test-results
-      # Deploy
+  deploy:
+    docker:
+      - image: circleci/ruby:2.4.1-node-browsers
+    steps:
       - run: bash .circleci/setup-heroku.sh
       - add_ssh_keys:
           fingerprints:
@@ -67,8 +70,18 @@ jobs:
       - run:
           name: Deploy Master to Heroku
           command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              git push --force git@heroku.com:rowe-chiropractic.git HEAD:refs/heads/master
-              heroku run rails db:migrate -a rowe-chiropractic
-              heroku restart -a rowe-chiropractic
-            fi
+            git push --force git@heroku.com:rowe-chiropractic.git HEAD:refs/heads/master
+            heroku run rails db:migrate -a rowe-chiropractic
+            heroku restart -a rowe-chiropractic
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build_and_test
+      - deploy:
+          requires:
+            - build_and_test
+          filters:
+            branches:
+              only: master
