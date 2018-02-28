@@ -1,0 +1,13 @@
+textarea {
+  height: 5rem;
+}
+
+.CodeMirror {
+  border: 1px solid #eee;
+  height: auto;
+  font-family: Consolas;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+
+.CodeMirror-scroll { min-height: 10rem; }

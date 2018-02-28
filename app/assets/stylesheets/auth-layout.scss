@@ -1,0 +1,52 @@
+body.auth {
+  background-color: $brand-primary;
+
+  .logo {
+    margin: $margin-v 0;
+    height: 100px;
+  }
+
+  hr {
+    color: white;
+    border-color: $accent-gray;
+    width: 80%;
+  }
+
+  h1.brand {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: white;
+  }
+
+  .card {
+    margin: 0 auto 4rem auto;
+    border-radius: 10px;
+    .card-header, .card-footer {
+      font-weight: 300;
+      border-radius: 10px;
+    }
+    .card-header {
+      margin-bottom: 0;
+    }
+    .card-block {
+      padding-top: 1rem;
+    }
+    .card-footer {
+    }
+    .input-group {
+      margin-bottom: 1rem;
+    }
+    input[type="submit"] {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.auth.account-session {
+  .form-inline .form-control {
+    width:auto;
+  }
+  .form-inline .form-group {
+    display: inline-block;
+  }
+}

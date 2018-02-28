@@ -1,0 +1,14 @@
+- resource.memberships = [Membership.new(account: @current_account)]
+
+.col-sm-6.offset-sm-3
+  %h2= "Invite a team member"
+  = simple_form_for resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post} do |f|
+    = f.input :email
+    = f.input :first_name
+    = f.input :last_name
+    = f.simple_fields_for :memberships do |memberships|
+      = memberships.input :account_id, input_html: { value: @current_account.id }, as: :hidden
+      = memberships.input :role, input_html: { value: :manager }, as: :hidden
+
+    = f.button :submit, t("devise.invitations.new.submit_button"), class: 'btn btn-primary'
+
