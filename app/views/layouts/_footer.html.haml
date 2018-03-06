@@ -37,3 +37,11 @@
         %h6 Patient's Choice Award
         = link_to image_tag('https://www.opencare.com/images/badges/patients-choice-winner-2016.png'), 'https://www.opencare.com/chiropractors/new-york-ny/#tc24630637381', target: '_blank'
 
+    .row
+      .col-sm
+        %small
+          &copy;
+          = Date.today.year
+          Rowe Chiropractic Offices. All rights reserved.
+          .float-right
+            = link_to fa_icon('lock'), new_user_session_path

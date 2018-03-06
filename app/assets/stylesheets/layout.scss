@@ -1,11 +1,11 @@
-$footer-height: 550px;
+$footer-height: 600px;
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
   position: relative;
   min-height: 100%;
 }
-body {
+body.main {
   /* Margin bottom by footer height */
   margin-bottom: $footer-height;
 }
