@@ -9,3 +9,6 @@
 */**/.DS_Store
 /config/master.key
 /storage
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
