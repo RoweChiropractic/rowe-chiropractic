@@ -20,14 +20,8 @@ ActiveAdmin.register CmsPage do
     actions
   end
 
-  show do
-    attributes_table do
-      row :title
-      row :sub_title
-      row :body do |doc|
-        raw doc.formatted_body
-      end
-    end
+  show title: '' do
+    render 'cms_pages/cms_page_content'
   end
 
   form do |f|

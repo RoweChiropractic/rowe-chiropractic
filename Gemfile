@@ -8,6 +8,7 @@ end
 gem 'actionview-encoded_mail_to', '~> 1.0'
 gem 'active_link_to', '~> 1.0'
 gem 'activeadmin'
+gem 'activeadmin_blaze_theme'
 gem 'aws-sdk-s3', require: false
 gem 'bootstrap', '~> 4.0.0'
 gem 'bootstrap4-kaminari-views'
