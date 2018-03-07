@@ -1,0 +1,7 @@
+.row.breadcrumbs
+  .col-sm
+    %nav{ "aria-label" => :breadcrumb }
+      %ol.breadcrumb
+        %li.breadcrumb-item
+          %a{ href: root_path } Home
+        %li.breadcrumb-item.active{ "aria-current" => :page }= @cms_page.title

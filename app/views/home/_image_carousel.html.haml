@@ -1,10 +1,6 @@
 .row.image-carousel
   .col-sm-12
     #image-carousel.carousel.slide{ data: { ride: :carousel } }
-      / %ol.carousel-indicators
-      /   %li.active{ data: { 'slide-to' => 0, target: '#image-carousel' } }
-      /   %li{ data: { 'slide-to' => 1,  target: '#image-carousel' } }
-      /   %li{ data: { 'slide-to' => 2,  target: '#image-carousel' } }
       .carousel-inner
         .carousel-item.child.active
           = image_tag('carousel/child.png', class: 'd-block w-100', height: 400)

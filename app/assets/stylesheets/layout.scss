@@ -9,6 +9,10 @@ body.main {
   /* Margin bottom by footer height */
   margin-bottom: $footer-height;
 }
+.container.content {
+  margin-top: $margin * 3;
+}
+
 .footer {
   position: absolute;
   bottom: 0;

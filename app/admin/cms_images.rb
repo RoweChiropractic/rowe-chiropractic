@@ -9,12 +9,13 @@ ActiveAdmin.register CmsImage do
 
   index do
     column :image do |cms_image|
-      image_tag cms_image.image
+      image_tag cms_image.image.variant(resize: '100x100')
     end
     column :title
-    column :description
-    column :created_at
-    column :updated_at
+    column :link do |cms_image|
+      url_for cms_image.image
+    end
+    actions
   end
 
   form do |f|

@@ -1,6 +1,6 @@
 .row.splash-nav
   .card-group
-    = render 'splash_nav_card', title: 'About Us', text: 'Get to know more about what makes us the best in chiropractic in our area.', icon: 'thumbs-up'
-    = render 'splash_nav_card', title: 'Meet the Doctors', text: 'Friendly, helpful and well-knowledged, we will guide you every step of the way.', icon: 'info-circle'
-    = render 'splash_nav_card', title: 'Services', text: 'Our variety of services are proven to support your healthy lifestyle.', icon: 'question-circle'
-    = render 'splash_nav_card', title: ' Contact Us', text: 'Questions? Praises? No problem! Let us know how we can help.', icon: 'phone'
+    = render 'splash_nav_card', title: 'About Us', text: 'Get to know more about what makes us the best in chiropractic in our area.', icon: 'thumbs-up', link: cms_page_path('about-us')
+    = render 'splash_nav_card', title: 'Meet the Doctors', text: 'Friendly, helpful and well-knowledged, we will guide you every step of the way.', icon: 'info-circle', link: cms_page_path('meet-the-doctors')
+    = render 'splash_nav_card', title: 'Services', text: 'Our variety of services are proven to support your healthy lifestyle.', icon: 'question-circle', link: cms_page_path('services')
+    = render 'splash_nav_card', title: ' Contact Us', text: 'Questions? Praises? No problem! Let us know how we can help.', icon: 'phone', link: cms_page_path('contact-us')
