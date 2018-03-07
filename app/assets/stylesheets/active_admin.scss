@@ -1,10 +1,12 @@
 @import "vars";
-@import "bootstrap";
 @import "active_admin/mixins";
 @import "active_admin/base";
 @import "activeadmin_blaze_theme/theme";
 @import "codemirror/codemirror";
-@import "codemirror/zenburn";
 @import "admin-textareas";
 @import "cms-pages";
 @import "admin/cms-images";
+
+.col {
+  width: auto;
+}

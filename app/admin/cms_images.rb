@@ -25,6 +25,7 @@ ActiveAdmin.register CmsImage do
   end
 
   show do
+
     attributes_table_for cms_image do
       row :title
       row :description
