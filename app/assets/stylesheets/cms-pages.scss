@@ -1,6 +1,11 @@
 .cms-page {
-  h1.title {
-    color: $burnt-orange;
+  padding-bottom: $margin;
+  a { color: $link-color; }
+  h2.title {
+    small {
+      float: right;
+      font-size: 1rem;
+    }
   }
 
   .sub-title {

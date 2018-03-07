@@ -41,6 +41,8 @@ GEM
       ransack (~> 1.3)
       sass (~> 3.1)
       sprockets (< 4.1)
+    activeadmin_blaze_theme (0.5.12)
+      activeadmin (~> 1.0)
     activejob (5.2.0.rc1)
       activesupport (= 5.2.0.rc1)
       globalid (>= 0.3.6)
@@ -374,6 +376,7 @@ DEPENDENCIES
   actionview-encoded_mail_to (~> 1.0)
   active_link_to (~> 1.0)
   activeadmin
+  activeadmin_blaze_theme
   aws-sdk-s3
   bootstrap (~> 4.0.0)
   bootstrap4-kaminari-views

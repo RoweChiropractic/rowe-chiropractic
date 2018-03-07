@@ -1,0 +1,9 @@
+.container.cms-page
+  %h2.title
+    = @cms_page.title
+    - if user_signed_in?
+      %small= link_to(fa_icon('edit'), edit_admin_cms_page_path(@cms_page))
+  - if @cms_page.sub_title
+    %p.sub-title= @cms_page.sub_title
+
+  =raw @cms_page.formatted_body
