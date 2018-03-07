@@ -13,4 +13,5 @@ $ ->
        tabSize: 2
        lineNumbers: true
        theme: 'zenburn'
+       lineWrapping: true
 

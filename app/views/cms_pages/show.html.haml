@@ -1,0 +1,7 @@
+= render 'shared/breadcrumbs'
+.row.cms-page
+  .col-sm
+    - if @cms_page.sub_title
+      %p.sub-title= @cms_page.sub_title
+
+    =raw @cms_page.formatted_body

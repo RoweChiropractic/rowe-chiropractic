@@ -1,0 +1,28 @@
+.cms-page {
+  h1.title {
+    color: $burnt-orange;
+  }
+
+  .sub-title {
+    color: $gray-600;
+    font-style: italic;
+  }
+
+  p {
+  }
+
+  img {
+    padding: 3px;
+    border: 1px solid $gray-600;
+    margin: $margin/2;
+  }
+
+  img[src*="#right"] {
+    float: right;
+    margin-right: 0;
+  }
+  img[src*="#left"] {
+    float: left;
+    margin-left: 0;
+  }
+}
