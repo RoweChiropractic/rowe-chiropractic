@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   root to: "home#index"
 
-  resources :cms_pages, only: :show
+  resources :cms_pages, only: :show, path: :pages
 end
