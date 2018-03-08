@@ -8,6 +8,5 @@ $ ->
        mode:  'markdown'
        indentUnit: 2
        tabSize: 2
-       lineNumbers: true
        lineWrapping: true
 
