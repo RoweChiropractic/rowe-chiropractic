@@ -132,6 +132,7 @@ GEM
       rails (>= 4.2.0)
       responders
     execjs (2.7.0)
+    ffaker (2.8.1)
     ffi (1.9.23)
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
@@ -387,6 +388,7 @@ DEPENDENCIES
   database_cleaner
   devise
   exception_handler
+  ffaker
   friendly_id
   fuubar
   haml-rails
