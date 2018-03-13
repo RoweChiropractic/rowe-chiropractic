@@ -1,4 +1,6 @@
 ActiveAdmin.register CmsImage do
+  config.filters = false
+
   permit_params do
     [
       :title,
