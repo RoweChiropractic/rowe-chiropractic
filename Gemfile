@@ -35,6 +35,7 @@ group :development, :test do
   gem 'capybara'
   gem 'capybara-webkit'
   gem 'database_cleaner'
+  gem 'ffaker'
   gem 'fuubar'
   gem 'rspec-rails'
   gem 'rspec-retry'

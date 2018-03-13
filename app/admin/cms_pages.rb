@@ -21,7 +21,15 @@ ActiveAdmin.register CmsPage do
   end
 
   show title: '' do
-    render 'cms_pages/cms_page_content'
+    attributes_table_for cms_page do
+      row :link do |cms_page|
+        input value: cms_page_path(cms_page)
+        link_to 'View', cms_page_path(cms_page), target: '_blank'
+      end
+      row :content do |cms_page|
+        render 'cms_pages/cms_page_content'
+      end
+    end
   end
 
   form do |f|
