@@ -36,6 +36,9 @@ ActiveAdmin.register CmsImage do
       row 'Raw' do |cms_image|
         input value: url_for(cms_image.image), class: 'image-path'
       end
+      row '400px' do |cms_image|
+        input value: url_for(cms_image.image.variant(resize: '400x400')), class: 'image-path'
+      end
       row '200px' do |cms_image|
         input value: url_for(cms_image.image.variant(resize: '200x200')), class: 'image-path'
       end
