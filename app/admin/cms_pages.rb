@@ -1,4 +1,6 @@
 ActiveAdmin.register CmsPage do
+  config.filters = false
+
   controller do
     def find_resource
       scoped_collection.friendly.find(params[:id])
