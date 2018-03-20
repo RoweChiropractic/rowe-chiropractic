@@ -1,6 +1,6 @@
 Rails.application.configure do
   config.require_master_key = true
-  config.active_storage.service = :aws
+  config.active_storage.service = :amazon
 
   # Settings specified here will take precedence over those in config/application.rb.
 
