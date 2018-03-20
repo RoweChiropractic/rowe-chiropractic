@@ -127,10 +127,6 @@ GEM
     docile (1.1.5)
     erubi (1.7.1)
     erubis (2.7.0)
-    exception_handler (0.7.7.0)
-      bundler
-      rails (>= 4.2.0)
-      responders
     execjs (2.7.0)
     ffaker (2.8.1)
     ffi (1.9.23)
@@ -387,7 +383,6 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   database_cleaner
   devise
-  exception_handler
   ffaker
   friendly_id
   fuubar
