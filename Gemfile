@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.5.0'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -12,8 +13,10 @@ gem 'activeadmin_blaze_theme'
 gem 'aws-sdk-s3', require: false
 gem 'bootstrap', '~> 4.0.0'
 gem 'bootstrap4-kaminari-views'
+gem 'carrierwave'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
+gem 'fog-aws'
 gem 'friendly_id'
 gem 'haml-rails'
 gem 'kaminari'
@@ -21,7 +24,7 @@ gem 'mini_magick'
 gem 'newrelic_rpm', '~> 3.14'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
-gem 'rails', '~> 5.2.0.beta2'
+gem 'rails', '~> 5.2.0.rc2'
 gem 'ransack', '~> 1.8.7'
 gem 'redcarpet'
 gem 'rollbar'
