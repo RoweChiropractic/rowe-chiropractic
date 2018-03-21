@@ -11,7 +11,7 @@ ActiveAdmin.register CmsImage do
 
   index do
     column :image do |cms_image|
-      image_tag cms_image.image.url(:thumb)
+      image_tag cms_image.image.thumb.url
     end
     column :title
     actions
@@ -35,13 +35,13 @@ ActiveAdmin.register CmsImage do
         image_tag cms_image.image.url
       end
       row 'Raw' do |cms_image|
-        input value: url_for(cms_image.image.url), class: 'image-path'
+        input value: cms_image.image.url, class: 'image-path'
       end
       row '400px' do |cms_image|
-        input value: url_for(cms_image.image.url(:x400)), class: 'image-path'
+        input value: cms_image.image.x400.url, class: 'image-path'
       end
       row '200px' do |cms_image|
-        input value: url_for(cms_image.image.url(:x200)), class: 'image-path'
+        input value: cms_image.image.x200.url, class: 'image-path'
       end
     end
   end

@@ -1,7 +1,7 @@
 development:
   encoding: utf8
   adapter: postgresql
-  database: rowe_chiropractic_dev_prod
+  database: rowe_chiropractic_dev
   username: <%= `whoami` %>
 
 test:
