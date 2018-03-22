@@ -9,7 +9,7 @@ RSpec.feature 'As an admin user' do
     visit admin_cms_pages_path
   end
 
-  scenario 'I can manage Cms Pages' do
+  scenario 'I can create CmsPages' do
     click_on 'New Cms Page'
     fill_in 'Title', with: title
     fill_in 'Sub title', with: sub_title
@@ -18,7 +18,7 @@ RSpec.feature 'As an admin user' do
     expect(page).to have_content sub_title
   end
 
-  scenario 'I see Cms Page info' do
+  scenario 'I see CmsPages in the admin area' do
     within "#cms_page_#{cms_page.id}" do
       click_on 'View'
     end
@@ -26,5 +26,13 @@ RSpec.feature 'As an admin user' do
     expect(page).to have_content cms_page.sub_title
     expect(page).to have_css "h1", text: 'Headline'
     expect(page).to have_content "Link #{cms_page.slug}"
+  end
+
+  scenario 'I can preview CmsPages' do
+    visit admin_cms_page_path(cms_page)
+    within '.row-link' do
+      click_on 'View'
+    end
+    expect(page).to have_content cms_page.title
   end
 end
