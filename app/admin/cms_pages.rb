@@ -30,8 +30,11 @@ ActiveAdmin.register CmsPage do
   show title: '' do
     attributes_table_for cms_page do
       row :link do |cms_page|
-        input value: cms_page_path(cms_page)
-        link_to 'View', cms_page_path(cms_page), target: '_blank'
+        div
+          span class: 'cms-page-path' do
+            cms_page_path(cms_page)
+          end
+          link_to 'Preview', cms_page_path(cms_page), target: '_blank'
       end
       row :content do |cms_page|
         render 'cms_pages/cms_page_content'
