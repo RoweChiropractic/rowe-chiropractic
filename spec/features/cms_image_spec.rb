@@ -4,7 +4,7 @@ RSpec.feature 'As a admin' do
   let(:description) { FFaker::HipsterIpsum.paragraph }
 
   before do
-    login user
+    login
     visit admin_cms_images_path
   end
 

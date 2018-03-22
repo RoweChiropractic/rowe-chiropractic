@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.5.0'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -21,6 +22,7 @@ gem 'haml-rails'
 gem 'kaminari'
 gem 'mini_magick'
 gem 'newrelic_rpm', '~> 3.14'
+gem 'paper_trail'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.2.0.rc2'
