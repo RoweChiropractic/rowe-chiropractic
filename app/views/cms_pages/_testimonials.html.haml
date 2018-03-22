@@ -1,0 +1,7 @@
+.container.testimonials
+  - @testimonials.each do |testimonial|
+    .testimonial
+      %h5= testimonial.title
+      =raw testimonial.formatted_body
+      .author= testimonial.author
+
