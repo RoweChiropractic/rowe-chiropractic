@@ -1,0 +1,15 @@
+.testimonial {
+  margin-bottom: $margin;
+
+  p:last-of-type {
+    margin-bottom: 1rem;
+  }
+
+  .author {
+    color: $text-muted;
+    margin-left: $margin;
+    &:before {
+      content: "\2014 \00A0";
+    }
+  }
+}
