@@ -18,14 +18,18 @@ RSpec.feature 'As an admin user' do
     expect(page).to have_content sub_title
   end
 
-  scenario 'I see CmsPages in the admin area' do
+  scenario 'I see CmsPages in the admin area and preview them' do
     within "#cms_page_#{cms_page.id}" do
       click_on 'View'
     end
     expect(page).to have_content cms_page.title
     expect(page).to have_content cms_page.sub_title
     expect(page).to have_css "h1", text: 'Headline'
-    expect(page).to have_content "Link #{cms_page.slug}"
+    within '.row-link' do
+      expect(page).to have_content cms_page_path(cms_page)
+      click_on 'Preview'
+    end
+    expect(page).to have_content cms_page.title
   end
 
   scenario 'I can preview CmsPages' do
