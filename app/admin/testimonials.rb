@@ -15,7 +15,9 @@ ActiveAdmin.register Testimonial do
     column :created_at
     column :updated_at
     column :edited_by do |testimonial|
-      User.find(testimonial.versions.last.whodunnit).full_name
+      unless testimonial.versions.empty?
+        User.find(testimonial.versions.last.whodunnit).full_name
+      end
     end
     actions
   end
