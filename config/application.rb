@@ -21,5 +21,9 @@ module RoweChiropractic
       g.view_specs false
       g.orm :active_record, primary_key_type: :uuid
     end
+
+    config.action_mailer.default_options = {
+      from: Rails.application.credentials.from_mail
+    }
   end
 end

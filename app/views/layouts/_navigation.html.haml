@@ -16,12 +16,16 @@
       %li.nav-item= link_to 'Events', root_path, class: 'nav-link'
 
 
+
+
     .secondary-nav
       %ul.social
         %li.twitter= link_to fa_icon('twitter', class: 'fab'), '#', class: 'nav-link'
         %li.facebook= link_to fa_icon('facebook', class: 'fab'), '#', class: 'nav-link'
         %li.youtube= link_to fa_icon('youtube', class: 'fab'), '#', class: 'nav-link'
         %li.instagram= link_to fa_icon('instagram', class: 'fab'), '#', class: 'nav-link'
+        - if user_signed_in?
+          %li.admin= link_to fa_icon('lock', class: :fas), admin_dashboard_path
 
       %ul.contact
         %li.phone= link_to '(212) 486-8888', 'tel:2124868888'

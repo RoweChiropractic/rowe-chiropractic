@@ -1,5 +1,6 @@
 en:
   auth:
     sign_in: Log In
+    reset_password: 'Reset Password'
   null_cms_page:
     sub_title: <a href="%{link}">Click here</a> to create a page.
