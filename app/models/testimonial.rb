@@ -1,4 +1,6 @@
 class Testimonial < ApplicationRecord
+  include MarkdownParser
+
   has_paper_trail
 
   validates :title, presence: true
