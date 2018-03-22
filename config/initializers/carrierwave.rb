@@ -12,6 +12,6 @@ CarrierWave.configure do |config|
       region:                'us-east-2',
     }
     config.storage = :fog
-    config.fog_directory  = 'rowechiropractic.com'
+    config.fog_directory  = 'rowechiropractic-website'
   end
 end
