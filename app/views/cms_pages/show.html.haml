@@ -3,4 +3,4 @@
     = render 'cms_page_content'
 .row
   .col
-    = render @cms_page.slug
+    = render @cms_page.slug if lookup_context.exists?("cms_pages/_#{@cms_page.slug}")
