@@ -2,7 +2,7 @@ RSpec.feature 'As an admin user' do
   let(:title) { FFaker::CheesyLingo.title }
   let(:body) { FFaker::CheesyLingo.paragraph }
   let(:author) { FFaker::Name.name }
-  let(:featured) { FFaker::Boolean.sample }
+  # let(:featured) { FFaker::Boolean.sample }
 
   before { login }
 
@@ -14,7 +14,7 @@ RSpec.feature 'As an admin user' do
     fill_in 'Title', with: title
     fill_in 'Body', with: body
     fill_in 'Author', with: author
-    check 'Featured?'
+    # check 'Featured?'
     click_on 'Create Testimonial'
     expect(page).to have_content 'Testimonial was successfully created.'
     click_on 'Testimonials'
