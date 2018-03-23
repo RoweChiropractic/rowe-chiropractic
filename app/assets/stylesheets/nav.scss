@@ -44,6 +44,7 @@ nav.navbar {
         &.facebook a { color: $facebook-blue; }
         &.youtube a { color: $youtube-red; }
         &.instagram a { color: $instagram-purple; }
+        &.admin { font-size: 1.1rem; }
         a {
           display: inline;
           padding: 0;

@@ -1,4 +1,6 @@
 Rails.application.configure do
+  config.action_mailer.perform_deliveries = false
+  config.action_mailer.raise_delivery_errors = true
   # config.active_storage.service = :local
   # Settings specified here will take precedence over those in config/application.rb.
 
