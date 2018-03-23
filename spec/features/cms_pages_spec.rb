@@ -31,12 +31,4 @@ RSpec.feature 'As an admin user' do
     end
     expect(page).to have_content cms_page.title
   end
-
-  scenario 'I can preview CmsPages' do
-    visit admin_cms_page_path(cms_page)
-    within '.row-link' do
-      click_on 'View'
-    end
-    expect(page).to have_content cms_page.title
-  end
 end
