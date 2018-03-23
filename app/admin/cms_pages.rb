@@ -11,7 +11,8 @@ ActiveAdmin.register CmsPage do
     [
       :title,
       :sub_title,
-      :body
+      :body,
+      :parent_id
     ]
   end
 
@@ -29,6 +30,7 @@ ActiveAdmin.register CmsPage do
 
   show title: '' do
     attributes_table_for cms_page do
+      row :parent
       row :link do |cms_page|
         div
           span class: 'cms-page-path' do
@@ -44,6 +46,7 @@ ActiveAdmin.register CmsPage do
 
   form do |f|
     f.inputs do
+      f.input :parent
       f.input :title
       f.input :sub_title
       f.input :body, label: false, input_html: { class: [:code, :markdown] }

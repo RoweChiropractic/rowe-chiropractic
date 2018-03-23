@@ -1,4 +1,5 @@
 Capybara::Webkit.configure do |config|
+  config.raise_javascript_errors = true
   # Enable debug mode. Prints a log of everything the driver is doing.
   # config.debug = true
 

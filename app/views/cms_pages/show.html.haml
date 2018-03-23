@@ -1,6 +1,14 @@
 .row
   .col
     = render 'cms_page_content'
-.row
-  .col
-    = render @cms_page.slug if lookup_context.exists?("cms_pages/_#{@cms_page.slug}")
+- if lookup_context.exists?("cms_pages/_#{@cms_page.slug}")
+  .row
+    .col
+      = render @cms_page.slug
+
+- @cms_page.children.each do |child|
+  .container.cms-page{ id: "cms-page-#{child.id}"}
+    %h5.title
+      = child.title
+    %p.sub-title= child.sub_title
+    %p= link_to 'Read more...', cms_page_path(child)
