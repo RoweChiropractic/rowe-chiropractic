@@ -8,6 +8,7 @@ Rails.application.configure do
     :domain         => 'sandboxab76ef2fcb6b42f5b4acc0a8924782d5.mailgun.org',
     :authentication => :plain,
   }
+  config.action_mailer.default_url_options = { host: 'rowe-chiropractic.herokuapp.com' }
   config.require_master_key = true
   # config.active_storage.service = :amazon
 
