@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_03_22_035124) do
+ActiveRecord::Schema.define(version: 2018_03_23_170031) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2018_03_22_035124) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "slug"
+    t.uuid "parent_id"
     t.index ["slug"], name: "index_cms_pages_on_slug"
   end
 

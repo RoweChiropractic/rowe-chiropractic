@@ -1,4 +1,4 @@
-.container.cms-page
+.container.cms-page{ id: "cms-page-#{@cms_page.id}"}
   %h2.title
     = @cms_page.title
     - if user_signed_in?
