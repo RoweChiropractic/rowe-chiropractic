@@ -1,6 +1,6 @@
 module MarkdownParser
   def formatted_body
-    markdown.render body
+    body.present? ? markdown.render(body) : nil
   end
 
   private

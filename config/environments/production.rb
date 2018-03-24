@@ -9,7 +9,6 @@ Rails.application.configure do
     :authentication => :plain,
   }
   config.action_mailer.default_url_options = { host: 'rowe-chiropractic.herokuapp.com' }
-  config.require_master_key = true
   # config.active_storage.service = :amazon
 
   # Settings specified here will take precedence over those in config/application.rb.

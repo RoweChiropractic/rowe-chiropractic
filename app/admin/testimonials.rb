@@ -32,19 +32,21 @@ ActiveAdmin.register Testimonial do
   end
 
   show do
-    attributes_table_for testimonial do
-      row :title
-      row :body do |testimonial|
-        raw testimonial.formatted_body
-      end
-      row :author
-      row :edited_by do |testimonial|
-        unless testimonial.versions.empty?
-          User.find(testimonial.versions.last.whodunnit).full_name
+    panel "Table of Contents" do
+      attributes_table_for testimonial do
+        row :title
+        row :body do |testimonial|
+          raw testimonial.formatted_body
         end
+        row :author
+        row :edited_by do |testimonial|
+          unless testimonial.versions.empty?
+            User.find(testimonial.versions.last.whodunnit).full_name
+          end
+        end
+        row :created_at
+        row :updated_at
       end
-      row :created_at
-      row :updated_at
     end
   end
 end

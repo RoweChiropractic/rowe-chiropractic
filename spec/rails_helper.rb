@@ -8,6 +8,7 @@ require 'rspec/rails'
 
 ActiveRecord::Migration.maintain_test_schema!
 
+require 'capybara/email/rspec'
 require 'capybara/rails'
 require 'shoulda/matchers'
 require 'support/auth_steps'

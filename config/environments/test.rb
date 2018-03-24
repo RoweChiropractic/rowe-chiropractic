@@ -1,5 +1,6 @@
 Rails.application.configure do
-  # config.active_storage.service = :test
+  config.action_mailer.default_url_options = { host: 'example.com' }
+  config.active_job.queue_adapter = :inline
   # Settings specified here will take precedence over those in config/application.rb.
 
   # The test environment is used exclusively to run your application's

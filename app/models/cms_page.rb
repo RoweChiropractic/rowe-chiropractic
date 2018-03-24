@@ -10,4 +10,8 @@ class CmsPage < ApplicationRecord
 
   validates :title, presence: true, uniqueness: true
   validates :slug, presence: true, uniqueness: true
+
+  def partial
+    slug.gsub('-', '_')
+  end
 end
