@@ -1,4 +1,4 @@
-.container
+.container.contact-us
   .row.info
     .col-sm-3
       %address
@@ -43,11 +43,13 @@
             = f.input :preferred_appointment_time, as: :select, collection: %w(Morning Afternoon Evening)
           .col-sm-6
             = f.input :preferred_contact_time, as: :select, collection: %w(Morning Afternoon Evening)
+        .row
           .col-sm-6
             = f.input :preferred_contact_method, as: :select, collection: %w(Phone Email)
-        .row
-          .col-sm
-            = f.submit 'Submit', class: 'btn btn-primary'
+          .col-sm-6
+            .form-group
+              %label.control-label &nbsp;
+              = f.submit 'Submit', class: 'form-control btn btn-secondary'
       .col-sm-6
         .map-responsive
           %iframe{allowfullscreen: "", frameborder: "0", height: "450", src: "https://www.google.com/maps/embed/v1/place?key=#{ENV.fetch('google_api_key')}&q=Rowe+Chiropractic,Manhattan+NY", style: "border:0", width: "600"}
