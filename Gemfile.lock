@@ -135,8 +135,6 @@ GEM
     docile (1.3.0)
     erubi (1.7.1)
     erubis (2.7.0)
-    et-orbi (1.0.9)
-      tzinfo
     excon (0.61.0)
     execjs (2.7.0)
     ffaker (2.8.1)
@@ -337,8 +335,6 @@ GEM
     ruby_parser (3.11.0)
       sexp_processor (~> 4.9)
     rubyzip (1.2.1)
-    rufus-scheduler (3.4.2)
-      et-orbi (~> 1.0)
     safe_yaml (1.0.4)
     sass (3.5.5)
       sass-listen (~> 4.0.0)
@@ -363,9 +359,6 @@ GEM
       connection_pool (~> 2.2, >= 2.2.0)
       rack-protection (>= 1.5.0)
       redis (>= 3.3.5, < 5)
-    sidekiq-cron (0.6.3)
-      rufus-scheduler (>= 3.3.0)
-      sidekiq (>= 4.2.1)
     sidekiq-failures (1.0.0)
       sidekiq (>= 4.0.0)
     simple_form (3.5.1)
@@ -464,7 +457,6 @@ DEPENDENCIES
   selenium-webdriver (~> 2.5)
   shoulda-matchers
   sidekiq
-  sidekiq-cron
   sidekiq-failures
   simple_form
   simplecov
