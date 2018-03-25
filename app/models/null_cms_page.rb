@@ -1,6 +1,13 @@
 class NullCmsPage
   attr_reader :key, :slug, :sub_title, :title
 
+  def children
+    []
+  end
+
+  def id; end
+  def partial; end
+
   def initialize(slug)
     @slug = slug
     @title = slug.titleize

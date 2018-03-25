@@ -4,3 +4,6 @@ en:
     reset_password: 'Reset Password'
   null_cms_page:
     sub_title: <a href="%{link}">Click here</a> to create a page.
+  contact_form:
+    no_preferred_contact_method: Please provide your preferred contact method.
+    success: Thank you, we will get back to you!

@@ -1,12 +1,12 @@
-/.bundle
-/log/*
-/tmp/*
 !/log/.keep
 !/tmp/.keep
-/node_modules
-/yarn-error.log
-.byebug_history
 */**/.DS_Store
+.byebug_history
+/.bundle
+/config/application.yml
+/log/*
+/node_modules
 /public/uploads
-# Ignore master key for decrypting credentials and more.
-/config/master.key
+/tmp/*
+/yarn-error.log
+dump.rdb

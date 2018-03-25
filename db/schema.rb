@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_03_23_170031) do
+ActiveRecord::Schema.define(version: 2018_03_24_183457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -39,6 +39,19 @@ ActiveRecord::Schema.define(version: 2018_03_23_170031) do
     t.string "file"
     t.string "title"
     t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "inquiries", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "phone"
+    t.string "email"
+    t.text "comment"
+    t.string "preferred_appointment_time"
+    t.string "preferred_contact_time"
+    t.string "preferred_contact_method"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

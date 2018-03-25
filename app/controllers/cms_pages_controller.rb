@@ -5,6 +5,8 @@ class CmsPagesController < ApplicationController
     case @cms_page.slug
     when /testimonials/
       @testimonials = Testimonial.all
+    when /contact-us/
+      @inquiry = Inquiry.new
     end
   end
 end

@@ -1,0 +1,8 @@
+inquiry_1:
+  first_name: Homer
+  last_name: Simpson
+  email: homer@thesimpsons.com
+  phone: 123 123 1234
+  preferred_contact_time: Evening
+  preferred_contact_method: Email
+  preferred_appointment_time: Afternoon

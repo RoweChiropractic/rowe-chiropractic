@@ -1,0 +1,17 @@
+%p
+  %strong There has been a new submission from the Contact Us form!
+%p
+  Name:
+  %strong= @inquiry.full_name
+%p
+  Email:
+  %strong= @inquiry.email
+%p
+  Phone:
+  %strong= @inquiry.phone
+%p
+  Goto:
+  = link_to @url, @url
+  to manage this inquiry in the Admin Area.
+%p
+  \- Automated email from RoweChiropractic.com
