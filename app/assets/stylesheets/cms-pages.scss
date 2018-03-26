@@ -1,38 +1,41 @@
 .cms-page {
   padding-bottom: $margin;
-  a { color: $link-color; }
-  h2.title {
-    small {
-      float: right;
-      font-size: 1rem;
+
+  .cms-content {
+    a { color: $link-color; }
+    h2.title {
+      small {
+        float: right;
+        font-size: 1rem;
+      }
     }
-  }
 
-  .sub-title {
-    color: $gray-600;
-    font-style: italic;
-  }
+    .sub-title {
+      color: $gray-600;
+      font-style: italic;
+    }
 
-  p {
-  }
+    img {
+      padding: 3px;
+      border: 1px solid $gray-600;
+      margin: $margin/2;
+    }
 
-  img {
-    padding: 3px;
-    border: 1px solid $gray-600;
-    margin: $margin/2;
-    margin-top: 0;
-  }
+    p:first-of-type img {
+      margin-top: 0;
+    }
 
-  img[src*="#right"] {
-    float: right;
-    margin-right: 0;
-  }
-  img[src*="#left"] {
-    float: left;
-    margin-left: 0;
-  }
+    img[src*="#right"] {
+      float: right;
+      margin-right: 0;
+    }
+    img[src*="#left"] {
+      float: left;
+      margin-left: 0;
+    }
 
-}
-.cms-partial {
-  padding-bottom: $margin;
+  }
+  .cms-partial {
+    padding-bottom: $margin;
+  }
 }
