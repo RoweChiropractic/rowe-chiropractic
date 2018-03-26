@@ -22,13 +22,16 @@
   %body.main
     = render 'layouts/navigation'
     %main{ role: :main }
-      .container.content
-        - if flash
-          .container
+      - if controller.controller_name =~ /home/
+        .home
+          = yield
+      - else
+        .container.content
+          - if flash
             .row
               .col-12
                 = render 'layouts/messages'
-        = yield
+          = yield
     = javascript_include_tag 'fontawesome'
     = render 'layouts/footer'
 
