@@ -1,7 +1,9 @@
 RSpec.feature 'As an admin user' do
-  let(:patient) { patients(:milhouse) }
+  let(:patient) { patients(:barney) }
   let(:first_name) { FFaker::Name.first_name }
   let(:last_name) { FFaker::Name.last_name }
+  let(:condition_1) { conditions(:laziness) }
+  let(:condition_2) { conditions(:drunkenness) }
 
   before do
     login
@@ -13,6 +15,7 @@ RSpec.feature 'As an admin user' do
     within "#patient_#{patient.id}" do
       expect(page).to have_content patient.first_name
       expect(page).to have_content patient.last_name
+      expect(page).to have_content patient.conditions.map(&:name).to_sentence
     end
   end
 
@@ -24,11 +27,12 @@ RSpec.feature 'As an admin user' do
     expect(page).to have_content "Last name* can't be blank"
     fill_in 'First name', with: first_name
     fill_in 'Last name', with: last_name
+    check condition_1.name
+    check condition_2.name
     click_on 'Create Patient'
     expect(page).to have_content "Patient was successfully created."
     expect(page).to have_content "First Name #{first_name}"
     expect(page).to have_content "Last Name #{last_name}"
-    click_on 'Patients'
-    expect(page).to have_content ''
+    expect(page).to have_content [condition_1, condition_2].map(&:name).to_sentence
   end
 end

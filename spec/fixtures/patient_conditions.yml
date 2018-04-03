@@ -1,0 +1,11 @@
+barny_drunk:
+  patient: barney
+  condition: drunkenness
+
+barny_lazy:
+  patient: barney
+  condition: laziness
+
+barny_slow:
+  patient: barney
+  condition: slothful
