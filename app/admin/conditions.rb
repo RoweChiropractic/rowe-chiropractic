@@ -1,4 +1,6 @@
 ActiveAdmin.register Condition do
+  menu parent: 'Case Studies'
+
   permit_params :name, :description
 
   index do

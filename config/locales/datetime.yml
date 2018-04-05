@@ -1,0 +1,4 @@
+en:
+  time:
+    formats:
+      short_with_year: "%l:%M%P %h %d, \'%y"
