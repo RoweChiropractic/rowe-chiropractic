@@ -13,6 +13,9 @@ class Patient < ApplicationRecord
   has_many :xrays
   accepts_nested_attributes_for :xrays, allow_destroy: true, reject_if: :all_blank
   validates_associated :xrays
+  has_many :posture_prints
+  accepts_nested_attributes_for :posture_prints, allow_destroy: true, reject_if: :all_blank
+  validates_associated :posture_prints
 
   def full_name
     "#{first_name} #{last_name}"

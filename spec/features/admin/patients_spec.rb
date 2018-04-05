@@ -90,4 +90,43 @@ RSpec.feature 'As an admin user' do
       expect(page).to have_css("img[src*='#{xray_2_file.split('/').last}']")
     end
   end
+
+  context 'with Posture Prints', :js do
+    let(:posture_print_name) { FFaker::CheesyLingo.title }
+    let(:posture_print_date) { '2001-01-01' }
+    let(:posture_print_file) { 'spec/fixtures/posture_prints/posture_print.jpg' }
+    let(:posture_print_description) { FFaker::CheesyLingo.paragraph }
+    let(:posture_print_2_name) { FFaker::CheesyLingo.title }
+    let(:posture_print_2_date) { '2002-02-02' }
+    let(:posture_print_2_file) { 'spec/fixtures/posture_prints/posture_print-2.jpg' }
+    let(:posture_print_2_description) { FFaker::CheesyLingo.paragraph }
+
+    scenario 'I can manage Patient X-rays', :js do
+      click_on 'New Patient'
+      fill_in_required_patient_data
+      click_on 'Add New X-Ray'
+      within '.has_many_fields:first-of-type' do
+        fill_in 'Name', with: posture_print_name
+        fill_in 'Description', with: posture_print_description
+        attach_file 'File', Rails.root.join(posture_print_file)
+        fill_in 'Date', with: posture_print_date
+      end
+      click_on 'Add New X-Ray'
+      within '.has_many_fields:nth-of-type(2)' do
+        fill_in 'Name', with: posture_print_2_name
+        fill_in 'Description', with: posture_print_2_description
+        attach_file 'File', Rails.root.join(posture_print_2_file)
+        fill_in 'Date', with: posture_print_2_date
+      end
+      click_on 'Create Patient'
+      expect(page).to have_content posture_print_name
+      expect(page).to have_content posture_print_description
+      expect(page).to have_content I18n.l Time.parse(posture_print_date).to_date, format: :short_with_year
+      expect(page).to have_css("img[src*='#{posture_print_file.split('/').last}']")
+      expect(page).to have_content posture_print_2_name
+      expect(page).to have_content posture_print_2_description
+      expect(page).to have_content I18n.l Time.parse(posture_print_2_date).to_date, format: :short_with_year
+      expect(page).to have_css("img[src*='#{posture_print_2_file.split('/').last}']")
+    end
+  end
 end

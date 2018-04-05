@@ -14,6 +14,7 @@ ActiveAdmin.register Patient do
       :diagnosis,
       testimonial_attributes: [:id, :title, :body],
       xrays_attributes: [:id, :date, :description, :file, :file_cache, :name],
+      posture_prints_attributes: [:id, :date, :description, :file, :file_cache, :name],
       condition_ids: []
     ]
   end
@@ -65,6 +66,15 @@ ActiveAdmin.register Patient do
         x.input :description
       end
     end
+    f.inputs do
+      f.has_many :posture_prints do |x|
+        x.input :file, hint: (image_tag(x.object.file.thumb.url) if x.object.file.present?)
+        x.input :file_cache, as: :hidden
+        x.input :name
+        x.input :date, as: :datepicker, datepicker_options: {}
+        x.input :description
+      end
+    end
     f.actions
   end
 
@@ -90,7 +100,7 @@ ActiveAdmin.register Patient do
         column :body
       end
     end
-    panel "X-Rays" do
+    panel 'X-Rays' do
       table_for patient.xrays do
         column :name
         column :date do |xray|
@@ -99,6 +109,18 @@ ActiveAdmin.register Patient do
         column :description
         column :file do |xray|
           image_tag xray.file.thumb.url
+        end
+      end
+    end
+    panel 'Posture Prints' do
+      table_for patient.posture_prints do
+        column :name
+        column :date do |posture_print|
+          I18n.l posture_print.date, format: :short_with_year
+        end
+        column :description
+        column :file do |posture_print|
+          image_tag posture_print.file.thumb.url
         end
       end
     end

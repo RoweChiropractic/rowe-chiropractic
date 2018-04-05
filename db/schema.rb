@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_05_155356) do
+ActiveRecord::Schema.define(version: 2018_04_05_173716) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -80,6 +80,17 @@ ActiveRecord::Schema.define(version: 2018_04_05_155356) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "posture_prints", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.date "date"
+    t.string "file"
+    t.string "name"
+    t.text "description"
+    t.uuid "patient_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["patient_id"], name: "index_posture_prints_on_patient_id"
+  end
+
   create_table "testimonials", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -130,5 +141,6 @@ ActiveRecord::Schema.define(version: 2018_04_05_155356) do
     t.index ["patient_id"], name: "index_xrays_on_patient_id"
   end
 
+  add_foreign_key "posture_prints", "patients"
   add_foreign_key "xrays", "patients"
 end
