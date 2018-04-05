@@ -10,6 +10,9 @@ class Patient < ApplicationRecord
   has_one :testimonial
   accepts_nested_attributes_for :testimonial, allow_destroy: true, reject_if: :all_blank
   validates_associated :testimonial
+  has_many :xrays
+  accepts_nested_attributes_for :xrays, allow_destroy: true, reject_if: :all_blank
+  validates_associated :xrays
 
   def full_name
     "#{first_name} #{last_name}"

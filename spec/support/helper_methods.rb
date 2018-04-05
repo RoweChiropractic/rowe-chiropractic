@@ -21,3 +21,8 @@ def wait_until_minute_changes
   # wait for the reload...
   sleep 1
 end
+
+def fill_in_required_patient_data
+  fill_in 'First name', with: first_name
+  fill_in 'Last name', with: last_name
+end

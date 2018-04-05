@@ -13,6 +13,7 @@ ActiveAdmin.register Patient do
       :last_name,
       :diagnosis,
       testimonial_attributes: [:id, :title, :body],
+      xrays_attributes: [:id, :date, :description, :file, :file_cache, :name],
       condition_ids: []
     ]
   end
@@ -51,10 +52,17 @@ ActiveAdmin.register Patient do
     end
     f.inputs do
       f.has_many :testimonial, class: :has_one do |t|
-        t.semantic_errors *t.object.errors.keys
-        t.semantic_errors
         t.input :title
         t.input :body
+      end
+    end
+    f.inputs do
+      f.has_many :xrays, new_record: 'Add New X-Ray' do |x|
+        x.input :file, hint: (image_tag(x.object.file.thumb.url) if x.object.file.present?)
+        x.input :file_cache, as: :hidden
+        x.input :name
+        x.input :date, as: :datepicker, datepicker_options: {}
+        x.input :description
       end
     end
     f.actions
@@ -80,6 +88,18 @@ ActiveAdmin.register Patient do
       table_for patient.testimonial do
         column :title
         column :body
+      end
+    end
+    panel "X-Rays" do
+      table_for patient.xrays do
+        column :name
+        column :date do |xray|
+          I18n.l xray.date, format: :short_with_year
+        end
+        column :description
+        column :file do |xray|
+          image_tag xray.file.thumb.url
+        end
       end
     end
   end

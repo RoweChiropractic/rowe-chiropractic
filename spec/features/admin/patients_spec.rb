@@ -5,16 +5,13 @@ RSpec.feature 'As an admin user' do
   let(:diagnosis) { FFaker::Lorem.paragraph }
   let(:condition_1) { conditions(:laziness) }
   let(:condition_2) { conditions(:drunkenness) }
-  let(:testimonial_title) { FFaker::CheesyLingo.title }
-  let(:testimonial_body) { FFaker::CheesyLingo.paragraph }
 
   before do
     login
-    visit admin_dashboard_path
+    visit admin_patients_path
   end
 
   scenario 'I can see a list of patients' do
-    click_on 'Patients'
     within "#patient_#{patient.id}" do
       expect(page).to have_content patient.first_name
       expect(page).to have_content patient.last_name
@@ -22,8 +19,7 @@ RSpec.feature 'As an admin user' do
     end
   end
 
-  scenario 'I can manage Patients', :js do
-    visit admin_patients_path
+  scenario 'I can manage Patient details' do
     click_on 'New Patient'
     click_on 'Create Patient'
     expect(page).to have_content "First name* can't be blank"
@@ -33,15 +29,65 @@ RSpec.feature 'As an admin user' do
     fill_in 'Diagnosis', with: diagnosis
     check condition_1.name
     check condition_2.name
-    click_on 'Add New Testimonial'
-    fill_in 'Title', with: testimonial_title
-    fill_in 'Body', with: testimonial_body
     click_on 'Create Patient'
     expect(page).to have_content "Patient was successfully created."
     expect(page).to have_content first_name
     expect(page).to have_content last_name
-    expect(page).to have_content testimonial_title
-    expect(page).to have_content testimonial_body
     expect(page).to have_content [condition_1, condition_2].map(&:name).sort.to_sentence
+  end
+
+  context 'with Testimonials' do
+    let(:testimonial_title) { FFaker::CheesyLingo.title }
+    let(:testimonial_body) { FFaker::CheesyLingo.paragraph }
+
+    scenario 'I can manage Patient Testimonial', :js do
+      click_on 'New Patient'
+      fill_in_required_patient_data
+      click_on 'Add New Testimonial'
+      fill_in 'Title', with: testimonial_title
+      fill_in 'Body', with: testimonial_body
+      click_on 'Create Patient'
+      expect(page).to have_content testimonial_title
+      expect(page).to have_content testimonial_body
+    end
+  end
+
+  context 'with X-Rays', :js do
+    let(:xray_name) { FFaker::CheesyLingo.title }
+    let(:xray_date) { '2001-01-01' }
+    let(:xray_file) { 'spec/fixtures/xrays/xray.jpg' }
+    let(:xray_description) { FFaker::CheesyLingo.paragraph }
+    let(:xray_2_name) { FFaker::CheesyLingo.title }
+    let(:xray_2_date) { '2002-02-02' }
+    let(:xray_2_file) { 'spec/fixtures/xrays/xray-2.jpg' }
+    let(:xray_2_description) { FFaker::CheesyLingo.paragraph }
+
+    scenario 'I can manage Patient X-rays', :js do
+      click_on 'New Patient'
+      fill_in_required_patient_data
+      click_on 'Add New X-Ray'
+      within '.has_many_fields:first-of-type' do
+        fill_in 'Name', with: xray_name
+        fill_in 'Description', with: xray_description
+        attach_file 'File', Rails.root.join(xray_file)
+        fill_in 'Date', with: xray_date
+      end
+      click_on 'Add New X-Ray'
+      within '.has_many_fields:nth-of-type(2)' do
+        fill_in 'Name', with: xray_2_name
+        fill_in 'Description', with: xray_2_description
+        attach_file 'File', Rails.root.join(xray_2_file)
+        fill_in 'Date', with: xray_2_date
+      end
+      click_on 'Create Patient'
+      expect(page).to have_content xray_name
+      expect(page).to have_content xray_description
+      expect(page).to have_content I18n.l Time.parse(xray_date).to_date, format: :short_with_year
+      expect(page).to have_css("img[src*='#{xray_file.split('/').last}']")
+      expect(page).to have_content xray_2_name
+      expect(page).to have_content xray_2_description
+      expect(page).to have_content I18n.l Time.parse(xray_2_date).to_date, format: :short_with_year
+      expect(page).to have_css("img[src*='#{xray_2_file.split('/').last}']")
+    end
   end
 end
