@@ -1,4 +1,6 @@
 ActiveAdmin.register Testimonial do
+  menu parent: 'Case Studies'
+
   config.filters = true
   filter :title_cont, label: 'Title'
   filter :author_cont, label: 'Author'

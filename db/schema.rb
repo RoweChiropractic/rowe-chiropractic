@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_03_24_183457) do
+ActiveRecord::Schema.define(version: 2018_04_05_173716) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -35,6 +35,13 @@ ActiveRecord::Schema.define(version: 2018_03_24_183457) do
     t.index ["slug"], name: "index_cms_pages_on_slug"
   end
 
+  create_table "conditions", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "documents", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "file"
     t.string "title"
@@ -56,6 +63,34 @@ ActiveRecord::Schema.define(version: 2018_03_24_183457) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "patient_conditions", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "patient_id"
+    t.uuid "condition_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["condition_id"], name: "index_patient_conditions_on_condition_id"
+    t.index ["patient_id"], name: "index_patient_conditions_on_patient_id"
+  end
+
+  create_table "patients", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.text "diagnosis"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posture_prints", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.date "date"
+    t.string "file"
+    t.string "name"
+    t.text "description"
+    t.uuid "patient_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["patient_id"], name: "index_posture_prints_on_patient_id"
+  end
+
   create_table "testimonials", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -63,6 +98,7 @@ ActiveRecord::Schema.define(version: 2018_03_24_183457) do
     t.boolean "featured"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.uuid "patient_id"
   end
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -94,4 +130,17 @@ ActiveRecord::Schema.define(version: 2018_03_24_183457) do
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
   end
 
+  create_table "xrays", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.date "date"
+    t.string "file"
+    t.string "name"
+    t.text "description"
+    t.uuid "patient_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["patient_id"], name: "index_xrays_on_patient_id"
+  end
+
+  add_foreign_key "posture_prints", "patients"
+  add_foreign_key "xrays", "patients"
 end

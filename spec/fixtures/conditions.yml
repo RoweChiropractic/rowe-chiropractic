@@ -1,0 +1,9 @@
+drunkenness:
+  name: Drunkenness
+  description: What happens when you go to Moe's.
+laziness:
+  name: Laziness
+  description: Why you don't go to work.
+slothful:
+  name: Slothful
+  description: How you act at work.

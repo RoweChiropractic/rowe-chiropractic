@@ -15,3 +15,7 @@
 .text-success {
   color: $green;
 }
+
+.has_one ~ .has_many_add {
+  display: none !important;
+}
