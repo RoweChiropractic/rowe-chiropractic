@@ -1,0 +1,24 @@
+h1, h2, h3 {
+  color: $headings-color;
+}
+h4, h5, h6 {
+  color: $gray-800;
+}
+
+h3 {
+  font-size: 1.5rem;
+  small {
+    font-size: 0.9  rem;
+  }
+}
+
+h4 {
+  font-size: 1.2rem;
+  color: gray-800;
+  line-height: 1.2rem;
+}
+
+p.read-more {
+  font-size: 0.5rem;
+  line-height: 0.5rem;
+}

@@ -1,9 +1,13 @@
 drunkenness:
   name: Drunkenness
   description: What happens when you go to Moe's.
+  position: 1
 laziness:
   name: Laziness
   description: Why you don't go to work.
+  position: 2
 slothful:
   name: Slothful
   description: How you act at work.
+  position: 3
+

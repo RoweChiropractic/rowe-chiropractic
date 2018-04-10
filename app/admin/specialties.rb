@@ -1,4 +1,4 @@
-ActiveAdmin.register Condition do
+ActiveAdmin.register Specialty do
   menu parent: 'Case Studies'
 
   permit_params :name, :description
@@ -6,6 +6,7 @@ ActiveAdmin.register Condition do
   index do
     column :name
     column :description
+    actions
   end
 
   form do |f|

@@ -11,7 +11,7 @@ ActiveAdmin.register CmsImage do
 
   index do
     column :image do |cms_image|
-      image_tag cms_image.image.thumb.url
+      link_to image_tag(cms_image.image.thumb.url), admin_cms_image_path(cms_image)
     end
     column :title
     actions

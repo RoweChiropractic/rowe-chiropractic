@@ -1,0 +1,14 @@
+.container
+  .row.specialties
+    .col-sm-12
+      %h3
+        Specialties
+        %small= link_to "(#{Specialty.count} more)"
+      .row
+        - @specialties.each do |specialty|
+          .col-sm
+            %h4= specialty.name
+            %p
+              = specialty.description
+            %p.read-more
+              = link_to 'Click for more &raquo;'.html_safe, specialty_path(specialty)

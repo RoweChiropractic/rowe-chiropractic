@@ -1,4 +1,4 @@
-$footer-height: 500px;
+$footer-height: 200px;
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -8,13 +8,6 @@ html {
 body.main {
   /* Margin bottom by footer height */
   margin-bottom: $footer-height;
-}
-.container.content {
-  margin-top: $margin * 3;
-}
-
-.home {
-  margin-top: $margin * 2.3;
 }
 
 .footer {

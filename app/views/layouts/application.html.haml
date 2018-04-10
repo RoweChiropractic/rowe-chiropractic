@@ -20,19 +20,20 @@
       window.FontAwesomeConfig = {searchPseudoElements: true }
 
   %body.main
+    = render 'layouts/header'
     = render 'layouts/navigation'
     %main{ role: :main }
+      - unless flash.empty?
+        .row.flash
+          .col-12
+            = render 'layouts/messages'
       - if controller.controller_name =~ /home/
         .home
           = yield
       - else
-        .container.content
-          - if flash
-            .row
-              .col-12
-                = render 'layouts/messages'
+        .container
           = yield
-    = javascript_include_tag 'fontawesome'
     = render 'layouts/footer'
+    = javascript_include_tag 'fontawesome'
 
 
