@@ -1,14 +1,15 @@
-.container
-  .row.specialties
-    .col-sm-12
-      %h3
-        Specialties
-        %small= link_to "(#{Specialty.count} more)"
-      .row
-        - @specialties.each do |specialty|
-          .col-sm
-            %h4= specialty.name
-            %p
-              = specialty.description
-            %p.read-more
-              = link_to 'Click for more &raquo;'.html_safe, specialty_path(specialty)
+- unless @specialties.empty?
+  .container.featured-specialties
+    .row
+      .col-sm-12
+        %h3
+          Specialties
+          %small= link_to "(#{Specialty.count} more)"
+        .row
+          - @specialties.each do |specialty|
+            .col-sm-3
+              %h4= specialty.title
+              %p
+                = specialty.teaser
+              %p.read-more
+                = link_to 'Click for more &raquo;'.html_safe, specialty_path(specialty)

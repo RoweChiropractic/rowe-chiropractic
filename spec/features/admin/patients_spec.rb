@@ -15,7 +15,7 @@ RSpec.feature 'As an admin user' do
     within "#patient_#{patient.id}" do
       expect(page).to have_content patient.first_name
       expect(page).to have_content patient.last_name
-      expect(page).to have_content patient.specialties.map(&:name).sort.to_sentence
+      expect(page).to have_content patient.specialties.map(&:title).sort.to_sentence
     end
   end
 
@@ -27,13 +27,13 @@ RSpec.feature 'As an admin user' do
     fill_in 'First name', with: first_name
     fill_in 'Last name', with: last_name
     fill_in 'Diagnosis', with: diagnosis
-    check specialty_1.name
-    check specialty_2.name
+    check specialty_1.title
+    check specialty_2.title
     click_on 'Create Patient'
     expect(page).to have_content "Patient was successfully created."
     expect(page).to have_content first_name
     expect(page).to have_content last_name
-    expect(page).to have_content [specialty_1, specialty_2].map(&:name).sort.to_sentence
+    expect(page).to have_content [specialty_1, specialty_2].map(&:title).sort.to_sentence
   end
 
   context 'with Testimonials' do
