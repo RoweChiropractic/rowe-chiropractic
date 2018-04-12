@@ -31,7 +31,7 @@ ActiveAdmin.register Patient do
     column :first_name
     column :last_name
     column :specialties do |patient|
-      patient.specialties.map(&:name).to_sentence
+      patient.specialties.map(&:title).to_sentence
     end
     column :created_at
     column :updated_at
@@ -84,7 +84,7 @@ ActiveAdmin.register Patient do
         row :first_name
         row :last_name
         row :specialties do |patient|
-          patient.specialties.map(&:name).to_sentence
+          patient.specialties.map(&:title).to_sentence
         end
         row :diagnosis
         row :created_at

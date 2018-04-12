@@ -1,0 +1,6 @@
+.container.testimonials
+  - @specialties.each do |specialty|
+    .specialty
+      %h5= specialty.title
+      =raw specialty.formatted_body
+

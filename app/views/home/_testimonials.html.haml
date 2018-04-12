@@ -1,9 +1,10 @@
-.container.featured-testimonials
-  .row
-    .col-sm
-      %h3
-        What our patients are saying
-        %small= link_to "(#{Testimonial.count} more)"
+- unless @testimonials.empty?
+  .container.featured-testimonials
+    .row
+      .col-sm
+        %h3
+          What our patients are saying
+          %small= link_to "(#{Testimonial.count} more)"
 
-  .row
-    = render @testimonials
+    .row
+      = render @testimonials
