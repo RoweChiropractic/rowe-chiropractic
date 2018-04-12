@@ -3,8 +3,8 @@ RSpec.feature 'As an admin user' do
   let(:first_name) { FFaker::Name.first_name }
   let(:last_name) { FFaker::Name.last_name }
   let(:diagnosis) { FFaker::Lorem.paragraph }
-  let(:condition_1) { conditions(:laziness) }
-  let(:condition_2) { conditions(:drunkenness) }
+  let(:specialty_1) { specialties(:laziness) }
+  let(:specialty_2) { specialties(:drunkenness) }
 
   before do
     login
@@ -15,7 +15,7 @@ RSpec.feature 'As an admin user' do
     within "#patient_#{patient.id}" do
       expect(page).to have_content patient.first_name
       expect(page).to have_content patient.last_name
-      expect(page).to have_content patient.conditions.map(&:name).sort.to_sentence
+      expect(page).to have_content patient.specialties.map(&:name).sort.to_sentence
     end
   end
 
@@ -27,13 +27,13 @@ RSpec.feature 'As an admin user' do
     fill_in 'First name', with: first_name
     fill_in 'Last name', with: last_name
     fill_in 'Diagnosis', with: diagnosis
-    check condition_1.name
-    check condition_2.name
+    check specialty_1.name
+    check specialty_2.name
     click_on 'Create Patient'
     expect(page).to have_content "Patient was successfully created."
     expect(page).to have_content first_name
     expect(page).to have_content last_name
-    expect(page).to have_content [condition_1, condition_2].map(&:name).sort.to_sentence
+    expect(page).to have_content [specialty_1, specialty_2].map(&:name).sort.to_sentence
   end
 
   context 'with Testimonials' do

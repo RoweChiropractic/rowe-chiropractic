@@ -1,0 +1,16 @@
+.row.specialties {
+  padding-bottom: $margin;
+
+  h3 {
+    margin-bottom: $margin/4;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  svg {
+    font-size: 1.5rem;
+    color: $green !important;
+  }
+}

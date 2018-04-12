@@ -1,4 +1,5 @@
 .footer {
+  font-size: 0.8rem;
   padding: $margin;
   color: $gray-400;
 
@@ -7,12 +8,12 @@
     padding-bottom: 0.5rem;
     margin-bottom: 0.5rem;
   }
-  .copy {
-    color: $gray-600;
+  .row.content {
+    margin-bottom: $margin/2;
   }
 
-  .row.content {
-    margin-bottom: $margin;
+  .row.copy {
+    color: $gray-600;
   }
 
   ul.hours {

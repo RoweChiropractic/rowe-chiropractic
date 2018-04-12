@@ -4,9 +4,9 @@ class Patient < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
 
-  has_many :patient_conditions
-  has_many :conditions, through: :patient_conditions
-  accepts_nested_attributes_for :conditions
+  has_many :patient_specialties
+  has_many :specialties, through: :patient_specialties
+  accepts_nested_attributes_for :specialties
   has_one :testimonial
   accepts_nested_attributes_for :testimonial, allow_destroy: true, reject_if: :all_blank
   validates_associated :testimonial

@@ -1,7 +1,14 @@
-= render 'facebook_page_embed'
-= render 'image_carousel'
-.container
-  = render 'patient_special'
-  = render 'splash-nav'
-  = render 'conditions_treated'
-  = render 'quote_carousel'
+.row.header
+  .col-sm-12
+    .header-content
+      .container
+        .row
+          .col-sm-9.intro
+            = image_tag 'splash/rowe.png', class: 'dr-rowe'
+            %h2 A sentence or two about what makes us special and how chiropractic care can help.
+            %h3 A sentence or two about what makes us special and how chiropractic care can help.
+          .col-sm-3.contact-form
+            = render 'shared/contact_form'
+= render 'meet_the_team'
+= render 'testimonials'
+= render 'specialties'

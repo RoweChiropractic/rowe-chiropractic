@@ -1,8 +1,15 @@
 nav.navbar {
-  border-top: 5px solid $brand-primary;
-
+  background-color: #e5e5e5;
   a {
     text-decoration: none;
+    text-transform: uppercase;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+    &:last-of-type {
+      padding-right: 0;
+    }
   }
   .navbar-brand {
     color: $brand-primary  !important;
@@ -13,43 +20,6 @@ nav.navbar {
     img {
       height: 50px;
       width: 50px;
-    }
-  }
-
-  .secondary-nav {
-    ul.social, ul.contact {
-      text-align: right;
-      margin: 0;
-      margin-bottom: 0.4rem;
-      li {
-        list-style: none;
-        display: inline;
-        margin-right: 0.5rem;
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-    }
-
-    ul.contact {
-      font-size: 0.85rem;
-      li.phone a {
-        color: $gray-600;
-      }
-    }
-    ul.social {
-      font-size: 1.3rem;
-      li {
-        &.twitter a { color: $twitter-blue; }
-        &.facebook a { color: $facebook-blue; }
-        &.youtube a { color: $youtube-red; }
-        &.instagram a { color: $instagram-purple; }
-        &.admin { font-size: 1.1rem; }
-        a {
-          display: inline;
-          padding: 0;
-        }
-      }
     }
   }
 }

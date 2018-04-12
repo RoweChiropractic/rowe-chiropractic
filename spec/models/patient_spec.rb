@@ -2,7 +2,7 @@ RSpec.describe Patient do
   let(:patient) { described_class.new }
   it { is_expected.to validate_presence_of :first_name }
   it { is_expected.to validate_presence_of :last_name }
-  it { is_expected.to have_many(:conditions).through(:patient_conditions) }
+  it { is_expected.to have_many(:specialties).through(:patient_specialties) }
   it { is_expected.to have_one(:testimonial) }
 
   describe '#full_name' do

@@ -1,0 +1,33 @@
+%nav.navbar.navbar-expand-lg.fixed-top.navbar-light.bg-light
+  %a.navbar-brand{ href: root_path }
+    = image_tag 'rowe-chiropractic-logo-round.png'
+    %span Rowe Chiropractic
+  %button.navbar-toggler{"aria-controls" => "main-nav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#main-nav", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #main-nav.collapse.navbar-collapse
+    %ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+      / %li.nav-item.dropdown
+      /   = link_to 'New Patients', '#', class: 'nav-link dropdown-toggle', data: { toggle: :dropdown }
+      /   .dropdown-menu
+      /     = link_to 'Sub-1', root_path, class: 'dropdown-item'
+      %li.nav-item= link_to 'About', root_path, class: 'nav-link'
+      %li.nav-item= link_to 'Specialties', root_path, class: 'nav-link'
+      %li.nav-item= link_to 'Services', root_path, class: 'nav-link'
+      %li.nav-item= link_to 'Events', root_path, class: 'nav-link'
+
+
+
+
+    .secondary-nav
+      %ul.social
+        %li.twitter= link_to fa_icon('twitter', class: 'fab'), '#', class: 'nav-link'
+        %li.facebook= link_to fa_icon('facebook', class: 'fab'), '#', class: 'nav-link'
+        %li.youtube= link_to fa_icon('youtube', class: 'fab'), '#', class: 'nav-link'
+        %li.instagram= link_to fa_icon('instagram', class: 'fab'), '#', class: 'nav-link'
+        - if user_signed_in?
+          %li.admin= link_to fa_icon('lock', class: :fas), admin_dashboard_path
+
+      %ul.contact
+        %li.phone= link_to '(212) 486-8888', 'tel:2124868888'
+        %li.email= mail_to 'info@rowechiropractic.com', 'info@rowechiropractic.com', encode: :javascript
+

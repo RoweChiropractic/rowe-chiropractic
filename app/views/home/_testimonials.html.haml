@@ -1,0 +1,9 @@
+.container.featured-testimonials
+  .row
+    .col-sm
+      %h3
+        What our patients are saying
+        %small= link_to "(#{Testimonial.count} more)"
+
+  .row
+    = render @testimonials

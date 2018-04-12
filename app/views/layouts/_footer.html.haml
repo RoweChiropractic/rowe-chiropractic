@@ -1,47 +1,30 @@
 %footer.footer.bg-dark
   .container
     .row.content
-      .col-sm-3
-        %h6 What do you think of when you hear the word Chiropractor?
-        %iframe{height: "120px", src: "https://player.vimeo.com/video/100711016?", width: "204px"}
-      .col-sm-3
-        %h6 Our Facebook Page
-        .fb-page{ data: { 'hide-cover' => false, href: 'https://www.facebook.com/RoweChiropracticOffices/', 'show-facepile' => false, width: '200', 'adapt-container-width' => true, 'small-header' => true } }
-      .col-sm-3
+      .col-sm
+        = link_to image_tag('https://www.opencare.com/images/badges/patients-choice-winner-2016.png'), 'https://www.opencare.com/chiropractors/new-york-ny/#tc24630637381', target: '_blank'
+
+      .col-sm.text-center
         %address
-          %h6 Rowe Chiropractic Offices
+          %strong Rowe Chiropractic Offices
+          %br
           316 E. 59th St.
           %br
           New York, NY 10022
           %br
           %abbr{ title: :Phone } P:
           = link_to '(212) 486-8888', 'tel:2124868888', target: '_blank'
+          %br
           = mail_to 'info@rowechiropractic.com', 'info@rowechiropractic.com', encode: :javascript
-
-      .col-sm-3
-        %h6 Hours
+      .col-sm.text-right
         %ul.hours
           %li Monday  8:00AM - 6:45PM
           %li Tuesday 8:00AM - 6:45PM
           %li Wednesday 8:00AM - 6:45PM
           %li Thursday  8:00AM - 6:45PM
           %li Friday  8:00AM - 9:30AM
-
-    .row.content
-      .col-sm-3
-        %h6 Why am I a chiropractor?
-        %small
-          %p I have been asked this question throughout my entire career, and I always seemed to have an extremely thorough response:
-          = link_to 'Read more...', '#'
-      .col-sm-3
-        %h6 Patient's Choice Award
-        = link_to image_tag('https://www.opencare.com/images/badges/patients-choice-winner-2016.png'), 'https://www.opencare.com/chiropractors/new-york-ny/#tc24630637381', target: '_blank'
-
-    .row
-      .col-sm
-        %small
-          &copy;
-          = Date.today.year
-          Rowe Chiropractic Offices. All rights reserved.
-          .float-right
-            = link_to fa_icon('lock', class: :fas), admin_dashboard_path
+    .row.copy
+      .col-sm.text-center
+        &copy;
+        = Date.today.year
+        Rowe Chiropractic Offices. All rights reserved.

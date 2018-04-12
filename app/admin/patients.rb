@@ -4,7 +4,7 @@ ActiveAdmin.register Patient do
   config.filters = true
   filter :first_name_cont, label: 'First Name'
   filter :last_name_cont, label: 'Last Name'
-  filter :conditions
+  filter :specialties
   filter :testimonial_id_not_null, label: 'Has testimonial', as: :boolean
 
   permit_params do
@@ -13,9 +13,9 @@ ActiveAdmin.register Patient do
       :last_name,
       :diagnosis,
       testimonial_attributes: [:id, :title, :body],
-      xrays_attributes: [:id, :date, :description, :file, :file_cache, :name],
+      xrays_attributes: [:id, :date, :description, :file, :file_cache, :name, :position, :_destroy],
       posture_prints_attributes: [:id, :date, :description, :file, :file_cache, :name],
-      condition_ids: []
+      specialty_ids: []
     ]
   end
 
@@ -30,8 +30,8 @@ ActiveAdmin.register Patient do
   index do
     column :first_name
     column :last_name
-    column :conditions do |patient|
-      patient.conditions.map(&:name).to_sentence
+    column :specialties do |patient|
+      patient.specialties.map(&:name).to_sentence
     end
     column :created_at
     column :updated_at
@@ -49,7 +49,7 @@ ActiveAdmin.register Patient do
       f.input :diagnosis
     end
     f.inputs do
-      f.input :conditions, as: :check_boxes, collection: Condition.all, hidden_fields: false
+      f.input :specialties, as: :check_boxes, collection: Specialty.all, hidden_fields: false
     end
     f.inputs do
       f.has_many :testimonial, class: :has_one do |t|
@@ -58,7 +58,7 @@ ActiveAdmin.register Patient do
       end
     end
     f.inputs do
-      f.has_many :xrays, new_record: 'Add New X-Ray' do |x|
+      f.has_many :xrays, sortable: :position, sortable_start: 1, new_record: 'Add New X-Ray', allow_destroy: true do |x|
         x.input :file, hint: (image_tag(x.object.file.thumb.url) if x.object.file.present?)
         x.input :file_cache, as: :hidden
         x.input :name
@@ -83,8 +83,8 @@ ActiveAdmin.register Patient do
       attributes_table_for patient do
         row :first_name
         row :last_name
-        row :conditions do |patient|
-          patient.conditions.map(&:name).to_sentence
+        row :specialties do |patient|
+          patient.specialties.map(&:name).to_sentence
         end
         row :diagnosis
         row :created_at

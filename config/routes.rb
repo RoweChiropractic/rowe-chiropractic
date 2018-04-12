@@ -11,4 +11,5 @@ Rails.application.routes.draw do
 
   resources :cms_pages, only: :show, path: :pages
   resources :inquiries
+  resources :specialties
 end

@@ -9,4 +9,6 @@ class Testimonial < ApplicationRecord
   validates :body, presence: true
   validates :author, presence: true, if: Proc.new { |testimonial| testimonial.patient.nil? }
   validates :patient, presence: true, if: Proc.new { |testimonial| testimonial.author.blank? }
+
+  scope :featured, -> { where featured: true }
 end
