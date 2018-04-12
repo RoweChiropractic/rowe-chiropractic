@@ -4,7 +4,7 @@
       .col-sm-12
         %h3
           Specialties
-          %small= link_to "(#{Specialty.count} more)"
+          %small= link_to "(#{Specialty.count} more)", '/pages/specialties'
         .row
           - @specialties.each do |specialty|
             .col-sm-3

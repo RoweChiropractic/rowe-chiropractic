@@ -4,7 +4,7 @@
       .col-sm
         %h3
           What our patients are saying
-          %small= link_to "(#{Testimonial.count} more)"
+          %small= link_to "(#{Testimonial.count} more)", '/pages/testimonials'
 
     .row
       = render @testimonials
