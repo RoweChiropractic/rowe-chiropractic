@@ -1,14 +1,22 @@
 h1, h2, h3 {
   color: $headings-color;
 }
+
 h4, h5, h6 {
   color: $gray-800;
+}
+
+h2.page-header {
+  small.edit-link {
+    float: right;
+    font-size: 1rem;
+  }
 }
 
 h3 {
   font-size: 1.5rem;
   small {
-    font-size: 0.9  rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -20,4 +28,8 @@ h4 {
 
 p.read-more {
   font-size: 0.8rem;
+}
+
+blockquote p {
+  font-size: 1rem;
 }

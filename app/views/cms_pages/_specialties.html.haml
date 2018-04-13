@@ -1,6 +1,5 @@
-.container.testimonials
-  - @specialties.each do |specialty|
-    .specialty
-      %h5= specialty.title
-      =raw specialty.formatted_body
-
+.container.specialties
+  %ul.list-inline
+    - @specialties.each do |specialty|
+      %li.list-inline-item= link_to specialty.title, anchor: specialty.id
+  = render @specialties

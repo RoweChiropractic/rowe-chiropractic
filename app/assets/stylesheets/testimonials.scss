@@ -1,21 +1,6 @@
-.testimonial {
-  margin-bottom: $margin;
-
-  p:last-of-type {
-    margin-bottom: 1rem;
-  }
-
-  .author {
-    color: $text-muted;
-    margin-left: $margin;
-    &:before {
-      content: "\2014 \00A0";
-    }
-  }
-}
-
-.featured-testimonials {
-  p {
-    font-size: 0.9rem;
+.testimonials {
+  .testimonial {
+    padding-top: $margin/2;
+    margin-bottom: $margin/2;
   }
 }

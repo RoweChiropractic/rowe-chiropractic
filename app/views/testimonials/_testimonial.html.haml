@@ -1,10 +1,9 @@
-.col-sm-3
-  .testimonial
-    %h4= testimonial.title
-    %blockquote.blockquote
-      %p<>
-        = "\"#{testimonial.teaser}\""
-      %footer.blockquote-footer
-        = testimonial.author
-      %p.mt-3.read-more
-        = link_to 'Click for more &raquo;'.html_safe, cms_page_path('testimonials')
+%a.anchor{ name: testimonial.id, href: '#' }
+.testimonial{ id: "testimonial-#{testimonial.id}" }
+  %h4
+    = testimonial.title
+    %small.ml-3= link_to fa_icon('arrow-alt-to-top', class: :fa), '/pages/testimonials'
+  %blockquote.blockquote
+    =raw testimonial.formatted_body
+    %footer.blockquote-footer= testimonial.author
+

@@ -7,4 +7,4 @@
           %small= link_to "(#{Testimonial.count} more)", '/pages/testimonials'
 
     .row
-      = render @testimonials
+      = render partial: "testimonials/featured_testimonial", collection: @testimonials

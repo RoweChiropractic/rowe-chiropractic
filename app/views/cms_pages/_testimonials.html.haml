@@ -1,7 +1,6 @@
 .container.testimonials
-  - @testimonials.each do |testimonial|
-    .testimonial
-      %h5= testimonial.title
-      =raw testimonial.formatted_body
-      .author= testimonial.author
+  %ul.list-inline
+    - @testimonials.each do |testimonial|
+      %li.list-inline-item= link_to testimonial.title, anchor: testimonial.id
 
+  = render @testimonials

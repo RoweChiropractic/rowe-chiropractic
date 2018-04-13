@@ -1,14 +1,16 @@
 nav.navbar {
-  background-color: #e5e5e5;
+  padding: 0;
+  background-color: $nav-bg;
+  border-top: 1px solid $headings-color;
+  border-bottom: 1px solid $text-muted;
+
   a {
     text-decoration: none;
     text-transform: uppercase;
 
-    &:first-of-type {
-      padding-left: 0;
-    }
-    &:last-of-type {
-      padding-right: 0;
+    &.active {
+      color: white;
+      background-color: $link-color;
     }
   }
   .navbar-brand {

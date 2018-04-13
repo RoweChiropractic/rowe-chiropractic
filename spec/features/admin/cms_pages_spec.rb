@@ -53,7 +53,7 @@ RSpec.feature 'As an admin user' do
       within_window new_window do
         expect(page).to have_content sub_title
         within "#cms-page-#{cms_page.id}" do
-          click_on "Read more..."
+          click_on "Click for more »"
         end
         expect(page).to have_content cms_page.body
       end

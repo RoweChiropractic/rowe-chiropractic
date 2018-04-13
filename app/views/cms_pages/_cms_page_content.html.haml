@@ -1,11 +1,8 @@
 .container.cms-page{ id: "cms-page-#{@cms_page.id}"}
-  %h2.title
+  %h2.page-header
     = @cms_page.title
     - if user_signed_in?
-      - if @cms_page.is_a? NullCmsPage
-        %small= link_to(fa_icon('edit'), new_admin_cms_page_path('cms_page[title]' => @cms_page.title))
-      - else
-        %small= link_to(fa_icon('edit'), edit_admin_cms_page_path(@cms_page))
+      %small.edit-link= link_to fa_icon('edit', class: :fa), @edit_path
   - if @cms_page.sub_title
     %p.sub-title= @cms_page.sub_title
   .cms-content

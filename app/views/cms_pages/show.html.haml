@@ -8,7 +8,8 @@
 
 - @cms_page.children.each do |child|
   .container.cms-page{ id: "cms-page-#{child.id}"}
-    %h5.title
+    %h4.title
       = child.title
     %p.sub-title= child.sub_title
-    %p= link_to 'Read more...', cms_page_path(child)
+    %p.read-more= link_to 'Click for more &raquo;'.html_safe, cms_page_path(child)
+

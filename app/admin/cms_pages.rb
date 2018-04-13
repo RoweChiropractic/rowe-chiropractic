@@ -1,5 +1,7 @@
 ActiveAdmin.register CmsPage do
-  config.filters = false
+  config.filters = true
+  filter :title_cont, label: 'Title'
+  filter :parent_title_cont, label: 'Parent Title'
 
   controller do
     def find_resource
@@ -12,15 +14,16 @@ ActiveAdmin.register CmsPage do
       :title,
       :sub_title,
       :body,
-      :parent_id
+      :parent_id,
+      children_attributes: [:position, :id]
     ]
   end
 
   index do
-    column :title
-    column 'Parent Page', :parent
-    column :created_at
-    column :updated_at
+    column :title, sortable: true
+    column 'Parent Page', :parent, sortable: true
+    column :created_at, sortable: true
+    column :updated_at, sortable: true
     column :edited_by do |testimonial|
       User.find(testimonial.versions.last.whodunnit).full_name rescue 'N/A'
     end
@@ -40,6 +43,13 @@ ActiveAdmin.register CmsPage do
       row :content do |cms_page|
         render 'cms_pages/cms_page_content'
       end
+      panel 'Child Pages' do
+        table_for cms_page.children, title: 'Child Pages' do
+          column :title do |child|
+            link_to child.title, edit_admin_cms_page_path(child)
+          end
+        end
+      end
     end
   end
 
@@ -49,6 +59,11 @@ ActiveAdmin.register CmsPage do
       f.input :title
       f.input :sub_title
       f.input :body, label: false, input_html: { class: [:code, :markdown] }
+      f.inputs 'Child Pages' do
+        f.has_many :children, heading: nil, sortable: :position do |child|
+          child.input :title
+        end
+      end
     end
     f.actions
   end
