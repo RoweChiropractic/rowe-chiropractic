@@ -1,0 +1,7 @@
+%a.anchor{ name: specialty.id, href: '#' }
+.specialty{ id: "specialty-#{specialty.id}"}
+  %h4
+    = specialty.title
+    %small.ml-3= link_to fa_icon('arrow-alt-to-top', class: :fa), '/pages/specialties'
+  =raw specialty.formatted_body
+

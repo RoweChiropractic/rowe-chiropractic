@@ -1,4 +1,4 @@
-$footer-height: 200px;
+$footer-height: 260px;
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -10,6 +10,9 @@ body.main {
   margin-bottom: $footer-height;
 }
 
+.content {
+  padding-bottom: $margin;
+}
 .footer {
   position: absolute;
   bottom: 0;

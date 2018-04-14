@@ -15,7 +15,7 @@
               %li.list-inline-item.youtube= link_to fa_icon('youtube', class: 'fab'), '#', class: 'nav-link'
               %li.list-inline-item.instagram= link_to fa_icon('instagram', class: 'fab'), '#', class: 'nav-link'
               - if user_signed_in?
-                %li.list-inline-item.admin= link_to fa_icon('lock', class: :fas), admin_dashboard_path
+                = link_to fa_icon('sign-in-alt', class: :fa), admin_dashboard_path
 
           %li.email_phone
             = link_to '(212) 486-8888', 'tel:2124868888', class: :phone

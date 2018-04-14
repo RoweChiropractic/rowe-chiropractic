@@ -4,9 +4,12 @@
       %span.navbar-toggler-icon
     #main-nav.collapse.navbar-collapse
       .collapse.navbar-collapse.d-flex.justify-content-between
+        = active_link_to 'Home', '/', active: :exclusive, class: 'nav-link'
         = active_link_to 'About Us', '/pages/about-us', class: 'nav-link'
         = active_link_to 'Meet The Doctors', '/pages/meet-the-doctors', class: 'nav-link'
         = active_link_to 'Specialties', '/pages/specialties', class: 'nav-link'
-        = active_link_to 'Contact & Directions', root_path, class: 'nav-link'
+        = active_link_to 'Testimonials', '/pages/testimonials', class: 'nav-link'
+        = active_link_to 'Contact & Directions', '/pages/contact-us', class: 'nav-link'
+        = active_link_to 'Make an appointment', '/pages/foo', class: 'nav-link'
 
 

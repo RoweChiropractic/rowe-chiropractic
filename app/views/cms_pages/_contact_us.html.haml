@@ -1,56 +1,35 @@
 .container.contact-us
-  .row.info
-    .col-sm-3
-      %address
-        %h5 Rowe Chiropractic Offices
-        316 E. 59th St.
-        %br
-        New York, NY 10022
-        %br
-        %abbr{ title: 'Phone' } P:
-        212-486-8888
-        %br
-        %abbr{ title: 'Email' } E:
-        info@rowechiropractic.com
-    .col-sm-3
-      %h5 Hours
-      %ul.hours
-        %li Monday 8:00AM - 6:45PM
-        %li Tuesday 8:00AM - 6:45PM
-        %li Wednesday 8:00AM - 6:45PM
-        %li Thursday 8:00AM - 6:45PM
-        %li Friday 8:00AM - 9:30AM
-  = simple_form_for @inquiry do |f|
-    - if @inquiry.errors.present?
-      .row
+  .row
+    .col-sm-6
+      .row.info
         .col-sm-6
-          .alert.alert-danger
-            = f.error :base
+          %address
+            %h5 Rowe Chiropractic Offices
+            316 E. 59th St.
+            %br
+            New York, NY 10022
+            %br
+            %abbr{ title: 'Phone' } P:
+            = link_to '(212) 486-8888', 'tel:2124868888', class: :phone
+            %br
+            %abbr{ title: 'Email' } E:
+            = mail_to 'info@rowechiropractic.com', 'info@rowechiropractic.com', encode: :javascript
+        .col-sm-6
+          %h5 Hours
+          %ul.hours
+            %li Monday 8:00AM - 6:45PM
+            %li Tuesday 8:00AM - 6:45PM
+            %li Wednesday 8:00AM - 6:45PM
+            %li Thursday 8:00AM - 6:45PM
+            %li Friday 8:00AM - 9:30AM
+
+    .col-sm-6
+      .map-responsive
+        %iframe{allowfullscreen: "", frameborder: "0", height: "450", src: "https://www.google.com/maps/embed/v1/place?key=#{ENV.fetch('google_api_key')}&q=Rowe+Chiropractic,Manhattan+NY", style: "border:0", width: "600"}
+
+
     .row
-      .col-sm-6
-        .row
-          .col-sm-6
-            = f.input :first_name
-            = f.input :email
-          .col-sm-6
-            = f.input :last_name
-            = f.input :phone
-        .row
-          .col-sm
-            = f.input :comment, as: :text
-        .row
-          .col-sm-6
-            = f.input :preferred_appointment_time, as: :select, collection: %w(Morning Afternoon Evening)
-          .col-sm-6
-            = f.input :preferred_contact_time, as: :select, collection: %w(Morning Afternoon Evening)
-        .row
-          .col-sm-6
-            = f.input :preferred_contact_method, as: :select, collection: %w(Phone Email)
-          .col-sm-6
-            .form-group
-              %label.control-label &nbsp;
-              = f.submit 'Submit', class: 'form-control btn btn-secondary'
-      .col-sm-6
-        .map-responsive
-          %iframe{allowfullscreen: "", frameborder: "0", height: "450", src: "https://www.google.com/maps/embed/v1/place?key=#{ENV.fetch('google_api_key')}&q=Rowe+Chiropractic,Manhattan+NY", style: "border:0", width: "600"}
+    .col-sm-6
+      = render 'shared/contact_form'
+    .col-sm-6
 
