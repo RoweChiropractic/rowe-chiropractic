@@ -1,4 +1,4 @@
-$footer-height: 260px;
+$footer-height: 300px;
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -17,6 +17,7 @@ body.main {
   position: absolute;
   bottom: 0;
   width: 100%;
+  // line-height: $footer-height;
   /* Set the fixed height of the footer here */
   height: $footer-height;
 }

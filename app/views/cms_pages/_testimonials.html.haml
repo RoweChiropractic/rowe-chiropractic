@@ -1,4 +1,7 @@
-.container.testimonials
+.row
+  .col
+    = render 'cms_pages/cms_page_content'
+.testimonials
   %ul.list-inline
     - @testimonials.each do |testimonial|
       %li.list-inline-item= link_to testimonial.title, anchor: testimonial.id

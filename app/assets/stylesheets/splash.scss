@@ -24,7 +24,9 @@
 
         img {
           height: 250px;
-          float: left;
+          @media (min-width: 768px) {
+            float: left;
+          }
           margin-right: $margin;
           border: 1px solid $gray-600;
         }

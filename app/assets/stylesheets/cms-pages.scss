@@ -19,20 +19,26 @@
     img {
       padding: 3px;
       border: 1px solid $gray-600;
-      margin: $margin/2;
-      margin-top: 0;
     }
 
-    img[src*="#right"] {
-      float: right;
-      margin-right: 0;
+    @media (min-width: 768px) {
+      img {
+        padding: 3px;
+        border: 1px solid $gray-600;
+        margin: $margin/2;
+        margin-top: 0;
+      }
+      img[src*="#right"] {
+        float: right;
+        margin-right: 0;
+      }
+      img[src*="#left"] {
+        float: left;
+        margin-left: 0;
+      }
     }
-    img[src*="#left"] {
-      float: left;
-      margin-left: 0;
-    }
-
   }
+
   .cms-partial {
     padding-bottom: $margin;
   }

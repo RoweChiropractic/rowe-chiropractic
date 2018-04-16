@@ -1,11 +1,12 @@
 .contact-form
-  %h5 Schedule an appointment...
+  - if show_title
+    %h5 Schedule an appointment...
   = simple_form_for @inquiry do |f|
     - if @inquiry.errors.present?
       .alert.alert-danger
         = f.error :base
-    = f.input :name, label: false, placeholder: 'Name'
-    = f.input :phone, label: false, placeholder: 'Phone'
-    = f.input :email, label: false, placeholder: 'Email'
-    = f.input :comment, label: false, placeholder: 'Comments'
+    = f.input :name, label: false, placeholder: 'Name...'
+    = f.input :phone, label: false, placeholder: 'Phone...'
+    = f.input :email, label: false, placeholder: 'Email...'
+    = f.input :comment, label: false, placeholder: 'Comments and preferred time and method of contact...'
     = f.submit 'Submit', class: 'form-control btn btn-secondary'

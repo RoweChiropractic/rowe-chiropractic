@@ -1,10 +1,11 @@
-.row
-  .col
-    = render 'cms_pages/cms_page_content'
 - if lookup_context.exists?("cms_pages/_#{@cms_page.partial}")
   .row.cms-partial
     .col
       = render "cms_pages/#{@cms_page.partial}"
+- else
+  .row
+    .col.sm
+      = render 'cms_pages/cms_page_content'
 
 - @cms_page.children.each do |child|
   .container.cms-page{ id: "cms-page-#{child.id}"}
