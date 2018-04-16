@@ -14,6 +14,7 @@ class CmsPagesController < ApplicationController
     when /specialties/
       @specialties = Specialty.all
     when /contact-us/
+      @contact_link_active = true
       @inquiry = Inquiry.new
     end
   end

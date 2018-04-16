@@ -1,11 +1,11 @@
 ActiveAdmin.register Inquiry do
-  filter :first_name_cont, as: :string, label: 'First Name'
-  filter :last_name_cont, as: :string, label: 'Last Name'
+  filter :name_cont, as: :string, label: 'First Name'
   filter :phone_cont, as: :string, label: 'Phone'
   filter :email_cont, as: :string, label: 'Email'
 
   permit_params do
     [
+      :name,
       :first_name,
       :last_name,
       :phone,
@@ -18,7 +18,7 @@ ActiveAdmin.register Inquiry do
   end
 
   index do
-    column :full_name
+    column :name
     column :phone do |inquiry|
       span class: ('text-success' if inquiry.preferred_contact_method == 'Phone') do
         inquiry.phone
@@ -36,8 +36,9 @@ ActiveAdmin.register Inquiry do
 
   form do |f|
     f.inputs do
-      f.input :first_name
-      f.input :last_name
+      f.input :name
+      # f.input :first_name
+      # f.input :last_name
       f.input :phone
       f.input :email
       f.input :comment

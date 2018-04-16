@@ -1,42 +1,47 @@
 header {
-  padding: 1rem 0;
-  a.logo img {
-    display: inline-block;
-    height: 45px;
-    margin-right: 0.5rem;
-  }
-
-  h1 {
-    display: inline-block;
-    font-size: 2rem;
-    margin: 0;
-    a {
+  .address {
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: $nav-bg;
+    margin-bottom: 0.5rem;
+    address {
       margin: 0;
-      color: $headings-color;
+    }
+    p {
+      margin: 0.3rem;
+    }
+    abbr, a.contact, a.hours, a.directions {
+      margin-left: 1rem;
     }
   }
 
-  ul.social {
-    margin: 0;
-    li a {
-      padding: 0;
+  .header-main {
+    margin: 0.75em 0 0.75em 0;
+    a.logo img {
+      display: inline-block;
+      height: 45px;
+      margin-right: 0.5rem;
     }
-  }
 
-  .contact {
-    margin: 0;
-    text-align: right;
-    ul li {
-      list-style: none;
-      &.email_phone a {
-        &.phone {
-          color: $text-muted;
-          border: 1px solid $text-muted;
-          border-width: 0 1px 0 0;
-          padding-right: 0.5rem;
-          margin-right: 0.5rem;
+    h1 {
+      display: inline-block;
+      font-size: 2rem;
+      margin: 0;
+      a {
+        margin: 0;
+        color: $headings-color;
+      }
+    }
+
+    ul.social {
+      margin: 0;
+      text-align: right;
+      font-size: 2rem;
+      li {
+        list-style: none;
+        a {
+          padding: 0;
         }
-        display: inline;
       }
     }
   }
