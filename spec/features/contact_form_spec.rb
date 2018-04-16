@@ -10,14 +10,10 @@ RSpec.feature 'As a visitor' do
 
   scenario 'I can use the contact form' do
     visit cms_page_path(contact_us_page)
-    # fill_in 'First name', with: first_name
-    # fill_in 'Last name', with: last_name
+    fill_in 'Name...', with: email
     click_on 'Submit'
     expect(page).to have_content I18n.t('contact_form.no_preferred_contact_method')
-    fill_in 'Email', with: email
-    # select 'Morning', from: 'Preferred contact time'
-    # select 'Morning', from: 'Preferred appointment time'
-    # select 'Email', from: 'Preferred contact method'
+    fill_in 'Email...', with: email
     click_on 'Submit'
     expect(page).to have_content I18n.t('contact_form.success')
     open_email(ENV.fetch('contact_form_email'))

@@ -1,22 +1,40 @@
 %header
+  .row.address
+    .col-sm-12
+      %address
+        %p
+          Rowe Chiropractic Offices
+          316 E. 59th St.
+          New York, NY 10022
+          %span.desktop.d-none.d-md-inline-block
+            %abbr.phone{ title: 'Phone' } P:
+            = link_to '(212) 486-8888', 'tel:2124868888', class: :phone
+            %abbr.email{ title: 'Email' } E:
+            = mail_to 'info@rowechiropractic.com', 'info@rowechiropractic.com', encode: :javascript
+
+          %span.mobile-phone.d-lg-none
+            = link_to fa_icon('phone', class: :fa), 'tel:2124868888', class: :phone
+            = link_to fa_icon('envelope', class: :fa), 'mailto:info@rowechiropractic.com'
+
+          = link_to 'Contact', '/pages/contact-us', class: :contact
+          = link_to 'Directions', '/pages/contact-us', class: :directions
+          = link_to 'Hours', '/pages/contact-us#hours-of-operation', class: :hours
   .container
-    .row
-      .col-6.branding
-        %a.logo.align-middle{ href: '/' }= image_tag 'rowe-chiropractic-logo-round.png'
+    .row.header-main.d-none.d-md-flex
+      .col-sm-6.branding
+        %a.logo.align-middle.d-none.d-sm-inline-block{ href: '/' }= image_tag 'rowe-chiropractic-logo-round.png'
         %h1.align-middle
           %a{ href: '/' } Rowe Chiropractic
 
-      .col-6.contact
-        %ul.social
-          %li
-            %ul.list-inline
-              %li.list-inline-item.twitter= link_to fa_icon('twitter', class: 'fab'), '#', class: 'nav-link'
-              %li.list-inline-item.facebook= link_to fa_icon('facebook', class: 'fab'), '#', class: 'nav-link'
-              %li.list-inline-item.youtube= link_to fa_icon('youtube', class: 'fab'), '#', class: 'nav-link'
-              %li.list-inline-item.instagram= link_to fa_icon('instagram', class: 'fab'), '#', class: 'nav-link'
-              - if user_signed_in?
-                = link_to fa_icon('sign-in-alt', class: :fa), admin_dashboard_path
-
-          %li.email_phone
-            = link_to '(212) 486-8888', 'tel:2124868888', class: :phone
-            = mail_to 'info@rowechiropractic.com', 'info@rowechiropractic.com', encode: :javascript
+      .col-sm-6.d-none
+        %ul.social.list-inline
+          %li.list-inline-item.twitter
+            = link_to fa_icon('twitter', class: 'fab'), 'https://twitter.com/Rowe_Chiro', class: 'nav-link', target: :_blank
+          %li.list-inline-item.facebook
+            = link_to fa_icon('facebook', class: 'fab'), 'https://www.facebook.com/pages/Rowe-Chiropractic-Offices', class: 'nav-link', target: :_blank
+          %li.list-inline-item.youtube
+            = link_to fa_icon('youtube', class: 'fab'), 'https://www.youtube.com/user/RoweChiropractic', class: 'nav-link', target: :_blank
+          %li.list-inline-item.instagram
+            = link_to fa_icon('instagram', class: 'fab'), 'https://www.instagram.com/RoweChiropractic/', class: 'nav-link', target: :_blank
+          - if user_signed_in?
+            = link_to fa_icon('sign-in-alt', class: :fa), admin_dashboard_path

@@ -1,15 +1,13 @@
-%nav.navbar.navbar-expand-lg
+%nav.navbar.navbar-expand-lg.navbar-light
   .container
     %button.navbar-toggler{ aria: { controls: 'main-nav', expanded: false, label: 'Toggle navigation' },  data: { target: '#main-nav', toggle: :collapse, type: :button } }
       %span.navbar-toggler-icon
     #main-nav.collapse.navbar-collapse
       .collapse.navbar-collapse.d-flex.justify-content-between
-        = active_link_to 'Home', '/', active: :exclusive, class: 'nav-link'
-        = active_link_to 'About Us', '/pages/about-us', class: 'nav-link'
-        = active_link_to 'Meet The Doctors', '/pages/meet-the-doctors', class: 'nav-link'
-        = active_link_to 'Specialties', '/pages/specialties', class: 'nav-link'
-        = active_link_to 'Testimonials', '/pages/testimonials', class: 'nav-link'
-        = active_link_to 'Contact & Directions', '/pages/contact-us', class: 'nav-link'
-        = active_link_to 'Make an appointment', '/pages/foo', class: 'nav-link'
-
-
+        %ul.navbar-nav.nav-fill.w-100
+          %li.nav-item= active_link_to 'Home', '/', class: 'nav-link', active: :exclusive
+          %li.nav-item= active_link_to 'About Us', '/pages/about-us', class: 'nav-link'
+          %li.nav-item= active_link_to 'Meet The Doctors', '/pages/meet-the-doctors', class: 'nav-link'
+          %li.nav-item= active_link_to 'Specialties', '/pages/specialties', class: 'nav-link'
+          %li.nav-item= active_link_to 'Testimonials', '/pages/testimonials', class: 'nav-link'
+          %li.nav-item= active_link_to 'Contact Us', '/pages/contact-us', active: @contact_link_active, class: 'nav-link'

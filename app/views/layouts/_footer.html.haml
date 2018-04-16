@@ -1,28 +1,9 @@
 %footer.footer.bg-dark
   .container
     .row.content
-      .col-sm
+      .col-sm-12
         = link_to image_tag('https://www.opencare.com/images/badges/patients-choice-winner-2016.png'), 'https://www.opencare.com/chiropractors/new-york-ny/#tc24630637381', target: '_blank'
 
-      .col-sm.text-center
-        %address
-          %strong Rowe Chiropractic Offices
-          %br
-          316 E. 59th St.
-          %br
-          New York, NY 10022
-          %br
-          %abbr{ title: :Phone } P:
-          = link_to '(212) 486-8888', 'tel:2124868888', target: '_blank'
-          %br
-          = mail_to 'info@rowechiropractic.com', 'info@rowechiropractic.com', encode: :javascript
-      .col-sm.text-right
-        %ul.hours
-          %li Monday  8:00AM - 6:45PM
-          %li Tuesday 8:00AM - 6:45PM
-          %li Wednesday 8:00AM - 6:45PM
-          %li Thursday  8:00AM - 6:45PM
-          %li Friday  8:00AM - 9:30AM
     .row.copy
       .col-sm.text-center
         &copy;
