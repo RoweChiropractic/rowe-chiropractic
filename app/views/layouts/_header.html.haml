@@ -7,14 +7,12 @@
           316 E. 59th St.
           New York, NY 10022
           %span.desktop.d-none.d-md-inline-block
-            %abbr.phone{ title: 'Phone' } P:
             = link_to '(212) 486-8888', 'tel:2124868888', class: :phone
-            %abbr.email{ title: 'Email' } E:
-            = mail_to 'info@rowechiropractic.com', 'info@rowechiropractic.com', encode: :javascript
+            = mail_to 'info@rowechiropractic.com', 'info@rowechiropractic.com', encode: :javascript, class: :email
 
           %span.mobile-phone.d-lg-none
             = link_to fa_icon('phone', class: :fa), 'tel:2124868888', class: :phone
-            = link_to fa_icon('envelope', class: :fa), 'mailto:info@rowechiropractic.com'
+            = link_to fa_icon('envelope', class: :fa), 'mailto:info@rowechiropractic.com', class: :email
 
           = link_to 'Contact', '/pages/contact-us', class: :contact
           = link_to 'Directions', '/pages/contact-us', class: :directions
