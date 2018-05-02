@@ -67,7 +67,7 @@ GEM
       activesupport (>= 3.0.0)
     arel (9.0.0)
     ast (2.4.0)
-    autoprefixer-rails (8.1.0.1)
+    autoprefixer-rails (8.4.1)
       execjs
     aws-partitions (1.71.0)
     aws-sdk-core (3.17.1)
@@ -84,7 +84,7 @@ GEM
     aws-sigv4 (1.0.2)
     bcrypt (3.1.11)
     bindex (0.5.0)
-    bootstrap (4.0.0)
+    bootstrap (4.1.1)
       autoprefixer-rails (>= 6.0.3)
       popper_js (>= 1.12.9, < 2)
       sass (>= 3.5.2)
@@ -425,7 +425,7 @@ DEPENDENCIES
   activeadmin
   activeadmin_blaze_theme
   aws-sdk-s3
-  bootstrap (~> 4.0.0)
+  bootstrap (~> 4.1.1)
   bootstrap4-kaminari-views
   byebug
   capybara

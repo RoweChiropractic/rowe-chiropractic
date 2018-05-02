@@ -12,7 +12,7 @@ gem 'active_link_to', '~> 1.0'
 gem 'activeadmin'
 gem 'activeadmin_blaze_theme'
 gem 'aws-sdk-s3', require: false
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.1.1'
 gem 'bootstrap4-kaminari-views'
 gem 'carrierwave'
 gem 'coffee-rails', '~> 4.2'

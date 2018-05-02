@@ -1,26 +1,47 @@
+$logo-size: 60px;
+
 nav.navbar {
+  padding: 1rem 0;
+  a.navbar-brand {
+    padding: 0;
+    img { margin: 0; }
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: $headings-color;
+  }
+}
+
+ul.social-and-contact {
+  list-style: none;
+  li {
+    text-align: right;
+  }
+}
+
+#main-nav {
   padding: 0;
-  background-color: $nav-bg;
-  border-top: 1px solid $headings-color;
-  border-bottom: 1px solid $text-muted;
-
-  a {
-    text-decoration: none;
-
-    &.active {
-      color: white;
-      background-color: $link-color;
+  @media (max-width: 740px) {
+    a.nav-item {
+      text-align: left;
+      margin-left: 0;
     }
   }
-  .navbar-brand {
-    color: $brand-primary  !important;
-    span {
-      font-weight: 650;
-      margin-left: $margin/4;
+  a {
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: $headings-color;
+    &.active {
+      border-bottom: 5px solid $link-color;
     }
-    img {
-      height: 50px;
-      width: 50px;
-    }
+  }
+}
+
+.social-mobile {
+  margin: 10px 0;
+  text-align: center;
+  li {
+    padding: 0 1rem;
   }
 }
