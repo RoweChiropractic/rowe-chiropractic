@@ -21,7 +21,9 @@ ul.social-and-contact {
 
 #main-nav {
   padding: 0;
+  background-color: $nav-bg;
   @media (max-width: 740px) {
+    background-color: transparent;
     a.nav-item {
       text-align: left;
       margin-left: 0;

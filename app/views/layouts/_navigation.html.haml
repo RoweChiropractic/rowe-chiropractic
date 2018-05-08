@@ -37,8 +37,9 @@
       %li.address
         316 E. 59th St. New York, NY 10022
 
-  .navbar-expand-lg.navbar-light.w-100.align-middle
-    #main-nav.collapse.navbar-collapse.d-lg-flex.justify-content-between
+.navbar-expand-lg.navbar-light.w-100.align-middle
+  #main-nav.collapse.navbar-collapse.d-lg-flex.justify-content-between
+    .container
       .navbar-nav.nav-fill.w-100
         = active_link_to 'Home', '/', class: 'nav-item', active: :exclusive
         = active_link_to 'About Us', '/pages/about-us', class: 'nav-item'
