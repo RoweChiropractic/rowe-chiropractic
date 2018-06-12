@@ -1,32 +1,14 @@
 .container
-  %ul.social-mobile.d-sm-none.list-inline
-    %li.list-inline-item
-      = link_to fa_icon('twitter', class: :fab), 'https://twitter.com/Rowe_Chiro', target: :_blank
-    %li.list-inline-item
-      = link_to fa_icon('facebook', class: :fab), 'https://www.facebook.com/pages/Rowe-Chiropractic-Offices', target: :_blank
-    %li.list-inline-item
-      = link_to fa_icon('youtube', class: :fab), 'https://www.youtube.com/user/RoweChiropractic', target: :_blank
-    %li.list-inline-item
-      = link_to fa_icon('instagram', class: :fab), 'https://www.instagram.com/RoweChiropractic/', target: :_blank
-    %li.list-inline-item
-      = link_to fa_icon('envelope-open', class: :fa), 'mailto:info@rowechiropractic.com', encode: :javascript
-    %li.list-inline-item
-      = link_to fa_icon('phone', class: :fa), 'tel:2124868888'
-    %li.list-inline-item
-      = link_to fa_icon('map-marker', class: :fa), '/contact-us#directions'
-    - if user_signed_in?
-      %li.list-inline-item
-        = link_to fa_icon('sign-in-alt', class: :fa), admin_dashboard_path
   %nav.navbar.navbar-expand-lg.navbar-light.justify-content-between
     %a.navbar-brand{ href: '/'}
-      = image_tag 'rowe-chiropractic-logo-round.png', height: 80
-      Rowe Chiropractic
+      = image_tag 'rowe-chiropractic-logo-round.png', height: 80, class: 'd-none d-sm-inline-block'
+      %span Rowe Chiropractic
     %button.navbar-toggler{ aria: { controls: 'main-nav', expanded: false, label: 'Toggle navigation' },  data: { target: '#main-nav', toggle: :collapse, type: :button } }
       %span.navbar-toggler-icon
-    %ul.social-and-contact.d-none.d-sm-block
+    %ul.social-and-contact.d-none.d-md-block
       %li.social
         = link_to fa_icon('twitter', class: :fab), 'https://twitter.com/Rowe_Chiro', target: :_blank
-        = link_to fa_icon('facebook', class: :fab), 'https://www.facebook.com/pages/Rowe-Chiropractic-Offices', target: :_blank
+        = link_to fa_icon('facebook', class: :fab), 'https://www.facebook.com/RoweChiropracticOffices/', target: :_blank
         = link_to fa_icon('youtube', class: :fab), 'https://www.youtube.com/user/RoweChiropractic', target: :_blank
         = link_to fa_icon('instagram', class: :fab), 'https://www.instagram.com/RoweChiropractic/', target: :_blank
       - if user_signed_in?
