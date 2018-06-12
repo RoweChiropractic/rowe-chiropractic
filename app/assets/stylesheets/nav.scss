@@ -1,15 +1,14 @@
-$logo-size: 60px;
-
-nav.navbar {
-  padding: 1rem 0;
-  a.navbar-brand {
-    padding: 0;
-    img { margin: 0; }
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-    color: $headings-color;
-  }
+.navbar {
+  padding-left: 0;
+}
+a.navbar-brand {
+  font-family: $header-font;
+  font-size: 2rem;
+  color: $headings-color !important;
+}
+#main-nav {
+  padding: 0.5rem 0;
+  background-color: $gray-200;
 }
 
 ul.social-and-contact {
@@ -19,31 +18,9 @@ ul.social-and-contact {
   }
 }
 
-#main-nav {
-  padding: 0;
-  background-color: $nav-bg;
-  @media (max-width: 740px) {
-    background-color: transparent;
-    a.nav-item {
-      text-align: left;
-      margin-left: 0;
-    }
-  }
-  a {
-    padding: 1rem;
-    text-decoration: none;
-    font-size: 1.3rem;
-    color: $headings-color;
-    &.active {
-      border-bottom: 5px solid $link-color;
-    }
-  }
-}
-
-.social-mobile {
-  margin: 10px 0;
-  text-align: center;
-  li {
-    padding: 0 1rem;
+li.social a {
+  padding-right: 0.5rem;
+  &:last-child {
+    padding-right: 0;
   }
 }
