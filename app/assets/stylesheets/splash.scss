@@ -24,10 +24,9 @@
 
         img {
           height: 250px;
-          @media (min-width: 768px) {
-            float: left;
-          }
-          margin-right: $margin;
+          float: left;
+          margin-right: $margin / 2;
+          padding: 3px;
           border: 1px solid $gray-600;
         }
       }
