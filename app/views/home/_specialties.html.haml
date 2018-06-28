@@ -12,4 +12,4 @@
               %p
                 = specialty.teaser
               %p.read-more
-                = link_to 'Click for more &raquo;'.html_safe, specialty_path(specialty)
+                = link_to 'Click for more &raquo;'.html_safe, cms_page_path('specialties', anchor: specialty.id)
