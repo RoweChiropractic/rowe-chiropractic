@@ -12,6 +12,8 @@ class CmsPage < ApplicationRecord
   validates :title, presence: true, uniqueness: true
   validates :slug, presence: true, uniqueness: true
 
+  default_scope -> { order(:position) }
+
   def partial
     slug.gsub('-', '_')
   end
