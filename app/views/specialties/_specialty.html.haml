@@ -2,6 +2,6 @@
 .specialty{ id: "specialty-#{specialty.id}"}
   %h4
     = specialty.title
-    %small.ml-3= link_to fa_icon('arrow-alt-to-top', class: :fa), '/pages/specialties'
+    %small.ml-3= link_to fa_icon('arrow-alt-to-top', class: :fa), cms_page_path('specialties')
   =raw specialty.formatted_body
 

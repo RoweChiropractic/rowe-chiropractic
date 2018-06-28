@@ -5,10 +5,10 @@
       %span Rowe Chiropractic
     %button.navbar-toggler{ aria: { controls: 'main-nav', expanded: false, label: 'Toggle navigation' },  data: { target: '#main-nav', toggle: :collapse, type: :button } }
       %span.navbar-toggler-icon
-    %ul.social-and-contact.d-none.d-sm-block
+    %ul.social-and-contact.d-none.d-md-block
       %li.social
         = link_to fa_icon('twitter', class: :fab), 'https://twitter.com/Rowe_Chiro', target: :_blank
-        = link_to fa_icon('facebook', class: :fab), 'https://www.facebook.com/pages/Rowe-Chiropractic-Offices', target: :_blank
+        = link_to fa_icon('facebook', class: :fab), 'https://www.facebook.com/RoweChiropracticOffices/', target: :_blank
         = link_to fa_icon('youtube', class: :fab), 'https://www.youtube.com/user/RoweChiropractic', target: :_blank
         = link_to fa_icon('instagram', class: :fab), 'https://www.instagram.com/RoweChiropractic/', target: :_blank
       - if user_signed_in?

@@ -4,5 +4,5 @@
 .specialties
   %ul.list-inline
     - @specialties.each do |specialty|
-      %li.list-inline-item= link_to specialty.title, anchor: specialty.id
+      %li.list-inline-item= link_to specialty.title, cms_page_path('specialties', anchor: specialty.id)
   = render @specialties
