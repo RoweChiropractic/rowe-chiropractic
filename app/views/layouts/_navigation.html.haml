@@ -11,8 +11,8 @@
         = link_to fa_icon('facebook', class: :fab), 'https://www.facebook.com/RoweChiropracticOffices/', target: :_blank
         = link_to fa_icon('youtube', class: :fab), 'https://www.youtube.com/user/RoweChiropractic', target: :_blank
         = link_to fa_icon('instagram', class: :fab), 'https://www.instagram.com/RoweChiropractic/', target: :_blank
-      - if user_signed_in?
-        = link_to fa_icon('sign-in-alt', class: :fa), admin_dashboard_path
+        - if user_signed_in?
+          = link_to fa_icon('sign-in-alt', class: :fa), admin_dashboard_path
       %li.contact
         = mail_to 'info@rowechiropractic.com', 'info@rowechiropractic.com', encode: :javascript, class: :email
         = link_to '(212) 486-8888', 'tel:2124868888', class: :phone
