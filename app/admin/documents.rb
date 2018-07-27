@@ -20,7 +20,7 @@ ActiveAdmin.register Document do
   index do
     column :title
     column :file do |document|
-      link_to document.file.url
+      link_to 'Download', document.file.url
     end
     actions
   end
