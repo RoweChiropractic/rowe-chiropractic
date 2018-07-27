@@ -1,11 +1,30 @@
 .navbar {
   padding-left: 0;
+  padding-right: 0;
 }
 a.navbar-brand {
   font-family: $header-font;
   font-size: 2rem;
   color: $headings-color !important;
 }
+@media (max-width: 320px) {
+  a.navbar-brand {
+    font-size: 1.5rem;
+  }
+}
+
+.mobile-contact {
+  text-align: center;
+  li a {
+    color: $headings-color !important;
+  }
+}
+
+.navbar-toggler {
+  font-size: 0.8rem;
+  margin-right: 0;
+}
+
 #main-nav {
   padding: 0.5rem 0;
   background-color: $gray-200;

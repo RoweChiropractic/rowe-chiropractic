@@ -5,6 +5,13 @@
       %span Rowe Chiropractic
     %button.navbar-toggler{ aria: { controls: 'main-nav', expanded: false, label: 'Toggle navigation' },  data: { target: '#main-nav', toggle: :collapse, type: :button } }
       %span.navbar-toggler-icon
+    %ul.mobile-contact.d-md-none.list-inline
+      %li.list-inline-item
+        = link_to fa_icon(:phone, class: :fas), 'tel:2124868888', class: :phone
+        = link_to 'Phone', 'tel:2124868888', class: :phone
+      %li.list-inline-item
+        = link_to fa_icon('map-marker', class: :fas), '/pages/contact-us', class: :phone
+        = link_to 'Directions', '/pages/contact-us', class: :phone
     %ul.social-and-contact.d-none.d-md-block
       %li.social
         = link_to fa_icon('twitter', class: :fab), 'https://twitter.com/Rowe_Chiro', target: :_blank

@@ -8,6 +8,9 @@ RSpec.feature 'As a visitor' do
     clear_emails
   end
 
+  scenario 'I see the phone number' do
+  end
+
   scenario 'I can use the contact form' do
     visit cms_page_path(contact_us_page)
     fill_in 'Name...', with: email
