@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resources :cms_pages, only: :show, path: :pages
-  resources :inquiries
+  resources :inquiries, only: :create
 end
