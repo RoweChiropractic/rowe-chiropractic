@@ -22,16 +22,16 @@ RSpec.feature 'As an admin user' do
     visit admin_specialties_path
     click_on 'New Specialty'
     click_on 'Create Specialty'
-    expect(page).to have_content "Title* can't be blank"
-    expect(page).to have_content "Teaser* can't be blank"
-    expect(page).to have_content "Body* can't be blank"
+    expect(page).to have_content "Title*\ncan't be blank"
+    expect(page).to have_content "Teaser*\ncan't be blank"
+    expect(page).to have_content "Body*\ncan't be blank"
     fill_in 'Title', with: title
     fill_in 'Teaser', with: teaser
     fill_in 'Body', with: body
     click_on 'Create Specialty'
     expect(page).to have_content "Specialty was successfully created."
-    expect(page).to have_content "Title #{title}"
-    expect(page).to have_content "Teaser #{teaser}"
-    expect(page).to have_content "Body #{body}"
+    expect(page).to have_content title
+    expect(page).to have_content teaser
+    expect(page).to have_content body
   end
 end

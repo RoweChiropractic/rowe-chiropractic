@@ -50,9 +50,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rspec-retry'
   gem 'rspec_junit_formatter'
-  gem 'rubocop', '0.50.0', require: false
-  gem 'rubocop-rspec', '0.18.0', require: false
-  gem 'selenium-webdriver', '~> 2.5'
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
+  gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
   gem 'vcr'
