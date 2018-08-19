@@ -5,7 +5,7 @@ Rails.application.configure do
     :address        => ENV['MAILGUN_SMTP_SERVER'],
     :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
     :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-    :domain         => 'sandboxab76ef2fcb6b42f5b4acc0a8924782d5.mailgun.org',
+    :domain         => ENV['MAILGUN_SMTP_DOMAIN'],
     :authentication => :plain,
   }
   config.action_mailer.default_url_options = { host: 'rowe-chiropractic.herokuapp.com' }
