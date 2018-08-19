@@ -1,4 +1,6 @@
 ActiveAdmin.register Inquiry do
+  config.sort_order = 'created_at_desc'
+
   filter :name_cont, as: :string, label: 'First Name'
   filter :phone_cont, as: :string, label: 'Phone'
   filter :email_cont, as: :string, label: 'Email'
