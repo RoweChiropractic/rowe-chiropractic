@@ -9,7 +9,6 @@ class InquiriesController < ApplicationController
       UserMailer.new_inquiry(@inquiry).deliver_later
       redirect_to cms_page_path(@cms_page)
     else
-      flash[:error] = 'Erro'
       render 'cms_pages/show'
     end
   end

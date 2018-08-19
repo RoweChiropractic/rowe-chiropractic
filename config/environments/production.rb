@@ -5,10 +5,10 @@ Rails.application.configure do
     :address        => ENV['MAILGUN_SMTP_SERVER'],
     :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
     :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-    :domain         => ENV['MAILGUN_SMTP_DOMAIN'],
+    :domain         => ENV['MAILGUN_DOMAIN'],
     :authentication => :plain,
   }
-  config.action_mailer.default_url_options = { host: 'rowe-chiropractic.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'rowechiropractic.com' }
   # config.active_storage.service = :amazon
 
   # Settings specified here will take precedence over those in config/application.rb.
