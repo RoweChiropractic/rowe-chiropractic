@@ -20,19 +20,19 @@ ActiveAdmin.register Inquiry do
   end
 
   index do
+    column :created_at
     column :name
-    column :phone do |inquiry|
-      span class: ('text-success' if inquiry.preferred_contact_method == 'Phone') do
-        inquiry.phone
-      end
-    end
     column :email do |inquiry|
       span class: ('text-success' if inquiry.preferred_contact_method == 'Email') do
         inquiry.email
       end
     end
-    column :preferred_contact_time
-    column :created_at
+    column :phone do |inquiry|
+      span class: ('text-success' if inquiry.preferred_contact_method == 'Phone') do
+        inquiry.phone
+      end
+    end
+    column :comment
     actions
   end
 
