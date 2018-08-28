@@ -1,5 +1,6 @@
 class InquiriesController < ApplicationController
   before_action :set_active_nav_link
+  invisible_captcha only: [:create]
 
   def create
     @inquiry = Inquiry.new inquiry_params
