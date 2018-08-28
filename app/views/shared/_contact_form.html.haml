@@ -2,6 +2,7 @@
   - if show_title
     %h5 Schedule an appointment...
   = simple_form_for @inquiry do |f|
+    = raw negative_captcha(@captcha)
     - if @inquiry.errors.present?
       .alert.alert-danger
         = f.error :base
