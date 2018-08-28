@@ -1,8 +1,4 @@
 class CmsPagesController < ApplicationController
-  include Captcha
-
-  before_action :setup_negative_captcha, only: :show
-
   def show
     @cms_page = CmsPage.find_by(slug: params[:id]) || NullCmsPage.new(params[:id])
 

@@ -1,7 +1,6 @@
 RSpec.feature 'As a visitor' do
   let(:email) { FFaker::Internet.email }
-  # let(:first_name) { FFaker::Name.first_name }
-  # let(:last_name) { FFaker::Name.last_name }
+  let(:name) { FFaker::Name.name }
   let(:contact_us_page) { CmsPage.create! title: 'Contact Us' }
 
   before do
@@ -13,7 +12,7 @@ RSpec.feature 'As a visitor' do
 
   scenario 'I can use the contact form' do
     visit cms_page_path(contact_us_page)
-    fill_in 'Name...', with: email
+    fill_in 'Name...', with: name
     click_on 'Submit'
     expect(page).to have_content I18n.t('contact_form.no_preferred_contact_method')
     fill_in 'Email...', with: email

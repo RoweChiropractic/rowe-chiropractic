@@ -1,13 +1,11 @@
 class InquiriesController < ApplicationController
-  include Captcha
-
   before_action :set_active_nav_link
-  before_action :setup_negative_captcha, only: :create
+  invisible_captcha only: [:create]
 
   def create
     @inquiry = Inquiry.new inquiry_params
     @cms_page = CmsPage.find_by(slug: 'contact-us')
-    if @captcha.valid? && @inquiry.save
+    if @inquiry.save
       flash[:message] = I18n.t('contact_form.success')
       UserMailer.new_inquiry(@inquiry).deliver_later
       redirect_to cms_page_path(@cms_page)
