@@ -234,6 +234,9 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     multi_json (1.13.1)
+    negative_captcha (0.5)
+      actionpack
+      activesupport
     newrelic_rpm (3.18.1.330)
     nio4r (2.3.0)
     nokogiri (1.8.2)
@@ -445,6 +448,7 @@ DEPENDENCIES
   kaminari
   listen (>= 3.0.5, < 3.2)
   mini_magick
+  negative_captcha
   newrelic_rpm (~> 3.14)
   paper_trail
   pg (~> 0.18)

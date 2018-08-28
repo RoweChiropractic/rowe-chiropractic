@@ -2,5 +2,5 @@ aws_access_key_id: abc
 aws_secret_access_key: 123
 from_mail: from@example.com
 google_api_key: def
-secret_key_base: abc123
 contact_form_email: info@example.com
+negative_captcha_secret: 123
