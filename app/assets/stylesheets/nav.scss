@@ -1,45 +1,8 @@
-.navbar {
-  padding-left: 0;
-  padding-right: 0;
-}
-a.navbar-brand {
-  font-family: $header-font;
-  font-size: 2rem;
-  color: $headings-color !important;
-}
-@media (max-width: 320px) {
-  a.navbar-brand {
-    font-size: 1.5rem;
-  }
-}
+// %nav.navbar.navbar-expand-lg.navbar-light
 
-.mobile-contact {
-  text-align: center;
-  li a {
-    color: $headings-color !important;
-  }
-}
-
-.navbar-toggler {
-  font-size: 0.8rem;
-  margin-right: 0;
-}
-
-#main-nav {
-  padding: 0.5rem 0;
-  background-color: $gray-200;
-}
-
-ul.social-and-contact {
-  list-style: none;
-  li {
-    text-align: right;
-  }
-}
-
-li.social a {
-  padding-right: 0.5rem;
-  &:last-child {
-    padding-right: 0;
-  }
+nav {
+  background-color: rgba(255, 255, 255, 0.8);
+  // img.logo {
+  //   margin-left: 100px;
+  // }
 }

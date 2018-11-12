@@ -1,39 +1,9 @@
-.home {
-  .header {
-    padding: $margin/2 0;
-    margin-bottom: $margin;
-    background: #b6b3ab;
+.masthead {
+  overflow: auto;
+  min-height: 50vh;
+  background: transparent;
 
-    .header-content {
-      padding: $margin/2 0;
-
-      .contact-form {
-        h5 {
-          font-style: italic;
-          color: $headings-color;
-        }
-        .form-group { margin-bottom: 0.5rem; }
-        input, textarea { font-size: 0.8rem; }
-      }
-
-      .intro {
-        h2, h3, p {
-          color: white;
-          font-style: italic;
-        }
-
-        img {
-          height: 250px;
-          float: left;
-          margin-right: $margin / 2;
-          padding: 3px;
-          border: 1px solid $gray-600;
-        }
-      }
-    }
-  }
-
-  .featured-testimonials {
-    margin-bottom: $margin;
+  .navbar {
+    margin-top: 3rem;
   }
 }

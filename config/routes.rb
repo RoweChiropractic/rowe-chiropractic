@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'splash/index'
   devise_for :users
 
   ActiveAdmin.routes(self)
@@ -7,7 +8,7 @@ Rails.application.routes.draw do
     mount Sidekiq::Web => '/sidekiq'
   end
 
-  root to: "home#index"
+  root to: "splash#index"
 
   resources :cms_pages, only: :show, path: :pages
   resources :inquiries
