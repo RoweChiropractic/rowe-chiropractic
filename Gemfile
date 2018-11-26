@@ -5,8 +5,8 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
-
+gem 'octicons'
+gem 'octicons_helper'
 gem 'actionview-encoded_mail_to', '~> 1.0'
 gem 'active_link_to', '~> 1.0'
 gem 'activeadmin'

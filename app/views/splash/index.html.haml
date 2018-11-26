@@ -1,27 +1,75 @@
-.masthead{ data: { parallax: true, src: asset_path('splash/adjustment.jpg'), pos_x: :left } }
+.masthead{ data: { parallax: true, src: asset_path('splash/adjustment-fade.jpg'), pos_x: :left } }
   = render 'layouts/navigation'
+  %h1.text-center
+    Live your life at it's highest potential!
+    / %span.float-right Unlock your body's innate healing ability.
   .container
     .row
-      .col
-        %h1 Rowe Chiropractic
-        %h2
-          Chiropractic care for total health.
-          %br
-          Reconnecting your mind with your body.
-    .row
-      .col-sm-6
-        %p Your body has the ability to thrive and function at a higher level than you thought was possible.
+      .col-sm-8
+        .content
+          %h2 Chiropractic care for total health.
+          / Reconnecting your mind with your body.
+          / %h2 Unlock your body's innate healing ability.
+          %p
+            Family run since 1981, Rowe Chiropractic offers chiropractic care for total health.
+          %p
+            Dr. David Rowe uses
+            = link_to 'Gonstead', '#'
+            spinal adjustments,
+            = link_to('CBP', '#')
+            posture correction, diet and lifestyle guidance to reconnect body to mind and restore your body's natural, innate healing ability.
+          / %p Dr. Rowe's holistic approach addresses the body and mind, including lifestyle and diet, allowing his patients to heal the nervous system and return to pain-free, drug-free lives.
+          .row
+            .col-sm-6
+              = link_to 'What will my first visit be like?', '/'
+            .col-sm-6.text-right
+              = button_to 'Make an appointment now!', '/', class: 'btn btn-secondary  '
+      .col-sm-4.text-right
+        .content.text-center
+          .row
+            .col-sm-6
+              %figure.figure.text-center
+                = octicon 'person', height: 50
+                %figcaption.figure-caption
+                  =link_to 'Meet Dr. Rowe', '#'
+            .col-sm-6
+              %figure.figure.text-center
+                = octicon 'calendar', height: 50
+                %figcaption.figure-caption
+                  =link_to 'Schedule a consult', '#'
+          .row
+            .col-sm-6
+              %figure.figure.text-center
+                = octicon 'search', height: 50
+                %figcaption.figure-caption
+                  =link_to 'What is chiropractic?', '#'
+            .col-sm-6
+              %figure.figure.text-center
+                = octicon 'link', height: 50
+                %figcaption.figure-caption
+                  =link_to 'Contact Us', '#'
+        / %figure.figure.text-center
+        /   = image_tag 'splash/rowe.png', class: 'figure-img img-fluid rounded img-thumbnail', width: '200px'
+        /   %figcaption.figure-caption
+        /     = link_to 'Meet Dr. Rowe', '/', class: 'btn btn-secondary'
 
+
+.container
+  .content
+    .row
+      .col
+        %h2 Humans are self-healing living beings.
+        %p Our innate intelligence, expressed by our nervous system, directs our healing. We owe it to ourselves to give that innate intelligence a chance to express itself fully; reducing pressure on the nervous systems gives us the best opportunity to heal ourselves.
 
 #section2.section{ data: { parallax: true, src: asset_path('splash/exam.jpg'), pos_x: :left } }
+
   .container
     .row
-      .col
-        %h2 Using Gonstead, CBP and individually-customized, therapeutic movements, we alleviate the stress on the nervous system and restore the body’s natural healing ability.
-
-        %p.callout Humans are self-healing living beings. Our innate intelligence, expressed by our nervous system, directs our healing. We owe it to ourselves to give that innate intelligence a chance to express itself fully; reducing pressure on the nervous systems gives us the best opportunity to heal ourselves.
-
-        %p Dr. Rowe is a certified practitioner of both the Gonstead system and Chiropractic Biophysics (CBP). The Gonstead System provides the most comprehensive method of addressing the dysfunction of individual vertebrae. Chiropractic Biophysics restores the body’s balance and natural-healing by correcting overall posture.
+      .col-sm-4
+      .col-sm-8
+        .content
+          %h2 Using Gonstead, CBP and individually-customized, therapeutic movements, we alleviate the stress on the nervous system and restore the body’s natural healing ability.
+          %p Dr. Rowe is a certified practitioner of both the Gonstead system and Chiropractic Biophysics (CBP). The Gonstead System provides the most comprehensive method of addressing the dysfunction of individual vertebrae. Chiropractic Biophysics restores the body’s balance and natural-healing by correcting overall posture.
 
 #section2.section
   .container
