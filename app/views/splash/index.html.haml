@@ -1,15 +1,13 @@
-.masthead{ data: { parallax: true, src: asset_path('splash/adjustment-fade.jpg'), pos_x: :left } }
+.masthead{ data: { parallax: true, src: asset_path('splash/adjustment.jpg'), pos_x: :left } }
   = render 'layouts/navigation'
   %h1.text-center
-    Live your life at it's highest potential!
+    / Live your life at it's highest potential!
     / %span.float-right Unlock your body's innate healing ability.
   .container
     .row
-      .col-sm-8
+      .col-sm-7
         .content
           %h2 Chiropractic care for total health.
-          / Reconnecting your mind with your body.
-          / %h2 Unlock your body's innate healing ability.
           %p
             Family run since 1981, Rowe Chiropractic offers chiropractic care for total health.
           %p
@@ -18,40 +16,43 @@
             spinal adjustments,
             = link_to('CBP', '#')
             posture correction, diet and lifestyle guidance to reconnect body to mind and restore your body's natural, innate healing ability.
-          / %p Dr. Rowe's holistic approach addresses the body and mind, including lifestyle and diet, allowing his patients to heal the nervous system and return to pain-free, drug-free lives.
-          .row
-            .col-sm-6
-              = link_to 'What will my first visit be like?', '/'
-            .col-sm-6.text-right
-              = button_to 'Make an appointment now!', '/', class: 'btn btn-secondary  '
-      .col-sm-4.text-right
-        .content.text-center
-          .row
-            .col-sm-6
-              %figure.figure.text-center
-                = octicon 'person', height: 50
-                %figcaption.figure-caption
-                  =link_to 'Meet Dr. Rowe', '#'
-            .col-sm-6
-              %figure.figure.text-center
-                = octicon 'calendar', height: 50
-                %figcaption.figure-caption
-                  =link_to 'Schedule a consult', '#'
-          .row
-            .col-sm-6
-              %figure.figure.text-center
-                = octicon 'search', height: 50
-                %figcaption.figure-caption
-                  =link_to 'What is chiropractic?', '#'
-            .col-sm-6
-              %figure.figure.text-center
-                = octicon 'link', height: 50
-                %figcaption.figure-caption
-                  =link_to 'Contact Us', '#'
-        / %figure.figure.text-center
-        /   = image_tag 'splash/rowe.png', class: 'figure-img img-fluid rounded img-thumbnail', width: '200px'
-        /   %figcaption.figure-caption
-        /     = link_to 'Meet Dr. Rowe', '/', class: 'btn btn-secondary'
+      .col-sm-4.offset-1
+        .row
+          .col
+            %figure.figure.text-center
+              = image_tag 'splash/rowe.png', class: 'figure-img img-fluid rounded img-thumbnail', width: '200px'
+              %figcaption.figure-caption
+                = link_to 'Meet Dr. Rowe', '/', class: 'btn btn-secondary'
+
+          /   %figure.figure.text-center
+          /     = fa_icon 'play-circle', class: 'fa-3x'
+          /     %figcaption.figure-caption
+          /       =link_to 'What will my first visit be like?', '#'
+          / .col
+          /   %figure.figure.text-center
+          /     = fa_icon 'calendar', class: 'fa-3x'
+          /     %figcaption.figure-caption
+          /       =link_to 'Schedule a consult', '#'
+
+.container
+  .row.mt-5
+    .col-sm-7
+      / %p Dr. Rowe's holistic approach addresses the body and mind, including lifestyle and diet, allowing his patients to heal the nervous system and return to pain-free, drug-free lives.
+
+      %h2 Reconnecting your body and mind and unlock your body's innate healing ability...
+      %p Humans  are  self-healing  living  beings.  Our  innate  intelligence,  expressed  by  our  nervous  system,  directs  our  healing.  We  owe  it  to  ourselves  to  give  that  innate  intelligence  a  chance  to  express  itself  fully;  reducing  pressure  on  the  nervous  systems  gives  us  the  best  opportunity  to  heal  ourselves.
+
+    .col-sm-2
+      %figure.figure.text-center
+        = fa_icon 'question-circle', class: 'fa-3x'
+        %figcaption.figure-caption
+          =link_to 'What is chiropractic?', '#'
+    .col-sm-2
+      %figure.figure.text-center
+        = fa_icon 'phone', class: 'fa-3x'
+        %figcaption.figure-caption
+          =link_to 'Contact Us', '#'
+
 
 
 .container

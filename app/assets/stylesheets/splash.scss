@@ -1,8 +1,9 @@
-* {
-    color: #58595b;
-  }
+p, h1, h2, h3 {
+    font-family: Delius;
 
+}
 p {
+    color: #58595b;
     font-weight: 300;
     &.callout {
       text-indent: 2rem;
@@ -14,15 +15,16 @@ p {
     }
 }
 
-.octicon {
-  fill: $headings-color;
+.figure {
+  color: $link-color;
 }
-h1 {
-  padding:  0.5rem 5rem;
-  // background-color: rgba(255, 255, 255, 0.6);
 
-  font-size: 1.4rem;
-  font-weight: 400;
+h1 {
+  padding:  1rem 5rem;
+  font-family: Muli, sans-serif;
+
+  font-size: 1.6rem;
+  font-weight: 600;
   letter-spacing: 1px;
   font-style: italic;
   width: 100%;
@@ -34,13 +36,19 @@ h2 {
   font-weight: 600;
   width: 100%;
 }
+h3 {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 600;
+  width: 100%;
+}
 .masthead {
   overflow: auto;
   background: transparent;
-  margin-bottom: 2rem;
-  padding-bottom: 5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
   .navbar {
-    margin: 3rem 0 0 0;
+    margin: 2rem 0 0 0;
     .logo {
       height: 75px;
       margin-left: 4rem;
@@ -59,7 +67,8 @@ h2 {
 }
 
 .content {
-  // background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
+  // background-color: rgb(255, 255, 255);
   border-radius: 3px;
   padding: 1rem;
   margin-bottom: 2rem;

@@ -4,3 +4,4 @@
 //= require jquery.parallax
 //= require popper
 //= require bootstrap-sprockets
+//= require fontawesome-all
