@@ -15,7 +15,6 @@ p {
     }
 }
 
-
 .figure {
   color: $link-color;
   .figure-caption {
@@ -50,6 +49,7 @@ h3 {
   overflow: auto;
   background: transparent;
   margin-bottom: 1rem;
+  padding-bottom: 2rem;
   .navbar {
     margin: 2rem 0 0 0;
     .logo {
@@ -94,4 +94,9 @@ h3 {
   overflow: auto;
   min-height: 300px;
   padding-top: 2rem;
+}
+
+#section2.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
