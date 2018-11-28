@@ -1,9 +1,19 @@
-p, h1, h2, h3 {
-    font-family: Delius;
+$text-color: #58595b;
 
+h2, h3 {
+  color: $text-color;
+  text-transform: uppercase;
+}
+h2 {
+  span {
+    color: $link-color;
+  }
+}
+h3 {
+    margin-bottom: 2rem;
 }
 p {
-    color: #58595b;
+    color: $text-color;
     font-weight: 300;
     &.callout {
       text-indent: 2rem;
@@ -15,24 +25,16 @@ p {
     }
 }
 
-p.mission, p.mission-sub {
-  // -webkit-text-stroke-width: 1px;
-  // -webkit-text-stroke-color: white;
-  // -webkit-text-fill-color: $link-color;
-  font-size: 1.8rem;
-  font-weight: 2000;
-  font-style: italic;
-  text-align: center;
-  // letter-spacing: 0.1px;
-  line-height: 2.2rem;
-  margin-bottom: 0;
-  color: $headings-color;
+.icon-nav {
+  font-size: 1.3rem;
+  margin-top: 4rem;
+  figcaption.figure-caption {
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.7rem;
+  }
 }
 
- p.mission-sub {
-  color: $link-color;
-  font-size: 1.3rem;
- }
 .figure {
   color: $link-color;
   .figure-caption {
@@ -40,29 +42,6 @@ p.mission, p.mission-sub {
   }
 }
 
-h1 {
-  padding:  1rem 5rem;
-  font-family: Muli, sans-serif;
-
-  font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  font-style: italic;
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-h2 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  width: 100%;
-}
-h3 {
-  font-size: 1.2rem;
-  font-style: italic;
-  font-weight: 600;
-  width: 100%;
-}
 .masthead {
   overflow: auto;
   background: transparent;
@@ -74,8 +53,6 @@ h3 {
     .logo {
       height: 75px;
       margin-left: 4rem;
-    }
-    ul {
     }
   }
 
@@ -90,32 +67,12 @@ h3 {
 
 .content {
   background-color: rgba(255, 255, 255, 0.8);
-  // background-color: rgb(255, 255, 255);
   border-radius: 3px;
-  padding: 1rem;
-  margin-bottom: 2rem;
-
-}
-.img {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid #58595b;
-  text-align: center;
-  img {
-    margin: auto;
-  }
-  a {
-    display: inline-block;
-  }
-
+  padding: 2rem;
 }
 
-.section {
+section {
   overflow: auto;
   min-height: 300px;
-  padding-top: 2rem;
-}
-
-#section2.section {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding: 2rem;
 }

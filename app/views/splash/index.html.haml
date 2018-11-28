@@ -1,54 +1,56 @@
 .masthead{ data: { parallax: true, src: asset_path('splash/adjustment.jpg'), pos_x: :left } }
   = render 'layouts/navigation'
+  .container.icon-nav
+    .row.text-center
+      .col-sm-3
+        %figure.figure.text-center
+          = fa_icon 'handshake', class: 'fas fa-4x'
+          %figcaption.figure-caption
+            =link_to 'Your First Visit', '#'
+      .col-sm-3
+        %figure.figure.text-center
+          = fa_icon 'user-md', class: 'fas fa-4x'
+          %figcaption.figure-caption
+            =link_to 'Meet Dr. Rowe', '#'
+      .col-sm-3
+        %figure.figure.text-center
+          = fa_icon 'calendar-check', class: 'fa-4x'
+          %figcaption.figure-caption
+            =link_to 'Make an appointment', '#'
+      .col-sm-3
+        %figure.figure.text-center
+          = fa_icon 'skeleton', class: 'fa-4x'
+          %figcaption.figure-caption
+            =link_to 'Chiropractic Care', '#'
+
+
+%section
   .container
     .row
-      .col-sm-8.offset-2
-        .content
-          %p.mission The human body is self-healing.
-          %p.mission-sub Chiropractic care works to free the nervous system and restore the body's natural ability to heal.
+      .col
+        %h2 CHIROPRACTIC CARE FOR TOTAL HEALTH:
+        %h3 RECONNECTING YOUR MIND WITH YOUR BODY
 
-.container
-  .row.mt-5
-    .col
-      = image_tag 'placeholder.svg', size: '300x300', class: 'img-thumbnail'
+        = image_tag 'splash/spine.png', width: '250', class: 'float-left mr-5'
 
-    .col-sm-9
-      / %p Dr. Rowe's holistic approach addresses the body and mind, including lifestyle and diet, allowing his patients to heal the nervous system and return to pain-free, drug-free lives.
-      .content
-        %h2 Reconnecting your body and mind and unlock your body's innate healing ability.
-        %p Humans  are  self-healing  living  beings.  Our  innate  intelligence,  expressed  by  our  nervous  system,  directs  our  healing.  We  owe  it  to  ourselves  to  give  that  innate  intelligence  a  chance  to  express  itself  fully;  reducing  pressure  on  the  nervous  systems  gives  us  the  best  opportunity  to  heal  ourselves.
+        %p Our bodies have the ability to thrive and function at a higher level than we thought was possible. Reach your full physical and mental potential by reducing pressure on the nervous system. Give your body the best opportunity to heal itself.
 
-      / %figure.figure.text-center
-      /   = fa_icon 'question-circle', class: 'fa-3x'
-      /   %figcaption.figure-caption
-      /     =link_to 'What is chiropractic?', '#'
-    / .col-sm-2
-    /   %figure.figure.text-center
-    /     = fa_icon 'phone', class: 'fa-3x'
-    /     %figcaption.figure-caption
-    /       =link_to 'Contact Us', '#'
-
-
-
-/ .container
-/   .content
-/     .row
-/       .col
-/         %h2 Humans are self-healing living beings.
-/         %p Our innate intelligence, expressed by our nervous system, directs our healing. We owe it to ourselves to give that innate intelligence a chance to express itself fully; reducing pressure on the nervous systems gives us the best opportunity to heal ourselves.
-
-#section2.section{ data: { parallax: true, src: asset_path('splash/exam.jpg'), pos_x: :left } }
+%section{ data: { parallax: true, src: asset_path('splash/exam.jpg'), pos_x: :left } }
   .container
     .row
-      .col-sm-8
-        .content
-          %h2 Using Gonstead, CBP and individually-customized, therapeutic movements, we alleviate the stress on the nervous system and restore the body’s natural healing ability.
-          %p Dr. Rowe is a certified practitioner of both the Gonstead system and Chiropractic Biophysics (CBP). The Gonstead System provides the most comprehensive method of addressing the dysfunction of individual vertebrae. Chiropractic Biophysics restores the body’s balance and natural-healing by correcting overall posture.
+      .col
+        .content.mr-5.ml-5
+          %h2
+            %span
+              = fa_icon 'handshake', class: 'fas fa-2x'
+            Your First Visit
+          %p
+            %strong
+              %em
+                Our first goal
+            is to allow you to feel comfortable and at home. We start with a tour of the office, answer any questions you may have, and let you know what to expect. Your comfort is our first priority.
 
-      .col.text-right
-        = image_tag 'placeholder.svg', size: '300x300', class: 'img-thumbnail'
-
-#section3.section
+%section
   .container
     .row
       .col
