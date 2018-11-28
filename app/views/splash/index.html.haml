@@ -7,16 +7,29 @@
     .row
       .col-sm-7
         .content
-          %h2 Chiropractic care for total health.
-          %p
-            Family run since 1981, Rowe Chiropractic offers chiropractic care for total health.
-          %p
-            Dr. David Rowe uses
-            = link_to 'Gonstead', '#'
-            spinal adjustments,
-            = link_to('CBP', '#')
-            posture correction, diet and lifestyle guidance to reconnect body to mind and restore your body's natural, innate healing ability.
-      .col-sm-4.offset-1
+          .row
+            .col
+              %h2 Chiropractic care for total health.
+              %p
+                Family run since 1981, Rowe Chiropractic Offices in New York City combines
+                = link_to 'Gonstead', '#', class: 'content-link'
+                spinal adjustments,
+                = link_to 'CBP', '#', class: 'content-link'
+                posture correction, diet and lifestyle guidance to restore your body's natural, innate healing ability.
+          .row.mt-4.text-center
+            .col
+              %figure.figure.text-center
+                = fa_icon 'calendar-check', class: 'fa-3x'
+                %figcaption.figure-caption
+                  =link_to 'Schedule your first appointment!', '#'
+            .col
+              %figure.figure.text-center
+                = fa_icon 'play-circle', class: 'fa-3x'
+                %figcaption.figure-caption
+                  =link_to 'What will my first visit be like?', '#'
+
+
+      .col-sm-4.offset-1.text-right
         .row
           .col
             %figure.figure.text-center
@@ -24,53 +37,47 @@
               %figcaption.figure-caption
                 = link_to 'Meet Dr. Rowe', '/', class: 'btn btn-secondary'
 
-          /   %figure.figure.text-center
-          /     = fa_icon 'play-circle', class: 'fa-3x'
-          /     %figcaption.figure-caption
-          /       =link_to 'What will my first visit be like?', '#'
-          / .col
-          /   %figure.figure.text-center
-          /     = fa_icon 'calendar', class: 'fa-3x'
-          /     %figcaption.figure-caption
-          /       =link_to 'Schedule a consult', '#'
 
 .container
   .row.mt-5
-    .col-sm-7
+    .col
+      = image_tag 'placeholder.svg', size: '300x300', class: 'img-thumbnail'
+
+    .col-sm-9
       / %p Dr. Rowe's holistic approach addresses the body and mind, including lifestyle and diet, allowing his patients to heal the nervous system and return to pain-free, drug-free lives.
+      .content
+        %h2 Reconnecting your body and mind and unlock your body's innate healing ability.
+        %p Humans  are  self-healing  living  beings.  Our  innate  intelligence,  expressed  by  our  nervous  system,  directs  our  healing.  We  owe  it  to  ourselves  to  give  that  innate  intelligence  a  chance  to  express  itself  fully;  reducing  pressure  on  the  nervous  systems  gives  us  the  best  opportunity  to  heal  ourselves.
 
-      %h2 Reconnecting your body and mind and unlock your body's innate healing ability...
-      %p Humans  are  self-healing  living  beings.  Our  innate  intelligence,  expressed  by  our  nervous  system,  directs  our  healing.  We  owe  it  to  ourselves  to  give  that  innate  intelligence  a  chance  to  express  itself  fully;  reducing  pressure  on  the  nervous  systems  gives  us  the  best  opportunity  to  heal  ourselves.
-
-    .col-sm-2
-      %figure.figure.text-center
-        = fa_icon 'question-circle', class: 'fa-3x'
-        %figcaption.figure-caption
-          =link_to 'What is chiropractic?', '#'
-    .col-sm-2
-      %figure.figure.text-center
-        = fa_icon 'phone', class: 'fa-3x'
-        %figcaption.figure-caption
-          =link_to 'Contact Us', '#'
-
+      / %figure.figure.text-center
+      /   = fa_icon 'question-circle', class: 'fa-3x'
+      /   %figcaption.figure-caption
+      /     =link_to 'What is chiropractic?', '#'
+    / .col-sm-2
+    /   %figure.figure.text-center
+    /     = fa_icon 'phone', class: 'fa-3x'
+    /     %figcaption.figure-caption
+    /       =link_to 'Contact Us', '#'
 
 
-.container
-  .content
-    .row
-      .col
-        %h2 Humans are self-healing living beings.
-        %p Our innate intelligence, expressed by our nervous system, directs our healing. We owe it to ourselves to give that innate intelligence a chance to express itself fully; reducing pressure on the nervous systems gives us the best opportunity to heal ourselves.
+
+/ .container
+/   .content
+/     .row
+/       .col
+/         %h2 Humans are self-healing living beings.
+/         %p Our innate intelligence, expressed by our nervous system, directs our healing. We owe it to ourselves to give that innate intelligence a chance to express itself fully; reducing pressure on the nervous systems gives us the best opportunity to heal ourselves.
 
 #section2.section{ data: { parallax: true, src: asset_path('splash/exam.jpg'), pos_x: :left } }
-
   .container
     .row
-      .col-sm-4
       .col-sm-8
         .content
           %h2 Using Gonstead, CBP and individually-customized, therapeutic movements, we alleviate the stress on the nervous system and restore the body’s natural healing ability.
           %p Dr. Rowe is a certified practitioner of both the Gonstead system and Chiropractic Biophysics (CBP). The Gonstead System provides the most comprehensive method of addressing the dysfunction of individual vertebrae. Chiropractic Biophysics restores the body’s balance and natural-healing by correcting overall posture.
+
+      .col.text-right
+        = image_tag 'placeholder.svg', size: '300x300', class: 'img-thumbnail'
 
 #section2.section
   .container
