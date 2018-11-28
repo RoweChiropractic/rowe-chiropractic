@@ -1,42 +1,11 @@
 .masthead{ data: { parallax: true, src: asset_path('splash/adjustment.jpg'), pos_x: :left } }
   = render 'layouts/navigation'
-  %h1.text-center
-    / Live your life at it's highest potential!
-    / %span.float-right Unlock your body's innate healing ability.
   .container
     .row
-      .col-sm-7
+      .col-sm-8.offset-2
         .content
-          .row
-            .col
-              %h2 Chiropractic care for total health.
-              %p
-                Family run since 1981, Rowe Chiropractic Offices in New York City combines
-                = link_to 'Gonstead', '#', class: 'content-link'
-                spinal adjustments,
-                = link_to 'CBP', '#', class: 'content-link'
-                posture correction, diet and lifestyle guidance to restore your body's natural, innate healing ability.
-          .row.mt-4.text-center
-            .col
-              %figure.figure.text-center
-                = fa_icon 'calendar-check', class: 'fa-3x'
-                %figcaption.figure-caption
-                  =link_to 'Schedule your first appointment!', '#'
-            .col
-              %figure.figure.text-center
-                = fa_icon 'play-circle', class: 'fa-3x'
-                %figcaption.figure-caption
-                  =link_to 'What will my first visit be like?', '#'
-
-
-      .col-sm-4.offset-1.text-center
-        .row
-          .col
-            %figure.figure
-              = image_tag 'splash/rowe.png', class: 'figure-img img-fluid rounded img-thumbnail', width: '170px'
-              %figcaption.figure-caption
-                = link_to 'Meet Dr. Rowe', '/', class: 'btn btn-secondary'
-
+          %p.mission The human body is self-healing.
+          %p.mission-sub Chiropractic care works to free the nervous system and restore the body's natural ability to heal.
 
 .container
   .row.mt-5

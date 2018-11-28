@@ -15,6 +15,24 @@ p {
     }
 }
 
+p.mission, p.mission-sub {
+  // -webkit-text-stroke-width: 1px;
+  // -webkit-text-stroke-color: white;
+  // -webkit-text-fill-color: $link-color;
+  font-size: 1.8rem;
+  font-weight: 2000;
+  font-style: italic;
+  text-align: center;
+  // letter-spacing: 0.1px;
+  line-height: 2.2rem;
+  margin-bottom: 0;
+  color: $headings-color;
+}
+
+ p.mission-sub {
+  color: $link-color;
+  font-size: 1.3rem;
+ }
 .figure {
   color: $link-color;
   .figure-caption {
@@ -48,10 +66,11 @@ h3 {
 .masthead {
   overflow: auto;
   background: transparent;
+  min-height: 400px;
   margin-bottom: 1rem;
   padding-bottom: 2rem;
   .navbar {
-    margin: 2rem 0 0 0;
+    margin: 2rem 0 2rem 0;
     .logo {
       height: 75px;
       margin-left: 4rem;
