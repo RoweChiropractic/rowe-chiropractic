@@ -6,12 +6,16 @@
         %figure.figure.text-center
           = fa_icon 'handshake', class: 'fas fa-4x'
           %figcaption.figure-caption
-            =link_to 'Your First Visit', '#'
+            =link_to 'Your First', '#'
+            %br
+            =link_to 'Visit', '#'
       .col-sm-3
         %figure.figure.text-center
           = fa_icon 'user-md', class: 'fas fa-4x'
           %figcaption.figure-caption
-            =link_to 'Meet Dr. Rowe', '#'
+            =link_to 'Meet', '#'
+            %br
+            =link_to 'Dr. Rowe', '#'
       .col-sm-3
         %figure.figure.text-center
           = fa_icon 'calendar-check', class: 'fa-4x'
@@ -21,7 +25,9 @@
         %figure.figure.text-center
           = fa_icon 'skeleton', class: 'fa-4x'
           %figcaption.figure-caption
-            =link_to 'Chiropractic Care', '#'
+            =link_to 'Chiropractic', '#'
+            %br
+            =link_to 'Care', '#'
 
 
 %section
@@ -44,17 +50,23 @@
             %span
               = fa_icon 'handshake', class: 'fas fa-2x'
             Your First Visit
-          %p
-            %strong
-              %em
-                Our first goal
-            is to allow you to feel comfortable and at home. We start with a tour of the office, answer any questions you may have, and let you know what to expect. Your comfort is our first priority.
+          %p Our first goal is to allow you to feel comfortable and at home. We start with a tour of the office, answer any questions you may have, and let you know what to expect. Your comfort is our first priority.
 
 %section
   .container
     .row
-      .col
-        %h2 Rowe chiropractic is a specialist in locating and correcting subluxation - rewiring communication so that the brain can talk to the body again.
+      .col-sm-6
+        .content
+          %h2
+            %span
+              = fa_icon 'skeleton', class: 'fas fa-2x'
+            Chiropractic Care
+          %p Unhealthy posture disrupts the nervous system and with an stressed nervous system the body can’t heal or self-regulate. This interferes with our brain’s ability to properly react to our ever- changing environment.
 
-        %p The lives we live create an impression on our nervous system and on our posture. When our minds and bodies feel stress, it imprints on our skeleton system as subluxation, or an interruption in the nervous system. We employ different modalities to repair our bodies, but if the brain is not talking to the body, the body can’t be healthy. As much as we learn about and hope to maintain our health through stress management, diet, and exercise. the most important - one small misalignment - can create subluxations that turn the volume of our brain/body communication down.
-
+      .col-sm-6
+        .content
+          %h2
+            %span
+              = fa_icon 'user-md', class: 'fas fa-2x'
+            Meet Dr. Rowe
+          %p Using Gonstead, CBP and individually- customized, therapeutic movements, Dr. Rowe alleviate the stress on the nervous system to restore the body’s natural healing ability.
