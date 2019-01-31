@@ -1,5 +1,7 @@
 .info {
-
+  p {
+    margin: 0;
+  }
 }
 .branding {
   margin-bottom: $margin;
@@ -30,7 +32,6 @@ p {
   margin-bottom: $margin * 2;
   background-image: image-url('splash/adjustment.jpg');
   background-size: cover;
-  background-repeat: fill;
   background-position: 0 -350px;
 
   figure {
@@ -68,3 +69,7 @@ p {
   }
 }
 
+.content {
+  background-image: image-url('splash/exam.jpg');
+  background-size: cover;
+}
