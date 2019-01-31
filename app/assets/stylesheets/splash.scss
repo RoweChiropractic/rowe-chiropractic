@@ -1,81 +1,70 @@
-$text-color: #58595b;
+.info {
 
-h2, h3 {
-  color: $text-color;
-  text-transform: uppercase;
 }
-h2 {
-  margin-bottom: 0;
-  span {
-    color: $link-color;
+.branding {
+  margin-bottom: $margin;
+  text-transform: uppercase;
+  img.logo {
+    margin-bottom: $margin;
+  }
+  h1 {
+    margin-bottom: 0;
+    font-weight: 600;
+    padding: 0;
+  }
+  p.tag-line {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.07rem
   }
 }
-h3 {
-    margin-bottom: 2rem;
-}
+
 p {
-    font-weight: 300;
-    &.callout {
-      text-indent: 2rem;
-      font-weight: 500;
-      font-size: 1.3rem;
-      font-style: italic;
-      margin: 2rem 2rem;
-    }
+  font-weight: 600;
 }
 
 .icon-nav {
-  padding: 0 10rem;
-  font-size: 1.1rem;
-  margin-top: 4rem;
-  figcaption.figure-caption {
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    margin-top: 1.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    line-height: 1rem;
-  }
-}
+  padding: $margin * 2 0;
+  margin-bottom: $margin * 2;
+  background-image: image-url('splash/adjustment.jpg');
+  background-size: cover;
+  background-repeat: fill;
+  background-position: 0 -350px;
 
-.figure {
-  color: $link-color;
-  .figure-caption {
-    margin-top: 0.5rem;
-  }
-  margin: 0;
-}
+  figure {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    margin-right: $margin * 5;
+    &:last-child { margin-right: 0; }
+    color: $link-color;
 
-.masthead {
-  overflow: auto;
-  background: transparent;
-  min-height: 400px;
-  margin-bottom: 1rem;
-  .navbar {
-    margin: 2rem 0 2rem 0;
-    .logo {
-      height: 75px;
-      margin-left: 4rem;
+    svg {
+      fill: $link-color;
+      width: 3.5rem;
+    }
+
+    figcaption.figure-caption {
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      margin-top: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 1rem;
     }
   }
+}
 
-  a.navbar-brand {
-    padding: 0;
-    font-size: 1.8rem;
-    font-weight: 300;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+.mission {
+  text-align: center;
+
+  .statement {
+    width: $margin * 13;
+    margin-right: $margin * 3;
+    &:last-child { margin-right: 0; }
+    display: inline-block;
   }
 }
 
-.content {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 3px;
-  padding: 2rem;
-}
-
-section {
-  overflow: auto;
-  min-height: 300px;
-  padding: 1.5rem;
-}

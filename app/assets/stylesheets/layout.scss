@@ -1,24 +1,8 @@
+section {
+  margin: 0;
+  padding: 0;
+}
 
-// $footer-height: 300px;
-// /* Sticky footer styles
-// -------------------------------------------------- */
-// html {
-//   position: relative;
-//   min-height: 100%;
-// }
-// body.main {
-//   /* Margin bottom by footer height */
-//   margin-bottom: $footer-height;
-// }
-
-// .content {
-//   padding-bottom: $margin;
-// }
-// .footer {
-//   position: absolute;
-//   bottom: 0;
-//   width: 100%;
-//   // line-height: $footer-height;
-//   /* Set the fixed height of the footer here */
-//   height: $footer-height;
-// }
+.row {
+  margin-bottom: $margin;
+}

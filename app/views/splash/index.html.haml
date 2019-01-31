@@ -1,72 +1,94 @@
-.masthead{ data: { parallax: true, src: asset_path('splash/adjustment.jpg'), pos_x: :left } }
-  = render 'layouts/navigation'
-  .container.icon-nav
-    .row.text-center
-      .col-sm-3
-        %figure.figure.text-center
-          = fa_icon 'handshake', class: 'fas fa-4x'
-          %figcaption.figure-caption
-            =link_to 'Your First', '#'
-            %br
-            =link_to 'Visit', '#'
-      .col-sm-3
-        %figure.figure.text-center
-          = fa_icon 'user-md', class: 'fas fa-4x'
-          %figcaption.figure-caption
-            =link_to 'Meet', '#'
-            %br
-            =link_to 'Dr. Rowe', '#'
-      .col-sm-3
-        %figure.figure.text-center
-          = fa_icon 'calendar-check', class: 'fa-4x'
-          %figcaption.figure-caption
-            =link_to 'Make an appointment', '#'
-      .col-sm-3
-        %figure.figure.text-center
-          = fa_icon 'skeleton', class: 'fa-4x'
-          %figcaption.figure-caption
-            =link_to 'Chiropractic', '#'
-            %br
-            =link_to 'Care', '#'
+%section.header
+  .container
+    .row.info
+      .col-sm-4
+        %p= link_to 'info@rowechiropractic.com'
+        %p= link_to '212.486.8888'
+      .col-sm-4.text-center
+        %p= link_to '316 E. 59th St. New York, NY 10022'
+      .col-sm-4.text-right
+        %p= link_to 'make an appointment'
+        %ul.list-inline
+          %li.list-inline-item= link_to fa_icon('twitter', class: 'fab')
+          %li.list-inline-item= link_to fa_icon('facebook', class: 'fab')
+          %li.list-inline-item= link_to fa_icon('youtube', class: 'fab')
+          %li.list-inline-item= link_to fa_icon('instagram', class: 'fab')
 
+    .row.branding.text-center
+      .col-12
+        = image_tag 'rowe-chiropractic-logo-round.png', height: '120px', class: :logo
+        %h1 Rowe Chiropractic
+        %p.tag-line Chiropractic care for total health
 
-%section
+%section.icon-nav
+  .container
+    .d-flex.flex-row.justify-content-center
+      %figure.figure
+        = fa_icon 'handshake', class: 'fas fa-4x'
+        %figcaption.figure-caption
+          =link_to 'Your First', '#'
+          %br
+          =link_to 'Visit', '#'
+      %figure.figure
+        = inline_svg 'splash/man-icon.svg'
+        %figcaption.figure-caption
+          =link_to 'Meet', '#'
+          %br
+          =link_to 'Dr. Rowe', '#'
+      %figure.figure
+        = fa_icon 'clipboard-list', class: 'fas fa-4x'
+        %figcaption.figure-caption
+          =link_to 'Make an'
+          %br
+          =link_to 'appointment', '#'
+      %figure.figure
+        = fa_icon 'skeleton', class: 'fa-4x'
+        %figcaption.figure-caption
+          =link_to 'Chiropractic', '#'
+          %br
+          =link_to 'Care', '#'
+
+%section.mission
+  .container
+    .d-flex.flex-row.justify-content-center
+      .statement
+        %h2 Reach
+        %p Reach your full physical and mental potential by reducing pressure on the nervous system
+      .statement
+        %h2 Thrive
+        %p Our bodies have the ability to thrive and function at a higher level than we thought was possible.
+      .statement
+        %h2 Connect
+        %p The human body is self-healing. Reconnect your mind with your body.
+
+%section.content
   .container
     .row
       .col
-        %h2 CHIROPRACTIC CARE FOR TOTAL HEALTH:
-        %h3 RECONNECTING YOUR MIND WITH YOUR BODY
+        %h2
+          %span
+            = fa_icon 'handshake', class: 'fas fa-2x'
+          Your First Visit
+        .image.float-right
+          = inline_svg 'placeholder.svg', height: 100, width: 200
+        %p Our first goal is to allow you to feel comfortable and at home. We start with a tour of the office, answer any questions you may have, and let you know what to expect. Your comfort is our first priority. Our first goal is to allow you to feel comfortable and at home. We start with a tour of the office, answer any questions you may have, and let you know what to expect. Your comfort is our first priority.
 
-        = image_tag 'splash/spine.png', width: '250', class: 'float-left mr-5'
-
-        %p Our bodies have the ability to thrive and function at a higher level than we thought was possible. Reach your full physical and mental potential by reducing pressure on the nervous system. Give your body the best opportunity to heal itself.
-
-%section{ data: { parallax: true, src: asset_path('splash/exam.jpg'), pos_x: :left } }
-  .container
     .row
       .col
-        .content.mr-5.ml-5
-          %h2
-            %span
-              = fa_icon 'handshake', class: 'fas fa-2x'
-            Your First Visit
-          %p Our first goal is to allow you to feel comfortable and at home. We start with a tour of the office, answer any questions you may have, and let you know what to expect. Your comfort is our first priority.
+        %h2.text-right
+          Chiropractic Care
+          %span
+            = fa_icon 'skeleton', class: 'fa-2x'
+        .image.float-left.mr-3
+          = inline_svg 'placeholder.svg', height: 200, width: 200
+        %p Unhealthy posture disrupts the nervous system and with an stressed nervous system the body can’t heal or self-regulate. This interferes with our brain’s ability to properly react to our ever-changing environment.
 
-%section
-  .container
     .row
-      .col-sm-6
-        .content
-          %h2
-            %span
-              = fa_icon 'skeleton', class: 'fas fa-2x'
-            Chiropractic Care
-          %p Unhealthy posture disrupts the nervous system and with an stressed nervous system the body can’t heal or self-regulate. This interferes with our brain’s ability to properly react to our ever- changing environment.
-
-      .col-sm-6
-        .content
-          %h2
-            %span
-              = fa_icon 'user-md', class: 'fas fa-2x'
-            Meet Dr. Rowe
-          %p Using Gonstead, CBP and individually- customized, therapeutic movements, Dr. Rowe alleviate the stress on the nervous system to restore the body’s natural healing ability.
+      .col
+        %h2
+          %span
+            = inline_svg 'splash/man-icon.svg', height: 100
+          Meet Dr. Rowe
+        .image.float-right
+          = inline_svg 'placeholder.svg', height: 100, width: 200
+        %p Using Gonstead, CBP and individually-customized, therapeutic movements, Dr. Rowe alleviate the stress on the nervous system to restore the body’s natural healing ability.
