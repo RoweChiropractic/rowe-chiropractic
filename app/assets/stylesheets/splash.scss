@@ -1,9 +1,12 @@
 .info {
+  margin-bottom: 0;
   p {
-    margin: 0;
+    margin-bottom: 0;
   }
 }
+
 .branding {
+  margin-top: -1rem;
   margin-bottom: $margin;
   text-transform: uppercase;
   img.logo {
@@ -72,4 +75,42 @@ p {
 .content {
   background-image: image-url('splash/exam.jpg');
   background-size: cover;
+  padding: $margin * 2 $margin * 8;
+
+  .content-block {
+    padding: $margin;
+    background: white;
+
+    h2 {
+      border: 1px solid $link-color;
+      border-width: 0 0 1px 0;
+      padding: $margin / 2;
+      margin-bottom: $margin;
+      span {
+        margin-right: 1rem;
+        font-size: 1.6rem;
+        display: inline-block;
+        vertical-align: middle;
+        color: $link-color;
+        fill: $link-color;
+      }
+    }
+
+    .image {
+      float: right;
+      margin-left: $margin;
+    }
+    &.right {
+      h2 {
+        text-align: right;
+        span {
+          margin-left: 1rem;
+        }
+      }
+      .image {
+        float: left;
+        margin: 0 $margin 0 0;
+      }
+    }
+  }
 }
