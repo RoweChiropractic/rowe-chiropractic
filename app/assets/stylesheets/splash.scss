@@ -34,9 +34,20 @@ p {
 .icon-nav {
   padding: $margin * 2 0;
   margin-bottom: $margin * 2;
-  background-image: image-url('splash/adjustment.jpg');
-  background-size: cover;
-  background-position: 0 -350px;
+  position: relative;
+  &:after {
+    content: '';
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    background-image: image-url('splash/adjustment.jpg');
+    background-size: cover;
+    background-position: 0 -350px;
+  }
 
   figure {
     text-align: center;
@@ -100,6 +111,9 @@ p {
     .image {
       float: right;
       margin-left: $margin;
+      img {
+        max-width: 200px;
+      }
     }
     &.right {
       h2 {
