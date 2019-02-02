@@ -2,17 +2,17 @@
   .container
     .row.info
       .col-sm-4
-        %p= link_to 'info@rowechiropractic.com'
-        %p= link_to '212.486.8888'
+        %p= mail_to 'info@rowechiropractic.com', 'info@rowechiropractic.com', encode: :javascript
+        %p= link_to '212.486.8888', 'tel:2124868888'
       .col-sm-4.text-center
-        %p= link_to '316 E. 59th St. New York, NY 10022'
+        %p= link_to '316 E. 59th St. New York, NY 10022', '/pages/contact-us'
       .col-sm-4.text-right
-        %p= link_to 'make an appointment'
+        %p= link_to 'make an appointment', '/pages/contact-us'
         %ul.list-inline
-          %li.list-inline-item= link_to fa_icon('twitter', class: 'fab')
-          %li.list-inline-item= link_to fa_icon('facebook', class: 'fab')
-          %li.list-inline-item= link_to fa_icon('youtube', class: 'fab')
-          %li.list-inline-item= link_to fa_icon('instagram', class: 'fab')
+          %li.list-inline-item= link_to fa_icon('twitter', class: 'fab'), 'https://twitter.com/Rowe_Chiro'
+          %li.list-inline-item= link_to fa_icon('facebook', class: 'fab'), 'https://www.facebook.com/RoweChiropracticOffices/'
+          %li.list-inline-item= link_to fa_icon('youtube', class: 'fab'), 'https://www.youtube.com/user/RoweChiropractic'
+          %li.list-inline-item= link_to fa_icon('instagram', class: 'fab'), 'https://www.instagram.com/RoweChiropractic/'
 
     .row.branding.text-center
       .col-12
@@ -24,29 +24,29 @@
   .container
     .d-flex.flex-row.justify-content-center
       %figure.figure
-        = link_to fa_icon('handshake', class: 'fas fa-4x'), '/splash/index#first-visit'
+        = link_to fa_icon('handshake', class: 'fas fa-4x'), '#first-visit'
         %figcaption.figure-caption
           =link_to 'Your First', '#first-visit'
           %br
           =link_to 'Visit', '#first-visit'
       %figure.figure
-        = inline_svg 'splash/man-icon.svg'
+        = link_to inline_svg('splash/man-icon.svg'), '#meet-dr-rowe'
         %figcaption.figure-caption
-          =link_to 'Meet', '#'
+          =link_to 'Meet', '#meet-dr-rowe'
           %br
-          =link_to 'Dr. Rowe', '#'
+          =link_to 'Dr. Rowe', '#meet-dr-rowe'
       %figure.figure
-        = fa_icon 'clipboard-list', class: 'fas fa-4x'
+        = link_to fa_icon('clipboard-list', class: 'fas fa-4x'), ''
         %figcaption.figure-caption
-          =link_to 'Make an'
+          = link_to 'Make an', '#'
           %br
           =link_to 'appointment', '#'
       %figure.figure
-        = fa_icon 'skeleton', class: 'fa-4x'
+        = link_to fa_icon('skeleton', class: 'fa-4x'), '#chiropractic-care'
         %figcaption.figure-caption
-          =link_to 'Chiropractic', '#'
+          =link_to 'Chiropractic', '#chiropractic-care'
           %br
-          =link_to 'Care', '#'
+          =link_to 'Care', '#chiropractic-care'
 
 %section.mission
   .container
