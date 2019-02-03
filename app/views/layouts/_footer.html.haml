@@ -1,93 +1,9 @@
-%footer
+%footer.footer.bg-dark
   .container
-    .row.text-center.text-xs-center.text-sm-left.text-md-left
-      .col-xs-12.col-sm-4.col-md-4
-        %h5 Footer Links
-        %ul.list-unstyled.quick-links
-          %li
-            %a{:href => "javascript:void();"}
-              %i.fa.fa-angle-double-right>
-              Home
-          %li
-            %a{:href => "javascript:void();"}
-              %i.fa.fa-angle-double-right>
-              About
-          %li
-            %a{:href => "javascript:void();"}
-              %i.fa.fa-angle-double-right>
-              FAQ
-          %li
-            %a{:href => "javascript:void();"}
-              %i.fa.fa-angle-double-right>
-              Get Started
-          %li
-            %a{:href => "javascript:void();"}
-              %i.fa.fa-angle-double-right>
-              Videos
-      .col-xs-12.col-sm-4.col-md-4
-        %h5 To Be Added
-        %ul.list-unstyled.quick-links
-          %li
-            %a{:href => "javascript:void();"}
-              %i.fa.fa-angle-double-right>
-              Home
-          %li
-            %a{:href => "javascript:void();"}
-              %i.fa.fa-angle-double-right>
-              About
-          %li
-            %a{:href => "javascript:void();"}
-              %i.fa.fa-angle-double-right>
-              FAQ
-          %li
-            %a{:href => "javascript:void();"}
-              %i.fa.fa-angle-double-right>
-              Get Started
-          %li
-            %a{:href => "javascript:void();"}
-              %i.fa.fa-angle-double-right>
-              Videos
-      .col-xs-12.col-sm-4.col-md-4
-        %h5 Later
-        %ul.list-unstyled.quick-links
-          %li
-            %a{:href => "javascript:void();"}
-              %i.fa.fa-angle-double-right>
-              Home
-          %li
-            %a{:href => "javascript:void();"}
-              %i.fa.fa-angle-double-right>
-              About
-          %li
-            %a{:href => "javascript:void();"}
-              %i.fa.fa-angle-double-right>
-              FAQ
-          %li
-            %a{:href => "javascript:void();"}
-              %i.fa.fa-angle-double-right>
-              Get Started
-          %li
-            %a{:href => "https://wwwe.sunlimetech.com", :title => "Design and developed by"}
-              %i.fa.fa-angle-double-right>
-              Imprint
-    .row
-      .col-xs-12.col-sm-12.col-md-12.mt-2.mt-sm-5
-        %ul.list-unstyled.list-inline.social.text-center
-          %li.list-inline-item
-            %a{:href => "javascript:void();"}
-              = fa_icon 'facebook', class: :fab
-          %li.list-inline-item
-            %a{:href => "javascript:void();"}
-              = fa_icon 'twitter', class: :fab
-          %li.list-inline-item
-            %a{:href => "javascript:void();"}
-              = fa_icon 'instagram', class: :fab
-          %li.list-inline-item
-            %a{:href => "javascript:void();", :target => "_blank"}
-              = fa_icon 'envelope'
-          %li.list-inline-item
-            %a{:href => "javascript:void();", :target => "_blank"}
-              = fa_icon 'phone'
+    .row.content
+      .col-sm-12
+        = link_to image_tag('https://www.opencare.com/images/badges/patients-choice-winner-2016.png'), 'https://www.opencare.com/chiropractors/new-york-ny/#tc24630637381', target: '_blank'
+
     .row.copy
       .col-sm.text-center
         &copy;
@@ -95,11 +11,3 @@
         Rowe Chiropractic Offices. All rights reserved.
         - path = user_signed_in? ? admin_dashboard_path : new_user_session_path
         = link_to fa_icon('sign-in-alt', class: :fa), path, class: 'admin-login'
-
-
-/ %footer.footer.bg-dark
-/   .container
-/     .row.content
-/       .col-sm-12
-/         = link_to image_tag('https://www.opencare.com/images/badges/patients-choice-winner-2016.png'), 'https://www.opencare.com/chiropractors/new-york-ny/#tc24630637381', target: '_blank'
-
