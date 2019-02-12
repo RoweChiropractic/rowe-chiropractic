@@ -16,20 +16,15 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = javascript_tag '$.fx.off = true;' if Rails.env.test?
 
-    %script
-      window.FontAwesomeConfig = {searchPseudoElements: true }
-
   %body.main
-    = render 'layouts/navigation'
-    %main{ role: :main }
-      - unless flash.empty?
-        .row.flash
-          .col-12
-            = render 'layouts/messages'
-      - if controller.controller_name =~ /home/
-        .home.content
-          = yield
-      - else
-        .container.content
+    = render 'layouts/info-nav'
+    .container
+      = render 'layouts/main-nav'
+      %main{ role: :main }
+        - unless flash.empty?
+          .row.flash
+            .col-12
+              = render 'layouts/messages'
+        .content
           = yield
     = render 'layouts/footer'

@@ -1,0 +1,16 @@
+nav.info-nav {
+  a {
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 0;
+    margin-right: 0.5rem;
+    svg {
+      color: $link-color;
+      margin-right: 0.25rem;
+    }
+    &.social {
+      margin-right: 0.5rem;
+      padding: 0;
+    }
+  }
+}

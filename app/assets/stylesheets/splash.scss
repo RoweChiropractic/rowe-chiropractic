@@ -1,136 +1,136 @@
-body {
+body.splash {
   background: #f4f4ef;
-}
 
-.info {
-  margin-top: $margin / 2;
-  margin-bottom: 0;
-  p {
+  .info {
+    margin-top: $margin / 2;
     margin-bottom: 0;
+    p {
+      margin-bottom: 0;
+    }
   }
-}
 
-.branding {
-  margin-top: -2rem;
-  margin-bottom: $margin;
-  text-transform: uppercase;
-  img.logo {
+  .branding {
+    margin-top: -2rem;
     margin-bottom: $margin;
-  }
-  h1 {
-    margin-bottom: 0;
-    font-weight: 600;
-    padding: 0;
-  }
-  p.tag-line {
-    margin: 0;
-    padding: 0;
-    font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 0.07rem
-  }
-}
-
-p {
-  font-weight: 600;
-}
-
-.icon-nav {
-  padding: $margin * 2 0;
-  margin-bottom: $margin;
-  position: relative;
-  border: 1px solid $gray-400;
-  border-width: 1px 0;
-  &:after {
-    content: '';
-    opacity: 0.7;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-    background-image: image-url('splash/adjustment.jpg');
-    background-size: cover;
-    background-position: 0 -350px;
-  }
-
-  figure {
-    text-align: center;
-    font-size: 1.1rem;
-    margin-bottom: 0;
-    margin-right: $margin * 5;
-    &:last-child { margin-right: 0; }
-    color: $link-color;
-
-    svg {
-      fill: $link-color;
-      width: 3.5rem;
-    }
-
-    figcaption.figure-caption {
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      margin-top: 0.75rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      line-height: 1rem;
-    }
-  }
-}
-
-.mission {
-  text-align: center;
-
-  .statement {
-    width: $margin * 13;
-    margin-right: $margin * 3;
-    &:last-child { margin-right: 0; }
-    display: inline-block;
-  }
-}
-
-.splash-content {
-  background-image: image-url('splash/exam.jpg');
-  background-size: cover;
-  padding: $margin * 2 $margin * 8;
-
-  .content-block {
-    padding: $margin;
-    background: white;
-
-    h2 {
-      border: 1px solid $link-color;
-      border-width: 0 0 1px 0;
-      padding: $margin / 2;
+    text-transform: uppercase;
+    img.logo {
       margin-bottom: $margin;
-      span {
-        margin-right: 1rem;
-        font-size: 1.6rem;
-        display: inline-block;
-        vertical-align: middle;
-        color: $link-color;
-        fill: $link-color;
-      }
+    }
+    h1 {
+      margin-bottom: 0;
+      font-weight: 600;
+      padding: 0;
+    }
+    p.tag-line {
+      margin: 0;
+      padding: 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 0.07rem
+    }
+  }
+
+  p {
+    font-weight: 600;
+  }
+
+  .icon-nav {
+    padding: $margin * 2 0;
+    margin-bottom: $margin;
+    position: relative;
+    border: 1px solid $gray-400;
+    border-width: 1px 0;
+    &:after {
+      content: '';
+      opacity: 0.7;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+      background-image: image-url('splash/adjustment.jpg');
+      background-size: cover;
+      background-position: 0 -350px;
     }
 
-    .image {
-      float: right;
-      margin-left: $margin;
-      img {
-        max-width: 200px;
+    figure {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 0;
+      margin-right: $margin * 5;
+      &:last-child { margin-right: 0; }
+      color: $link-color;
+
+      svg {
+        fill: $link-color;
+        width: 3.5rem;
+      }
+
+      figcaption.figure-caption {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        margin-top: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 1rem;
       }
     }
-    &.right {
+  }
+
+  .mission {
+    text-align: center;
+
+    .statement {
+      width: $margin * 13;
+      margin-right: $margin * 3;
+      &:last-child { margin-right: 0; }
+      display: inline-block;
+    }
+  }
+
+  .splash-content {
+    background-image: image-url('splash/exam.jpg');
+    background-size: cover;
+    padding: $margin * 2 $margin * 8;
+
+    .content-block {
+      padding: $margin;
+      background: white;
+
       h2 {
-        text-align: right;
+        border: 1px solid $link-color;
+        border-width: 0 0 1px 0;
+        padding: $margin / 2;
+        margin-bottom: $margin;
         span {
-          margin-left: 1rem;
+          margin-right: 1rem;
+          font-size: 1.6rem;
+          display: inline-block;
+          vertical-align: middle;
+          color: $link-color;
+          fill: $link-color;
         }
       }
+
       .image {
-        float: left;
-        margin: 0 $margin 0 0;
+        float: right;
+        margin-left: $margin;
+        img {
+          max-width: 200px;
+        }
+      }
+      &.right {
+        h2 {
+          text-align: right;
+          span {
+            margin-left: 1rem;
+          }
+        }
+        .image {
+          float: left;
+          margin: 0 $margin 0 0;
+        }
       }
     }
   }

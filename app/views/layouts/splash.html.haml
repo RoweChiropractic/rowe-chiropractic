@@ -16,7 +16,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = javascript_tag '$.fx.off = true;' if Rails.env.test?
 
-  %body
+  %body.splash
     = yield
 
     = render 'layouts/footer'

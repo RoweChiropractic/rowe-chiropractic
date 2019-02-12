@@ -1,0 +1,25 @@
+%nav.info-nav.navbar.navbar-light.bg-light.fixed-top.navbar-expand-lg
+  .container
+    .collapse.navbar-collapse
+      .navbar-nav
+        %a.nav-item.nav-link{ href: '/pages/contact-us' }
+          = fa_icon('calendar-check')
+          Make an appointment
+        %a.nav-item.nav-link{ href: 'tel:2124868888' }
+          = fa_icon('phone')
+          (212) 486-8888
+
+      .navbar-nav.ml-auto
+        %a.nav-item.nav-link{ href: '/pages/contact-us' }
+          = fa_icon('envelope')
+          Email Us
+        %a.nav-item.nav-link{ href: '/pages/contact-us' }
+          = fa_icon('clock')
+          Office Hours
+        %a.nav-item.nav-link{ href: '/pages/contact-us' }
+          = fa_icon('map-marker')
+          316 E. 59th St. New York, NY 10022
+        = link_to fa_icon('twitter', class: :fab), 'https://twitter.com/Rowe_Chiro', target: :_blank, class: 'social align-middle'
+        = link_to fa_icon('facebook', class: :fab), 'https://www.facebook.com/RoweChiropracticOffices/', target: :_blank, class: 'social align-middle'
+        = link_to fa_icon('youtube', class: :fab), 'https://www.youtube.com/user/RoweChiropractic', target: :_blank, class: 'social align-middle'
+        = link_to fa_icon('instagram', class: :fab), 'https://www.instagram.com/RoweChiropractic/', target: :_blank, class: 'social align-middle'

@@ -1,9 +1,10 @@
 .cms-page{ id: "cms-page-#{@cms_page.id}"}
   %h2.page-header
     = @cms_page.title
-    - if user_signed_in?
-      %small.edit-link= link_to fa_icon('edit', class: :fa), @edit_path
-  - if @cms_page.sub_title
+    / - if user_signed_in?
+    /   %small.edit-link= link_to fa_icon('edit', class: :fa), @edit_path
+  - unless @cms_page.sub_title.empty?
     %p.sub-title= @cms_page.sub_title
+  = image_tag 'splash/spinal.jpg', width: '1100px', height: '100px', class: 'mb-3'
   .cms-content
     =raw @cms_page.formatted_body
