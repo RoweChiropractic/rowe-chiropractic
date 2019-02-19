@@ -29,13 +29,21 @@ body.splash {
       margin-bottom: 0;
       font-weight: 600;
       padding: 0;
+      font-size: 2.2rem;
     }
+    @media (min-width: 576px) {
+      h1 { font-size: 2.5rem; }
+    }
+
     p.tag-line {
       margin: 0;
       padding: 0;
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: 600;
       letter-spacing: 0.07rem
+    }
+    @media (min-width: 576px) {
+      p.tag-line { font-size: 1.2rem; }
     }
   }
 
