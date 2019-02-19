@@ -1,5 +1,5 @@
 body.splash {
-  background: #f4f4ef;
+  background: #f8f8f8;
 
   .info {
     margin-top: $margin / 2;
@@ -7,10 +7,19 @@ body.splash {
     p {
       margin-bottom: 0;
     }
+    a {
+      font-size: 0.9rem;
+      color: $gray-700;
+      letter-spacing: 1px;
+      font-weight: 400;
+      svg {
+        color: $link-color;
+      }
+    }
   }
 
   .branding {
-    margin-top: -2rem;
+    margin-top: -1rem;
     margin-bottom: $margin;
     text-transform: uppercase;
     img.logo {
@@ -35,7 +44,7 @@ body.splash {
   }
 
   .icon-nav {
-    padding: $margin * 2 0;
+    padding: $margin 0;
     margin-bottom: $margin;
     position: relative;
     border: 1px solid $gray-400;
@@ -51,15 +60,14 @@ body.splash {
       z-index: -1;
       background-image: image-url('splash/adjustment.jpg');
       background-size: cover;
+      background-repeat: no-repeat;
       background-position: 0 -350px;
     }
 
     figure {
+      margin: $margin 0;
       text-align: center;
       font-size: 1.1rem;
-      margin-bottom: 0;
-      margin-right: $margin * 5;
-      &:last-child { margin-right: 0; }
       color: $link-color;
 
       svg {
@@ -70,7 +78,7 @@ body.splash {
       figcaption.figure-caption {
         font-size: 0.8rem;
         letter-spacing: 2px;
-        margin-top: 0.75rem;
+        margin-top: 0.5rem;
         font-weight: 800;
         text-transform: uppercase;
         line-height: 1rem;
@@ -82,9 +90,8 @@ body.splash {
     text-align: center;
 
     .statement {
-      width: $margin * 13;
-      margin-right: $margin * 3;
-      &:last-child { margin-right: 0; }
+      width: auto;
+      padding: $margin;
       display: inline-block;
     }
   }
@@ -92,30 +99,20 @@ body.splash {
   .splash-content {
     background-image: image-url('splash/exam.jpg');
     background-size: cover;
-    padding: $margin * 2 $margin * 8;
+    padding-top: $margin * 2;
 
     .content-block {
       padding: $margin;
       background: white;
+      clear: both;
 
       h2 {
         border: 1px solid $link-color;
         border-width: 0 0 1px 0;
-        padding: $margin / 2;
         margin-bottom: $margin;
-        span {
-          margin-right: 1rem;
-          font-size: 1.6rem;
-          display: inline-block;
-          vertical-align: middle;
-          color: $link-color;
-          fill: $link-color;
-        }
       }
-
       .image {
-        float: right;
-        margin-left: $margin;
+        margin-bottom: 1rem;
         img {
           max-width: 200px;
         }
@@ -123,13 +120,6 @@ body.splash {
       &.right {
         h2 {
           text-align: right;
-          span {
-            margin-left: 1rem;
-          }
-        }
-        .image {
-          float: left;
-          margin: 0 $margin 0 0;
         }
       }
     }

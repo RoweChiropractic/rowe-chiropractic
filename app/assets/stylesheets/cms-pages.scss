@@ -1,19 +1,28 @@
 .cms-page {
   padding-bottom: $margin/2;
 
-  .cms-content {
-    a { color: $link-color; }
-    h2.title {
-      small {
-        float: right;
-        font-size: 1rem;
-      }
+  h2.page-header {
+    .edit-link {
+      float: right;
+      font-size: 1rem;
     }
+  }
 
+  .cms-content {
     .sub-title {
       color: $gray-600;
       font-style: italic;
     }
+
+    h3 {
+      font-style: italic;
+      font-weight: 600;
+      border: 1px solid $gray-500;
+      border-width: 0 0 1px 0;
+      clear: both;
+      margin-bottom: 1rem;
+    }
+
 
     img {
       @include img-fluid();
@@ -31,10 +40,28 @@
         float: left;
         margin-left: 0;
       }
+
+      &[src*="#raw"] {
+        float: none;
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
     }
   }
 
   .cms-partial {
     padding-bottom: $margin;
+  }
+
+  blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    border: 1px solid $gray-200;
+    border-width: 0 0 0 7px;
+    padding: 1rem 0 1rem 1.5rem;
+    p {
+      margin: 0;
+    }
   }
 }

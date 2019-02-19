@@ -22,7 +22,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Process files as they are uploaded:
-  process resize_to_limit: [800, 800]
+  process resize_to_limit: [1500, 1500]
   #
   # def scale(width, height)
   #   # do something

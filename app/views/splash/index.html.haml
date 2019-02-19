@@ -22,7 +22,7 @@
 
 %section.icon-nav
   .container
-    .d-flex.flex-row.justify-content-center
+    .d-flex.flex-sm-row.flex-column.justify-content-around
       %figure.figure
         = link_to fa_icon('handshake', class: 'fas fa-4x'), '#first-visit'
         %figcaption.figure-caption
@@ -50,7 +50,7 @@
 
 %section.mission
   .container
-    .d-flex.flex-row.justify-content-center
+    .d-flex.flex-sm-row.flex-column.justify-content-around
       .statement
         %h2 Reach
         %p Reach your full physical and mental potential by reducing pressure on the nervous system
@@ -65,11 +65,8 @@
   .container
     .row#first-visit
       .col.content-block
-        %h2
-          %span
-            = fa_icon 'handshake', class: 'fas fa-2x'
-          Your First Visit
-        .image
+        %h2 Your First Visit
+        .image.float-sm-left.mr-sm-3
           = image_tag 'splash/team-cropped.jpg'
         %h3 Our first goal is to allow you to feel comfortable
         %p
@@ -78,11 +75,8 @@
 
     .row#chiropractic-care
       .col.content-block.right
-        %h2
-          Chiropractic Care
-          %span
-            = fa_icon 'skeleton', class: 'fa-2x'
-        .image
+        %h2 Chiropractic Care
+        .image.ml-sm-3.float-sm-right
           = image_tag 'splash/founders.jpg'
 
         %h3 Unhealthy posture disrupts the nervous system
@@ -92,11 +86,8 @@
 
     .row#meet-dr-rowe
       .col.content-block
-        %h2
-          %span
-            = inline_svg 'splash/man-icon.svg', height: 50
-          Meet Dr. Rowe
-        .image
+        %h2 Meet Dr. Rowe
+        .image.float-sm-left.mr-sm-3
           = image_tag 'splash/rowe.png'
         %h3 Using Gonstead, CBP and therapeutic exercises
         %p
