@@ -1,12 +1,23 @@
 %section.header
   .container
-    .row.info
-      .col-sm-4
+    .row.info.mobile.d-flex.d-sm-none
+      .col.text-center
+        %ul.list-inline
+          %li.list-inline-item= mail_to 'info@rowechiropractic.com', encode: :javascript do fa_icon('envelope', class: :fas)  end
+          %li.list-inline-item= link_to fa_icon('phone', class: :fas), 'tel:2124868888'
+          %li.list-inline-item= link_to fa_icon('map-marker', class: :fas), '/pages/contact-us'
+          %li.list-inline-item= link_to fa_icon('twitter', class: 'fab'), 'https://twitter.com/Rowe_Chiro'
+          %li.list-inline-item= link_to fa_icon('facebook', class: 'fab'), 'https://www.facebook.com/RoweChiropracticOffices/'
+          %li.list-inline-item= link_to fa_icon('youtube', class: 'fab'), 'https://www.youtube.com/user/RoweChiropractic'
+          %li.list-inline-item= link_to fa_icon('instagram', class: 'fab'), 'https://www.instagram.com/RoweChiropractic/'
+
+    .row.info.d-none.d-sm-flex
+      .col-sm-4.text-center.text-sm-left
         %p= mail_to 'info@rowechiropractic.com', 'info@rowechiropractic.com', encode: :javascript
         %p= link_to '212.486.8888', 'tel:2124868888'
       .col-sm-4.text-center
         %p= link_to '316 E. 59th St. New York, NY 10022', '/pages/contact-us'
-      .col-sm-4.text-right
+      .col-sm-4.text-center.text-sm-right
         %p= link_to 'make an appointment', '/pages/contact-us'
         %ul.list-inline
           %li.list-inline-item= link_to fa_icon('twitter', class: 'fab'), 'https://twitter.com/Rowe_Chiro'
@@ -16,7 +27,7 @@
 
     .row.branding.text-center
       .col-12
-        = image_tag 'rowe-chiropractic-logo-round.png', height: '80px', class: :logo
+        = image_tag 'rowe-chiropractic-logo-round.png', height: '80px', class: 'd-none d-sm-inline-block'
         %h1 Rowe Chiropractic
         %p.tag-line Chiropractic care for total health
 

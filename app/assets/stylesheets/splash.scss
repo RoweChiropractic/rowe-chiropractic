@@ -9,9 +9,8 @@ body.splash {
     }
     a {
       font-size: 0.9rem;
-      color: $gray-700;
-      letter-spacing: 1px;
-      font-weight: 400;
+      color: $gray-800;
+      font-weight: 600;
       svg {
         color: $link-color;
       }
@@ -66,6 +65,14 @@ body.splash {
       right: 0;
       position: absolute;
       z-index: -1;
+
+      background-color: #ededed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 0 -350px;
+    }
+
+    @media (min-width: 768px) {
       background-image: image-url('splash/adjustment.jpg');
       background-size: cover;
       background-repeat: no-repeat;
