@@ -4,4 +4,5 @@
 //= require bootstrap-sprockets
 //= require fontawesome-all
 //= require smooth-scroll
+//= require cms-page
 

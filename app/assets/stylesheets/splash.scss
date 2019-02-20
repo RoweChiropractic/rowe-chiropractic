@@ -103,7 +103,10 @@ body.splash {
 
   .mission {
     text-align: center;
-
+    h2 {
+      margin-bottom: 0;
+      font-weight: normal;
+    }
     .statement {
       width: auto;
       padding: $margin;

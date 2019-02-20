@@ -1,9 +1,5 @@
 .cms-page{ id: "cms-page-#{@cms_page.id}"}
-  %h2.page-header
-    = @cms_page.title
-    - if user_signed_in?
-      = link_to fa_icon('edit', class: :fa), @edit_path, class: 'edit-link'
   - unless @cms_page.sub_title.empty?
     %p.sub-title= @cms_page.sub_title
   .cms-content
-    =raw @cms_page.formatted_body
+    = raw @cms_page.formatted_body

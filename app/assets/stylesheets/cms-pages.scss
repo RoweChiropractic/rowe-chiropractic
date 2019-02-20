@@ -1,10 +1,15 @@
 .cms-page {
+  padding-top: 130px;
+  background-image: image-url('splash/spinal.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 110px;
   padding-bottom: $margin/2;
 
   h2.page-header {
     .edit-link {
       float: right;
       font-size: 1rem;
+      margin-bottom: $margin;
     }
   }
 
@@ -15,6 +20,8 @@
     }
 
     h3 {
+      display: inline-block;
+      min-width: 60%;
       font-style: italic;
       font-weight: 600;
       border: 1px solid $gray-500;
@@ -23,23 +30,22 @@
       margin-bottom: 1rem;
     }
 
-
+    p.img {
+      &.right {
+        // display: inline-block;
+        float: right;
+      }
+      &.left {
+        // display: inline-block;
+        float: left;
+      }
+    }
     img {
       @include img-fluid();
       padding: 3px;
       border: 1px solid $gray-600;
       margin: $margin/2;
       margin-top: 0;
-
-      &[src*="#right"] {
-        float: right;
-        margin-right: 0;
-      }
-
-      &[src*="#left"] {
-        float: left;
-        margin-left: 0;
-      }
 
       &[src*="#raw"] {
         float: none;
