@@ -3,6 +3,7 @@
 #= require codemirror/mode/markdown
 #= require codemirror/mode/gfm
 #= require codemirror/addon/mode/overlay
+#= require cms-page
 
 $ ->
   $('textarea.markdown').each ->

@@ -1,17 +1,16 @@
 .cms-page {
   padding-top: 130px;
-  background-image: image-url('splash/spinal.jpg');
   background-repeat: no-repeat;
-  background-size: 100% 110px;
-  padding-bottom: $margin/2;
+  background-size: 100%;
+  padding-bottom: $margin / 2;
 
-  h2.page-header {
-    .edit-link {
-      float: right;
-      font-size: 1rem;
-      margin-bottom: $margin;
-    }
-  }
+  &.your-first-visit { background-image: image-url('page_headers/first_visit.jpg'); }
+  &.david-rowe { background-image: image-url('page_headers/david_rowe.jpg'); }
+  &.about-us { background-image: image-url('page_headers/about_us.jpg'); }
+  &.meet-the-doctors { background-image: image-url('page_headers/meet_the_doctors.jpg'); }
+  &.specialties { background-image: image-url('page_headers/specialties.jpg'); }
+  &.testimonials { background-image: image-url('page_headers/testimonials.jpg'); }
+  &.contact-us { background-image: image-url('page_headers/contact_us.jpg'); }
 
   .cms-content {
     .sub-title {
@@ -31,21 +30,22 @@
     }
 
     p.img {
+      margin: $margin;
       &.right {
-        // display: inline-block;
         float: right;
+        margin-right:0;
       }
       &.left {
-        // display: inline-block;
         float: left;
+        margin-left: 0;
       }
     }
+
     img {
       @include img-fluid();
+      margin: 0;
       padding: 3px;
       border: 1px solid $gray-600;
-      margin: $margin/2;
-      margin-top: 0;
 
       &[src*="#raw"] {
         float: none;
@@ -61,6 +61,7 @@
   }
 
   blockquote {
+    margin-left: 0;
     font-size: 1.2rem;
     font-style: italic;
     border: 1px solid $gray-200;
