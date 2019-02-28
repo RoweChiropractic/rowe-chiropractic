@@ -9,6 +9,10 @@
 @import "admin/cms-images";
 @import "admin/cms-pages";
 
+body {
+  background-image: none;
+}
+
 .col {
   width: auto;
 }
@@ -20,3 +24,4 @@
 .has_one ~ .has_many_add {
   display: none !important;
 }
+
