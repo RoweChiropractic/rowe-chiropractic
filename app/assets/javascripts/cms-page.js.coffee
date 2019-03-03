@@ -7,6 +7,6 @@ $ ->
   $('.cms-page.about-us').closest('body').addClass('about-us');
   $('.cms-page.meet-the-doctors').closest('body').addClass('meet-the-doctors');
   $('.cms-page.specialties').closest('body').addClass('specialties');
-  $('.cms-page.testimonials').closest('body').addClass('testimonials-doctors');
+  $('.cms-page.testimonials').closest('body').addClass('testimonials');
   $('.cms-page.contact-us').closest('body').addClass('contact-us');
 
