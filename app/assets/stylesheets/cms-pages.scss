@@ -12,7 +12,7 @@ body {
 }
 
 .cms-page {
-  padding-top: $margin * 3;
+  padding-top: $margin * 4;
   background-repeat: no-repeat;
   background-size: 100%;
   padding-bottom: $margin / 2;
@@ -24,11 +24,20 @@ body {
     }
 
     h2 {
-      font-style: italic;
+      font-weight: 600;
       margin-bottom: $margin;
     }
+
     h3 {
-      font-weight: 600;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: black;
+      margin-top: $margin * 2;
+      margin-bottom: $margin;
+    }
+
+    p {
+      margin-bottom: $margin;
     }
 
     p.img {
@@ -64,14 +73,18 @@ body {
   }
 
   blockquote {
-    margin-left: 0;
-    font-size: 1.2rem;
-    font-style: italic;
-    border: 1px solid $gray-200;
-    border-width: 0 0 0 7px;
-    padding: 1rem 0 1rem 1.5rem;
+    width: 300px;
+    float: right;
+    margin-left: $margin;
+    border: 1px solid $brand-secondary;
+    border-width: 0 0 0 1px;
+    padding: 0.8rem 0;
+    padding-left: $margin;
     p {
-      margin: 0;
+      color: $brand-secondary;
+      margin-bottom: 0 !important;
+      font-style: italic;
+      font-weight: 600;
     }
   }
 }
