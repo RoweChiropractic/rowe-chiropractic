@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     mount Sidekiq::Web => '/sidekiq'
   end
 
-  root to: "home#index"
+  root to: 'home#index'
+  get '/fullerlife', to: 'home#index'
+  get '/betterlife', to: 'home#index'
 
   resources :cms_pages, only: :show, path: :pages
   resources :inquiries
