@@ -4,7 +4,6 @@ RSpec.describe Testimonial do
 
   it { is_expected.to validate_presence_of :title }
   it { is_expected.to validate_presence_of :body }
-  it { is_expected.to belong_to :patient }
 
   describe '#author_or_patient' do
     let(:testimonial) do

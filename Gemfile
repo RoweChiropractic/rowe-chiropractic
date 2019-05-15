@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.5.0'
+ruby '2.5.3'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -31,7 +31,7 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.2.0.rc2'
 gem 'rails-html-sanitizer', '~> 1.0.4'
-gem 'ransack', '~> 1.8.7'
+gem 'ransack'
 gem 'redcarpet'
 gem 'rollbar'
 gem 'sass-rails', '~> 5.0'
