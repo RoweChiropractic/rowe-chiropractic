@@ -108,6 +108,11 @@ body.splash {
       font-weight: normal;
     }
     .statement {
+      strong {
+        color: $brand-secondary;
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
       width: auto;
       padding: $margin;
       display: inline-block;
