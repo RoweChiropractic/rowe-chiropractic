@@ -1,0 +1,27 @@
+%section.icon-nav
+  .container
+    .d-flex.flex-sm-row.flex-column.justify-content-around
+      %figure.figure
+        = link_to fa_icon('handshake', class: 'fas fa-4x'), '#first-visit'
+        %figcaption.figure-caption
+          =link_to 'Your First', '#first-visit'
+          %br
+          =link_to 'Visit', '#first-visit'
+      %figure.figure
+        = link_to inline_svg('splash/man-icon.svg'), '#meet-dr-rowe'
+        %figcaption.figure-caption
+          =link_to 'Meet', '#meet-dr-rowe'
+          %br
+          =link_to 'Dr. Rowe', '#meet-dr-rowe'
+      %figure.figure
+        = link_to fa_icon('clipboard-list', class: 'fas fa-4x'), '/pages/contact-us'
+        %figcaption.figure-caption
+          = link_to 'Make an', '/pages/contact-us'
+          %br
+          =link_to 'appointment', '/pages/contact-us'
+      %figure.figure
+        = link_to fa_icon('skeleton', class: 'fa-4x'), '#chiropractic-care'
+        %figcaption.figure-caption
+          =link_to 'Chiropractic', '#chiropractic-care'
+          %br
+          =link_to 'Care', '#chiropractic-care'
