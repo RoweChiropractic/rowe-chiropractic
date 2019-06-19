@@ -1,0 +1,24 @@
+.splash-content {
+    background-size: cover;
+    padding-top: $margin * 2;
+
+    .content-block {
+      padding: $margin;
+      background: white;
+      clear: both;
+
+      h2 {
+        border: 1px solid $link-color;
+        border-width: 0 0 1px 0;
+        margin-bottom: $margin;
+      }
+      .image {
+        margin-bottom: 1rem;
+        padding: 3px;
+        border: 1px solid $brand-primary;
+        img {
+          width: 300px;
+        }
+      }
+    }
+  }

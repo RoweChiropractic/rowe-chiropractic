@@ -1,0 +1,50 @@
+  .icon-nav {
+    padding: $margin 0;
+    margin-bottom: $margin;
+    position: relative;
+    border: 1px solid $gray-400;
+    border-width: 1px 0;
+    &:after {
+      content: '';
+      opacity: 0.7;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+
+      background-color: #ededed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 0 -350px;
+    }
+
+    @media (min-width: 768px) {
+      background-image: image-url('splash/adjustment-faded.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 0 -350px;
+    }
+
+    figure {
+      margin: $margin 0;
+      text-align: center;
+      font-size: 1.1rem;
+      color: $link-color;
+
+      svg {
+        fill: $link-color;
+        width: 3.5rem;
+      }
+
+      figcaption.figure-caption {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        margin-top: 0.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 1rem;
+      }
+    }
+  }

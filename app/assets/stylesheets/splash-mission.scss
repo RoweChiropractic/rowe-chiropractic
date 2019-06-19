@@ -1,0 +1,16 @@
+ .mission {
+    text-align: center;
+    .statement {
+      strong {
+        font-weight: 700;
+        // text-transform: uppercase;
+        // font-family: Montserrat;
+        // color: $brand-secondary;
+        // font-size: 1.3rem;
+      }
+      color: $brand-secondary;
+      width: auto;
+      padding: $margin;
+      display: inline-block;
+    }
+  }
