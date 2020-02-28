@@ -257,7 +257,7 @@ GEM
     popper_js (1.14.5)
     powerpack (0.1.2)
     public_suffix (3.0.3)
-    puma (3.12.1)
+    puma (3.12.3)
     rack (2.0.7)
     rack-protection (2.0.5)
       rack
@@ -463,7 +463,7 @@ DEPENDENCIES
   newrelic_rpm (~> 3.14)
   paper_trail
   pg (~> 0.18)
-  puma (~> 3.7)
+  puma (~> 3.12)
   rails (~> 5.2.0.rc2)
   rails-html-sanitizer (~> 1.0.4)
   ransack
