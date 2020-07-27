@@ -11,21 +11,13 @@ ActiveAdmin.register Patient do
     [
       :first_name,
       :last_name,
-      :diagnosis,
+      :diagnosis, input_html: { rows: 5 },
       testimonial_attributes: [:id, :title, :body],
       xrays_attributes: [:id, :date, :description, :file, :file_cache, :name, :position, :_destroy],
       posture_prints_attributes: [:id, :date, :description, :file, :file_cache, :name],
       specialty_ids: []
     ]
   end
-
-  # controller do
-  #   def create
-  #     super do |format|
-  #       byebug
-  #     end
-  #   end
-  # end
 
   index do
     column :first_name
@@ -46,7 +38,7 @@ ActiveAdmin.register Patient do
     f.inputs do
       f.input :first_name
       f.input :last_name
-      f.input :diagnosis
+      f.input :diagnosis, input_html: { rows: 5 }
     end
     f.inputs do
       f.input :specialties, as: :check_boxes, collection: Specialty.all, hidden_fields: false
@@ -54,7 +46,7 @@ ActiveAdmin.register Patient do
     f.inputs do
       f.has_many :testimonial, class: :has_one do |t|
         t.input :title
-        t.input :body
+        t.input :body, input_html: { rows: 5 }
       end
     end
     f.inputs do
@@ -63,7 +55,8 @@ ActiveAdmin.register Patient do
         x.input :file_cache, as: :hidden
         x.input :name
         x.input :date, as: :datepicker, datepicker_options: {}
-        x.input :description
+        x.input :description, input_html: { rows: 5 }
+
       end
     end
     f.inputs do
@@ -72,7 +65,7 @@ ActiveAdmin.register Patient do
         x.input :file_cache, as: :hidden
         x.input :name
         x.input :date, as: :datepicker, datepicker_options: {}
-        x.input :description
+        x.input :description, input_html: { rows: 5 }
       end
     end
     f.actions
@@ -86,7 +79,7 @@ ActiveAdmin.register Patient do
         row :specialties do |patient|
           patient.specialties.map(&:title).to_sentence
         end
-        row :diagnosis
+        row :diagnosis, input_html: { rows: 5 }, input_html: { rows: 5 }
         row :created_at
         row :updated_at
         row :edited_by do |patient|

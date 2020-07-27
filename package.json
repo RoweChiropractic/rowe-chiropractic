@@ -1,5 +1,17 @@
 {
   "name": "rowe-chiropractic",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@activeadmin/activeadmin": "^2.7.0",
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "@fortawesome/fontawesome-pro": "^5.14.0",
+    "@rails/actiontext": "^6.0.3-2",
+    "@rails/webpacker": "5.1.1",
+    "arctic_admin": "^3.2.0",
+    "codemirror": "^5.56.0",
+    "trix": "^1.2.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.0"
+  }
 }

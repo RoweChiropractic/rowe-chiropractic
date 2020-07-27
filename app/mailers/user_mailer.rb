@@ -3,7 +3,7 @@ class UserMailer < ApplicationMailer
     @inquiry = inquiry
     @url  = admin_inquiry_url(inquiry)
     mail(
-      to: ENV.fetch('contact_form_email'),
+      to: Rails.application.credentials.from_email,
       subject: 'New inquiry from RoweChiropractic.com'
     )
   end

@@ -2,7 +2,9 @@
   %nav.navbar.navbar-expand-lg.navbar-light.justify-content-between
     %a.navbar-brand{ href: '/'}
       = image_tag 'rowe-chiropractic-logo-round.png', height: 80, class: 'd-none d-sm-inline-block'
-      %span Rowe Chiropractic
+      %span
+        Rowe Chiropractic
+        %i.fa-check
     %button.navbar-toggler{ aria: { controls: 'main-nav', expanded: false, label: 'Toggle navigation' },  data: { target: '#main-nav', toggle: :collapse, type: :button } }
       %span.navbar-toggler-icon
     %ul.mobile-contact.d-md-none.list-inline

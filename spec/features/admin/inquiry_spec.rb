@@ -1,7 +1,10 @@
 RSpec.feature 'As an admin user' do
+  let(:user) { users(:admin) }
   let(:inquiry) { inquiries(:inquiry_1) }
 
-  before { login }
+  before do
+    login_as user
+  end
 
   scenario 'I can review Inquiries' do
     visit admin_inquiry_path(inquiry)

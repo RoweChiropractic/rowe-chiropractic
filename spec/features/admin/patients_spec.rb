@@ -1,4 +1,5 @@
 RSpec.feature 'As an admin user' do
+  let(:user) { users(:admin) }
   let(:patient) { patients(:barney) }
   let(:first_name) { FFaker::Name.first_name }
   let(:last_name) { FFaker::Name.last_name }
@@ -7,7 +8,7 @@ RSpec.feature 'As an admin user' do
   let(:specialty_2) { specialties(:drunkenness) }
 
   before do
-    login
+    login_as user
     visit admin_patients_path
   end
 
@@ -22,8 +23,8 @@ RSpec.feature 'As an admin user' do
   scenario 'I can manage Patient details' do
     click_on 'New Patient'
     click_on 'Create Patient'
-    expect(page).to have_content "First name* can't be blank"
-    expect(page).to have_content "Last name* can't be blank"
+    expect(page).to have_content "First name*\ncan't be blank"
+    expect(page).to have_content "Last name*\ncan't be blank"
     fill_in 'First name', with: first_name
     fill_in 'Last name', with: last_name
     fill_in 'Diagnosis', with: diagnosis

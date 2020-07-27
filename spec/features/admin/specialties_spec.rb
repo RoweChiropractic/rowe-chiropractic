@@ -1,11 +1,12 @@
 RSpec.feature 'As an admin user' do
+  let(:user) { users(:admin) }
   let(:specialty) { specialties(:drunkenness) }
   let(:title) { FFaker::Lorem.word }
   let(:teaser) { FFaker::Lorem.paragraph }
   let(:body) { FFaker::Lorem.paragraph }
 
   before do
-    login
+    login_as user
     visit admin_dashboard_path
   end
 
@@ -22,9 +23,9 @@ RSpec.feature 'As an admin user' do
     visit admin_specialties_path
     click_on 'New Specialty'
     click_on 'Create Specialty'
-    expect(page).to have_content "Title* can't be blank"
-    expect(page).to have_content "Teaser* can't be blank"
-    expect(page).to have_content "Body* can't be blank"
+    expect(page).to have_content "Title*\ncan't be blank"
+    expect(page).to have_content "Teaser*\ncan't be blank"
+    expect(page).to have_content "Body*\ncan't be blank"
     fill_in 'Title', with: title
     fill_in 'Teaser', with: teaser
     fill_in 'Body', with: body
@@ -32,6 +33,6 @@ RSpec.feature 'As an admin user' do
     expect(page).to have_content "Specialty was successfully created."
     expect(page).to have_content "Title #{title}"
     expect(page).to have_content "Teaser #{teaser}"
-    expect(page).to have_content "Body #{body}"
+    expect(page).to have_content "Body\n#{body}"
   end
 end

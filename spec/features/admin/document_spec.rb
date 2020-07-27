@@ -1,8 +1,11 @@
 RSpec.feature 'As an admin user' do
+  let(:user) { users(:admin) }
   let(:title) { FFaker::CheesyLingo.title }
   let(:description) { FFaker::CheesyLingo.sentence }
 
-  before { login }
+  before do
+    login_as user
+  end
 
   scenario 'I can manage Documents' do
     visit admin_documents_path
@@ -14,6 +17,6 @@ RSpec.feature 'As an admin user' do
     attach_file 'File', Rails.root.join('spec/fixtures/test.pdf')
     click_on 'Create Document'
     click_on 'Documents'
-    expect(page).to have_css :tr, text: title
+    expect(page).to have_css 'tr', text: title
   end
 end

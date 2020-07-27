@@ -57,7 +57,7 @@ ActiveAdmin.register CmsPage do
     f.inputs do
       f.input :parent
       f.input :title
-      f.input :sub_title
+      f.input :sub_title, input_html: { rows: 3 }
       f.input :body, label: false, input_html: { class: [:code, :markdown] }
       f.inputs 'Child Pages' do
         f.has_many :children, heading: nil, sortable: :position do |child|
