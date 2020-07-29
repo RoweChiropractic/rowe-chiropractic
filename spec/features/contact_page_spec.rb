@@ -7,9 +7,6 @@ RSpec.feature 'As a visitor' do
     clear_emails
   end
 
-  scenario 'I see the phone number' do
-  end
-
   scenario 'I can use the contact form' do
     visit cms_page_path(contact_us_page)
     fill_in 'Name...', with: name
@@ -18,7 +15,7 @@ RSpec.feature 'As a visitor' do
     fill_in 'Email...', with: email
     click_on 'Submit'
     expect(page).to have_content I18n.t('contact_form.success')
-    open_email(ENV.fetch('contact_form_email'))
+    open_email Rails.application.credentials.from_email
     expect(current_email.body).not_to be_nil
   end
 end

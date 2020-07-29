@@ -1,20 +1,15 @@
 source 'https://rubygems.org'
-ruby '2.5.3'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+ruby '2.6.6'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
-
-gem 'actionview-encoded_mail_to', '~> 1.0'
-gem 'active_link_to', '~> 1.0'
+gem 'active_link_to'
 gem 'activeadmin'
-gem 'activeadmin_blaze_theme'
+gem 'arctic_admin'
 gem 'aws-sdk-s3', require: false
-gem 'bootstrap', '~> 4.3.1'
+gem 'bootstrap'
 gem 'bootstrap4-kaminari-views'
 gem 'carrierwave'
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails'
 gem 'commonmarker'
 gem 'devise'
 gem 'figaro'
@@ -24,25 +19,27 @@ gem 'haml-rails'
 gem 'invisible_captcha'
 gem 'kaminari'
 gem 'mini_magick'
-gem 'newrelic_rpm', '~> 3.14'
+gem 'newrelic_rpm'
 gem 'paper_trail'
-gem 'pg', '~> 0.18'
-gem 'puma', '~> 3.7'
-gem 'rails', '~> 5.2.0.rc2'
-gem 'rails-html-sanitizer', '~> 1.0.4'
+gem 'paper_trail-association_tracking'
+gem 'pg'
+gem 'puma'
+gem 'rails', '~> 6.0.3'
+gem 'rails-html-sanitizer'
 gem 'ransack'
 gem 'redcarpet'
 gem 'rollbar'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 gem 'sidekiq'
 gem 'sidekiq-failures'
 gem 'simple_form'
-gem 'turbolinks', '~> 5'
-gem 'uglifier', '>= 1.3.0'
+gem 'turbolinks'
+gem 'uglifier'
+gem 'bootsnap', '>= 1.4.2', require: false
+gem 'webpacker'
 
 group :development, :test do
   gem 'capybara'
-  gem 'capybara-webkit'
   gem 'capybara-email'
   gem 'database_cleaner'
   gem 'ffaker'
@@ -52,11 +49,10 @@ group :development, :test do
   gem 'rspec_junit_formatter'
   gem 'rubocop', '0.50.0', require: false
   gem 'rubocop-rspec', '0.18.0', require: false
-  gem 'selenium-webdriver', '~> 2.5'
+  gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
-  gem 'vcr'
-  gem 'webmock'
+  gem 'webdrivers'
 end
 
 group :development, :test do

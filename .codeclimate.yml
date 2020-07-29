@@ -1,0 +1,90 @@
+---
+checks:
+  argument-count:
+    enabled: true
+  complex-logic:
+    enabled: true
+  file-lines:
+    config:
+      threshold: 300
+    enabled: true
+  identical-code:
+    enabled: true
+  method-complexity:
+    enabled: false
+  method-count:
+    enabled: true
+  method-lines:
+    enabled: false
+  nested-control-flow:
+    enabled: true
+  return-statements:
+    enabled: true
+  similar-code:
+    enabled: true
+exclude_patterns:
+  - "**/node_modules/"
+  - "**/vendor/"
+  - app/javascript/
+  - db/
+  - public/
+  - script/
+  - config/initializers/simple_form.rb
+  - config/initializers/simple_form_bootstrap.rb
+  - lib/paperclip_shrine_synchronization.rb
+  - coverage/
+  - log/
+  - spec/support/chosenjs.rb
+  - tmp/
+  - vendor/
+  - babel.config.js
+plugins:
+  brakeman:
+    checks:
+      dangerous_permit_key:
+        enabled: false
+      dynamic_render_path:
+        enabled: false
+    enabled: true
+  bundler-audit:
+    enabled: true
+  coffeelint:
+    enabled: true
+  csslint:
+    enabled: true
+  duplication:
+    config:
+      languages:
+        javascript:
+          mass_threshold: 60
+        ruby: ~
+    enabled: true
+    exclude_patterns:
+      - app/controllers/
+      - config/initializers/simple_form_bootstrap.rb
+      - db/
+      - spec/
+  eslint:
+    checks:
+      comma-dangle:
+        enabled: false
+      global-require:
+        enabled: false
+    enabled: true
+  fixme:
+    enabled: true
+  grep:
+    config:
+      patterns:
+        no-console-log:
+          annotation: "Don't commit console.log in JavaScript"
+          categories: Security
+          path_patterns:
+            - "**/*.js"
+          pattern: console.log
+          severity: blocker
+    enabled: true
+  rubocop:
+    channel: rubocop-0-74
+    enabled: true
+version: "2"

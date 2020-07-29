@@ -1,6 +1,6 @@
+= render 'layouts/messages'
 .card.auth
   .card-body
-    = render 'layouts/messages'
     = simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-signin'}) do |f|
       .input-group
         .input-group-prepend

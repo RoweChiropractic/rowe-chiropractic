@@ -5,7 +5,7 @@ RSpec.feature 'As an admin user' do
   let(:cms_page) { cms_pages(:about_us) }
 
   before do
-    login
+    login_as user
     visit admin_cms_pages_path
   end
 

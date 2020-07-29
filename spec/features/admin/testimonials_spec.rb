@@ -1,10 +1,13 @@
 RSpec.feature 'As an admin user' do
+  let(:user) { users(:admin) }
   let(:title) { FFaker::CheesyLingo.title }
   let(:body) { FFaker::CheesyLingo.paragraph }
   let(:author) { FFaker::Name.name }
   # let(:featured) { FFaker::Boolean.sample }
 
-  before { login }
+  before do
+    login_as user
+  end
 
   scenario 'I can manage Testimonials' do
     visit admin_testimonials_path
@@ -18,6 +21,6 @@ RSpec.feature 'As an admin user' do
     click_on 'Create Testimonial'
     expect(page).to have_content 'Testimonial was successfully created.'
     click_on 'Testimonials'
-    expect(page).to have_css :tr, text: title
+    expect(page).to have_css 'tr', text: title
   end
 end

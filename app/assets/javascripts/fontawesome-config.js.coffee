@@ -1,4 +1,0 @@
-window.FontAwesomeConfig = {
-  searchPseudoElements: true
-}
-

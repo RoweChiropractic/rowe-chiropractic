@@ -6,8 +6,8 @@
 
     .row.copy
       .col-sm.text-center
-        &copy;
-        = Date.today.year
+        = precede '&copy;'.html_safe do
+          = Date.today.year
         Rowe Chiropractic Offices. All rights reserved.
         - path = user_signed_in? ? admin_dashboard_path : new_user_session_path
         = link_to fa_icon('sign-in-alt', class: :fa), path, class: 'admin-login'
