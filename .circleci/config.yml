@@ -65,8 +65,8 @@ jobs:
           only-branch: master
       - run:
           command: |
-            heroku run rails db:migrate -a rowe-chiropractic
-            heroku restart -a rowe-chiropractic
+            heroku run rails db:migrate -a ${HEROKU_APP_NAME}
+            heroku restart -a ${HEROKU_APP_NAME}
           name: "Heroku post-deploy steps"
 orbs:
   heroku: circleci/heroku@0.0.10
