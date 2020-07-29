@@ -50,7 +50,7 @@
     "RAILS_SERVE_STATIC_FILES": {
       "required": true
     },
-    "REDISTOGO_URL": {
+    "REDIS_URL": {
       "required": true
     },
     "ROLLBAR_ACCESS_TOKEN": {
