@@ -16,7 +16,6 @@ jobs:
             sudo apt-get update
             sudo apt-get install build-essential
             sudo apt-get install imagemagick
-
   test:
     docker:
       - image: "cimg/ruby:2.6.6-node"
@@ -37,12 +36,11 @@ jobs:
       - checkout
       - ruby/install-deps
       - run:
-          name: Install ImageMagic?
+          name: Install ImageMagic
           command: |
             sudo apt-get update
             sudo apt-get install build-essential
             sudo apt-get install imagemagick
-
       - browser-tools/install-chrome
       - browser-tools/install-chromedriver
       - node/install-packages:
@@ -65,8 +63,8 @@ jobs:
           only-branch: master
       - run:
           command: |
-            heroku run rails db:migrate -a rowe-chiropractic
-            heroku restart -a rowe-chiropractic
+            heroku run rails db:migrate -a ${HEROKU_APP_NAME}
+            heroku restart -a ${HEROKU_APP_NAME}
           name: "Heroku post-deploy steps"
 orbs:
   heroku: circleci/heroku@0.0.10
