@@ -22,7 +22,7 @@ module RoweChiropractic
     end
     config.active_job.queue_adapter = :sidekiq
     config.action_mailer.default_options = {
-      from: Rails.application.credentials.from_email
+      from: "Rowe Chiropractic <#{Rails.application.credentials.from_email}>"
     }
   end
 end
