@@ -28,12 +28,22 @@ a.navbar-brand {
 #main-nav {
   padding: 0.5rem 0;
   background-color: $gray-200;
+  &.main-nav-home {
+    background: none;
+    a {
+      color: black;
+    }
+  }
 }
 
 ul.social-and-contact {
   list-style: none;
+  font-family: $header-font;
   li {
     text-align: right;
+    a {
+      color: black !important;
+    }
   }
 }
 
