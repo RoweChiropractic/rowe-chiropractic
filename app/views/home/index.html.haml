@@ -12,74 +12,89 @@
             %a{ href: "/pages/contact-us" }
               %button.btn.home-btn-white Schedule Your Appointment
 
-.row.testimonial-section
-  .container
-    .row
-      .col-sm-6.info-col
-        %h3 Are you not feeling your best?  Then you need the best.  Dr. Rowe has trained hundreds of chiropractors and treated thousands of patients.
-        %p Dr. Rowe has worked tirelessly in his pursuit for wellness of his patients; his 38-year practice vows to educate and adjust as many individuals and families as possible to enable achievement of optimal health. Take advantage of an office that puts your wellness as a priority and schedule a call with us today.
-      .col-sm-6.testimonial-carousel dfnjd
+.row.testimonial-section.home-section
+  .col-sm-12
+    .container
+      .row
+        .col-sm-6.col-xs-12.info-col
+          %h3 Are you not feeling your best?  Then you need the best.  Dr. Rowe has trained hundreds of chiropractors and treated thousands of patients.
+          %p Dr. Rowe has worked tirelessly in his pursuit for wellness of his patients; his 38-year practice vows to educate and adjust as many individuals and families as possible to enable achievement of optimal health. Take advantage of an office that puts your wellness as a priority and schedule a call with us today.
+        .col-sm-6.col-xs-12.testimonial-carousel
+          - unless @testimonials.empty?
+            %h4.author
+              = @testimonials[0].author
+            %p
+              = @testimonials[0].teaser
+            %small= link_to "View #{Testimonial.count} more testimonials", '/pages/testimonials'
 
-.row.why-rowe
-  .container
-    .row
-      .col-sm-10.offset-sm-1.text-center
-        %h1 Why Rowe Chiropractic Has Your Back
-    .row
-      .col-sm-10.offset-sm-1
-        %p At Rowe Chiropractic Offices, we are committed to helping as many individuals and families as possible to improve their health and well-being through natural chiropractic care. Our expertly trained professionals find and correct subluxations, which cause stress and irritation to your nervous system. This stress and irritation are often the root cause of symptoms and dysfunction; this is why our patients with various health conditions see restored health and improved function with chiropractic care.
-        %p Our scientific approach helps our patients achieve optimal results by correcting their nervous system’s function, improving their posture, and helping them move well, eat well, and think well.
-    .row
-      .col-sm-10.offset-sm-1.text-center
-        %a{ href: "/pages/contact-us" }
-          %button.btn.home-btn-green Schedule Now
 
-.row.ready-to-live
-  .container
-    .row
-      .col-sm-6.info-col
-        %h3 Are you ready to live  pain free?
-        %p RCO offers each of our patients a specific, state-of-the-art chiropractic program, including a comprehensive wellness strategy designed to help them make improved lifestyle choices that will enable them to eat right, move right, think right.
-        %p We believe that making essential lifestyle choices is one of the most efficient actions any of us can take to improve our health. We offer an extensive schedule of seminars, lectures, and workshops geared towards helping our patients create and enjoy a healthy lifestyle.
-        %a{ href: "/pages/contact-us" }
-          %button.btn.home-btn-white Increase Immunity
-      .col-sm-6.issues-col
-        %p We believe that making essential lifestyle choices is one of the most efficient actions any of us can take to improve our health. We offer an extensive schedule of seminars, lectures, and workshops geared towards helping our patients create and enjoy a healthy lifestyle.
 
-.row.gain-confidence
-  .container
-    .row
-      .col-sm-10.offset-sm-1.text-center
-        %h1 Gain Confidence in the Strength & Health of Your Body
-    .row
-      .col-sm-10.offset-sm-1.text-center
-        %p Worldwide, back pain is the single leading cause of disability, preventing those suffering from living their lives.
-    .row
-      .col-sm-10.offset-sm-1.text-center
-        %a{ href: "/pages/contact-us" }
-          %button.btn.home-btn-green Chiropractic Care for Anxiety & Stress
-.row.rid-of-back-pain
-  .container
-    .row
-      .col-sm-12.text-center
-        %h1 Get Rid of Back Pain & Get Back to Your Life
-    .row.svg-row
-      .col-sm-4.svg-col
-        %div
-          = fa_icon('globe')
-        Worldwide, back pain is the single leading cause of disability, preventing those suffering from living their lives to their full potential.
-      .col-sm-4.svg-col
-        %div
-          = fa_icon('briefcase')
-        In the United States, back pain is the most common reason for missing work— accounting for more than 264 million lost workdays per year.
-      .col-sm-4.svg-col
-        %div
-          = fa_icon('ambulance')
-        Back pain costs Americans at  least $50 billion in health care costs each year.
-    .row
-      .col-sm-12.text-center
-        %a{ href: "/pages/contact-us" }
-          %button.btn.home-btn-green Renewed Health is Just One Click Away
--# = render 'meet_the_team'
--# = render 'testimonials'
--# = render 'specialties'
+.row.why-rowe.home-section
+  .col-sm-12
+    .container
+      .row
+        .col-sm-10.offset-sm-1.text-center
+          %h1 Why Rowe Chiropractic Has Your Back
+      .row
+        .col-sm-10.offset-sm-1
+          %p At Rowe Chiropractic Offices, we are committed to helping as many individuals and families as possible to improve their health and well-being through natural chiropractic care. Our expertly trained professionals find and correct subluxations, which cause stress and irritation to your nervous system. This stress and irritation are often the root cause of symptoms and dysfunction; this is why our patients with various health conditions see restored health and improved function with chiropractic care.
+          %p Our scientific approach helps our patients achieve optimal results by correcting their nervous system’s function, improving their posture, and helping them move well, eat well, and think well.
+      .row
+        .col-sm-10.offset-sm-1.text-center
+          %a{ href: "/pages/contact-us" }
+            %button.btn.home-btn-green Schedule Now
+
+.row.ready-to-live.home-section
+  .col-sm-12
+    .container
+      .row
+        .col-sm-6.info-col
+          %h3 Are you ready to live  pain free?
+          %p RCO offers each of our patients a specific, state-of-the-art chiropractic program, including a comprehensive wellness strategy designed to help them make improved lifestyle choices that will enable them to eat right, move right, think right.
+          %p We believe that making essential lifestyle choices is one of the most efficient actions any of us can take to improve our health. We offer an extensive schedule of seminars, lectures, and workshops geared towards helping our patients create and enjoy a healthy lifestyle.
+          %a{ href: "/pages/contact-us" }
+            %button.btn.home-btn-white Increase Immunity
+        .col-sm-6.issues-col
+          - unless @specialties.empty?
+            %p Chiropractic care is proven to help diminish back pain, but did you know it can also help with various other concerns for your whole family?
+            - @specialties.each do |specialty|
+              %div= specialty.title
+
+
+.row.gain-confidence.home-section
+  .col-sm-12
+    .container
+      .row
+        .col-sm-10.offset-sm-1.text-center
+          %h1 Gain Confidence in the Strength & Health of Your Body
+      .row
+        .col-sm-10.offset-sm-1.text-center
+          %p Worldwide, back pain is the single leading cause of disability, preventing those suffering from living their lives.
+      .row
+        .col-sm-10.offset-sm-1.text-center
+          %a{ href: "/pages/contact-us" }
+            %button.btn.home-btn-green Chiropractic Care for Anxiety & Stress
+
+.row.rid-of-back-pain.home-section
+  .col-sm-12
+    .container
+      .row
+        .col-sm-12.text-center
+          %h1 Get Rid of Back Pain & Get Back to Your Life
+      .row.svg-row
+        .col-sm-4.svg-col
+          %div
+            = fa_icon('globe')
+          Worldwide, back pain is the single leading cause of disability, preventing those suffering from living their lives to their full potential.
+        .col-sm-4.svg-col
+          %div
+            = fa_icon('briefcase')
+          In the United States, back pain is the most common reason for missing work— accounting for more than 264 million lost workdays per year.
+        .col-sm-4.svg-col
+          %div
+            = fa_icon('ambulance')
+          Back pain costs Americans at  least $50 billion in health care costs each year.
+      .row
+        .col-sm-12.text-center
+          %a{ href: "/pages/contact-us" }
+            %button.btn.home-btn-green Renewed Health is Just One Click Away

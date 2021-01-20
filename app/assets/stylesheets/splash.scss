@@ -1,10 +1,12 @@
+body {
+  overflow-x: hidden;
+}
 .home {
   h1,h2,h3,h4 {
     color: black;
   }
   .header {
     padding: $margin/2 0;
-    //margin-bottom: $margin;
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), url('splash/patient.jpg');
     background-size: cover;
     background-position: bottom;
@@ -27,17 +29,13 @@
   }
 
   .why-rowe {
-    h1 {
-      color: black;
-    }
     padding: 40px 0;
   }
+
   .gain-confidence {
-    h1 {
-      color: black;
-    }
     padding: 40px 0;
   }
+
   .testimonial-section {
     @media(max-width:576px){
       background: none;
@@ -47,25 +45,30 @@
     }
     background: linear-gradient(to right, #D6F1C4 50%, #3F3F3F 50%);
     padding: 20px 0;
-    h3 {
-      color: black;
-    }
     .info-col {
       padding-right: 100px;
     }
     .testimonial-carousel {
       margin-left: -1px;
       background-color: white;
+      padding: 20px;
+      .author {
+        font-weight: bold !important;
+        margin-bottom: 10px;
+      }
+      a {
+        color: black;
+      }
     }
   }
   .ready-to-live {
     @media(max-width:576px){
       background: #D6F1C4;
+      .info-col {
+        margin-bottom: 20px;
+      }
     }
     padding: 20px 0;
-    h3 {
-      color: black;
-    }
     background: linear-gradient(to right, #D6F1C4 50%, white 50%);
     .info-col {
       padding-right: 100px;
@@ -85,6 +88,7 @@
     }
     .svg-col {
       text-align: center;
+      margin-bottom: 20px;
     }
     svg {
       font-size: 100px;
@@ -106,5 +110,4 @@
     color: black;
     background-color: #D6F1C4;
   }
-
 }
