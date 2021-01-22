@@ -22,18 +22,19 @@
         = link_to fa_icon('instagram', class: :fab), 'https://www.instagram.com/RoweChiropractic/', target: :_blank
         - if user_signed_in?
           = link_to fa_icon('sign-in-alt', class: :fa), admin_dashboard_path
-      %li.contact
-        = mail_to 'info@rowechiropractic.com', 'info@rowechiropractic.com', encode: :javascript, class: :email
+      %li.phone
         = link_to '(212) 486-8888', 'tel:2124868888', class: :phone
+      %li.email
+        = mail_to 'info@rowechiropractic.com', 'info@rowechiropractic.com', encode: :javascript, class: :email
       %li.address
         316 E. 59th St. New York, NY 10022
 
 .navbar-expand-lg.navbar-light.w-100.align-middle
-  #main-nav.collapse.navbar-collapse.d-lg-flex.justify-content-between
+  #main-nav.collapse.navbar-collapse.d-lg-flex.justify-content-between{ :class => ('main-nav-home' if current_page?("/")) }
     .container
       .navbar-nav.nav-fill.w-100
         = active_link_to 'Home', '/', class: 'nav-item', active: :exclusive
-        = active_link_to 'About Us', '/pages/about-us', class: 'nav-item'
+        = active_link_to 'About', '/pages/about-us', class: 'nav-item'
         = active_link_to 'Meet The Doctors', '/pages/meet-the-doctors', class: 'nav-item'
         = active_link_to 'Specialties', '/pages/specialties', class: 'nav-item'
         = active_link_to 'Testimonials', '/pages/testimonials', class: 'nav-item'
