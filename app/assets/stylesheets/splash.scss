@@ -2,12 +2,16 @@ body {
   overflow-x: hidden;
 }
 .home {
-  h1,h2,h3,h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     color: black;
   }
   .header {
     padding: $margin/2 0;
-    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), url('splash/patient.jpg');
+    background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%),
+      asset-url("splash/patient.jpg");
     background-size: cover;
     background-position: bottom;
     min-height: 500px;
@@ -23,7 +27,6 @@ body {
           color: black;
           font-family: $body-font;
         }
-
       }
     }
   }
@@ -37,13 +40,13 @@ body {
   }
 
   .testimonial-section {
-    @media(max-width:576px){
+    @media (max-width: 576px) {
       background: none;
       .info-col {
         padding-right: 0;
       }
     }
-    background: linear-gradient(to right, #D6F1C4 50%, #3F3F3F 50%);
+    background: linear-gradient(to right, #d6f1c4 50%, #3f3f3f 50%);
     padding: 20px 0;
     .info-col {
       padding-right: 100px;
@@ -62,14 +65,14 @@ body {
     }
   }
   .ready-to-live {
-    @media(max-width:576px){
-      background: #D6F1C4;
+    @media (max-width: 576px) {
+      background: #d6f1c4;
       .info-col {
         margin-bottom: 20px;
       }
     }
     padding: 20px 0;
-    background: linear-gradient(to right, #D6F1C4 50%, white 50%);
+    background: linear-gradient(to right, #d6f1c4 50%, white 50%);
     .info-col {
       padding-right: 100px;
     }
@@ -79,7 +82,12 @@ body {
   }
 
   .rid-of-back-pain {
-    background: linear-gradient(180deg, #FFFFFF 16.15%, rgba(255, 255, 255, 0) 100%), url('splash/shoulder.jpg');
+    background: linear-gradient(
+        180deg,
+        #ffffff 16.15%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      asset-url("splash/shoulder.jpg");
     background-size: cover;
     background-position: center;
     padding: 40px 0;
@@ -92,7 +100,7 @@ body {
     }
     svg {
       font-size: 100px;
-      color: #D6F1C4;
+      color: #d6f1c4;
       margin-bottom: 20px;
     }
   }
@@ -108,6 +116,6 @@ body {
 
   .btn.home-btn-green {
     color: black;
-    background-color: #D6F1C4;
+    background-color: #d6f1c4;
   }
 }
