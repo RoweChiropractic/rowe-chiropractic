@@ -8,7 +8,7 @@
     "@rails/actiontext": "^6.0.3-2",
     "@rails/webpacker": "5.1.1",
     "arctic_admin": "^3.2.0",
-    "codemirror": "^5.56.0",
+    "codemirror": "^5.58.2",
     "trix": "^1.2.0"
   },
   "devDependencies": {
